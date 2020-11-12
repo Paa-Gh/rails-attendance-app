@@ -1,0 +1,54 @@
+<div class="container-fluid bg-3 text-center">
+  <br>
+  <div class="row w3-card">
+    <div class="col-md-4">
+      <img src="<%= polymorphic_url(@employee.picture) %>" class="img-responsive" style="width:100%" alt="Image">
+    </div>
+    <div class="empdet col-md-4 text-left pl-5">
+      <p>
+        <strong>First name:</strong>
+        <%= @employee.first_name %>
+      </p>
+
+      <p>
+        <strong>Last name:</strong>
+        <%= @employee.last_name %>
+      </p>
+
+      <p>
+        <strong>SSN:</strong>
+        <%= @employee.ssn %>
+      </p>
+      <p>
+        <strong>Address:</strong>
+        <%= @employee.address %>
+      </p>
+      <p>
+        <%= link_to 'Edit', edit_employee_path(@employee) %>
+      </p>
+    </div>
+    <div class="col-md-4">
+      <div>
+        <% unless Timer.last.time_in.present? and Timer.last.time_out.blank? %>
+          <%= link_to 'Clock In', timers_clockin_path, class:'btn btn-success' %> |
+        <% end %>
+          <%= link_to 'Clock Out', timers_clockout_path, class:'btn btn-danger' %>
+      </div>
+      <br>
+      <% if Timer.last.present? %>
+      <p class="text-left">
+        Welcome to work! Your reporting time today <b><%= Timer.last.time_in.strftime("%d, %b %Y,") %></b> is <b><%= Timer.last.time_in.strftime("%I:%M %p") %></b>
+      </p>
+      <br>
+      <p class="text-left">
+        Goodbye! Your clockout time today <b><%= Timer.last.time_out.strftime("%d, %b %Y,") if Timer.last.time_out %></b> is <b><%= Timer.last.time_out.strftime("%I:%M %p") if Timer.last.time_out %></b>
+      </p>
+      <br>
+      <p class="text-left">
+        You worked a total of <b><%= ((Timer.last.time_out - Timer.last.time_in)/1.minute).round %></b> minutes today
+      </p>
+      <% end %>
+    </div>
+
+  </div>
+</div><br><br>
