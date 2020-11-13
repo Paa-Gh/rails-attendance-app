@@ -1,3 +1,5 @@
+<div class="w3-row  d-flex justify-content-center">
+<div class="w3-col w3-card l8 s6">
 <%= form_with(model: employee, local: true) do |form| %>
   <% if employee.errors.any? %>
     <div id="error_explanation">
@@ -13,17 +15,17 @@
 
   <div class="field">
     <%= form.label :first_name %>
-    <%= form.text_field :first_name %>
+    <%= form.text_field :first_name, class:"form-control" %>
   </div>
 
   <div class="field">
     <%= form.label :last_name %>
-    <%= form.text_field :last_name %>
+    <%= form.text_field :last_name, class:"form-control" %>
   </div>
 
   <div class="field">
     <%= form.label :ssn %>
-    <%= form.text_field :ssn %>
+    <%= form.text_field :ssn, class:"form-control" %>
   </div>
 
   <div class="field">
@@ -33,7 +35,7 @@
 
   <div class="field">
     <%= form.label :address %>
-    <%= form.text_area :address %>
+    <%= form.text_area :address, class:"form-control" %>
   </div>
 
   <div class="field">
@@ -45,3 +47,5 @@
     <%= form.submit %>
   </div>
 <% end %>
+</div>
+</div>
