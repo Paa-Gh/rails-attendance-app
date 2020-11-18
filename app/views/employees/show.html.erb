@@ -29,23 +29,25 @@
     </div>
     <div class="col-md-4">
       <div>
-        <% unless Timer.last.time_in.present? and Timer.last.time_out.blank? %>
-          <%= link_to 'Clock In', timers_clockin_path, class:'btn btn-success' %> |
-        <% end %>
+        <% if current_user.employee.timers.last.blank? or current_user.employee.timers.last.time_in.blank? or current_user.employee.timers.last.time_in.present? and current_user.employee.timers.last.time_out.present?%>
+          <%= link_to 'Clock In', timers_clockin_path, class:'btn btn-success' %>
+        <% else %>
           <%= link_to 'Clock Out', timers_clockout_path, class:'btn btn-danger' %>
+        <% end %>
       </div>
       <br>
-      <% if Timer.last.present? %>
+      <% if current_user.employee.timers.last.time_in.present? and current_user.employee.timers.last.time_out.blank? %>
       <p class="text-left">
-        Welcome to work! Your reporting time today <b><%= Timer.last.time_in.strftime("%d, %b %Y,") %></b> is <b><%= Timer.last.time_in.strftime("%I:%M %p") %></b>
+        Welcome to work! Your last reporting time was on <b><%= current_user.employee.timers.last.time_in.strftime("%d, %b %Y,") %></b> at <b><%= current_user.employee.timers.last.time_in.strftime("%I:%M %p") %></b>
+      </p>
+      <% else %>
+      <br>
+      <p class="text-left">
+        Your last clockout time was on <b><%= current_user.employee.timers.last.time_out.strftime("%d, %b %Y,") if current_user.employee.timers.last.time_out %></b> at <b><%= current_user.employee.timers.last.time_out.strftime("%I:%M %p") if current_user.employee.timers.last.time_out %></b>
       </p>
       <br>
       <p class="text-left">
-        Goodbye! Your clockout time today <b><%= Timer.last.time_out.strftime("%d, %b %Y,") if Timer.last.time_out %></b> is <b><%= Timer.last.time_out.strftime("%I:%M %p") if Timer.last.time_out %></b>
-      </p>
-      <br>
-      <p class="text-left">
-        You worked a total of <b><%= ((Timer.last.time_out - Timer.last.time_in)/1.minute).round %></b> minutes today
+        You worked a total of <b><%= ((current_user.employee.timers.last.time_out - current_user.employee.timers.last.time_in)/1.minute).round %></b> minutes
       </p>
       <% end %>
     </div>
