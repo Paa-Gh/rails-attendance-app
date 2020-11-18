@@ -29,7 +29,7 @@
     </div>
     <div class="col-md-4">
       <div>
-        <% if current_user.employee.timers.last.blank? or current_user.employee.timers.last.time_in.blank? or current_user.employee.timers.last.time_in.present? and current_user.employee.timers.last.time_out.present?%>
+        <% if @clock_type %>
           <%= link_to 'Clock In', timers_clockin_path, class:'btn btn-success' %>
         <% else %>
           <%= link_to 'Clock Out', timers_clockout_path, class:'btn btn-danger' %>
