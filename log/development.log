@@ -4598,3 +4598,1450 @@ Processing by ActiveStorage::DiskController#show as PNG
 Completed 200 OK in 3ms (ActiveRecord: 0.0ms | Allocations: 714)
 
 
+Started GET "/" for 127.0.0.1 at 2020-11-18 17:30:38 +0000
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by EmployeesController#show as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mEmployee Load (0.2ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."user_id" = ? LIMIT ?[0m  [["user_id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/employees_controller.rb:71:in `set_employee'
+  Rendering employees/show.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 2], ["record_type", "Employee"], ["name", "picture"], ["LIMIT", 1]]
+  ↳ app/views/employees/show.html.erb:5
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/employees/show.html.erb:5
+  [1m[36mTimer Load (0.4ms)[0m  [1m[34mSELECT "timers".* FROM "timers" WHERE "timers"."employee_id" = ? ORDER BY "timers"."id" DESC LIMIT ?[0m  [["employee_id", 2], ["LIMIT", 1]]
+  ↳ app/views/employees/show.html.erb:32
+  [1m[36mCACHE Timer Load (0.0ms)[0m  [1m[34mSELECT "timers".* FROM "timers" WHERE "timers"."employee_id" = ? ORDER BY "timers"."id" DESC LIMIT ?[0m  [["employee_id", 2], ["LIMIT", 1]]
+  ↳ app/views/employees/show.html.erb:32
+  [1m[36mCACHE Timer Load (0.0ms)[0m  [1m[34mSELECT "timers".* FROM "timers" WHERE "timers"."employee_id" = ? ORDER BY "timers"."id" DESC LIMIT ?[0m  [["employee_id", 2], ["LIMIT", 1]]
+  ↳ app/views/employees/show.html.erb:32
+  [1m[36mCACHE Timer Load (0.0ms)[0m  [1m[34mSELECT "timers".* FROM "timers" WHERE "timers"."employee_id" = ? ORDER BY "timers"."id" DESC LIMIT ?[0m  [["employee_id", 2], ["LIMIT", 1]]
+  ↳ app/views/employees/show.html.erb:32
+  [1m[36mCACHE Timer Load (0.0ms)[0m  [1m[34mSELECT "timers".* FROM "timers" WHERE "timers"."employee_id" = ? ORDER BY "timers"."id" DESC LIMIT ?[0m  [["employee_id", 2], ["LIMIT", 1]]
+  ↳ app/views/employees/show.html.erb:39
+  [1m[36mCACHE Timer Load (0.0ms)[0m  [1m[34mSELECT "timers".* FROM "timers" WHERE "timers"."employee_id" = ? ORDER BY "timers"."id" DESC LIMIT ?[0m  [["employee_id", 2], ["LIMIT", 1]]
+  ↳ app/views/employees/show.html.erb:39
+  [1m[36mCACHE Timer Load (0.0ms)[0m  [1m[34mSELECT "timers".* FROM "timers" WHERE "timers"."employee_id" = ? ORDER BY "timers"."id" DESC LIMIT ?[0m  [["employee_id", 2], ["LIMIT", 1]]
+  ↳ app/views/employees/show.html.erb:46
+  [1m[36mCACHE Timer Load (0.0ms)[0m  [1m[34mSELECT "timers".* FROM "timers" WHERE "timers"."employee_id" = ? ORDER BY "timers"."id" DESC LIMIT ?[0m  [["employee_id", 2], ["LIMIT", 1]]
+  ↳ app/views/employees/show.html.erb:46
+  [1m[36mCACHE Timer Load (0.0ms)[0m  [1m[34mSELECT "timers".* FROM "timers" WHERE "timers"."employee_id" = ? ORDER BY "timers"."id" DESC LIMIT ?[0m  [["employee_id", 2], ["LIMIT", 1]]
+  ↳ app/views/employees/show.html.erb:46
+  [1m[36mCACHE Timer Load (0.0ms)[0m  [1m[34mSELECT "timers".* FROM "timers" WHERE "timers"."employee_id" = ? ORDER BY "timers"."id" DESC LIMIT ?[0m  [["employee_id", 2], ["LIMIT", 1]]
+  ↳ app/views/employees/show.html.erb:46
+  [1m[36mCACHE Timer Load (0.0ms)[0m  [1m[34mSELECT "timers".* FROM "timers" WHERE "timers"."employee_id" = ? ORDER BY "timers"."id" DESC LIMIT ?[0m  [["employee_id", 2], ["LIMIT", 1]]
+  ↳ app/views/employees/show.html.erb:50
+  [1m[36mCACHE Timer Load (0.0ms)[0m  [1m[34mSELECT "timers".* FROM "timers" WHERE "timers"."employee_id" = ? ORDER BY "timers"."id" DESC LIMIT ?[0m  [["employee_id", 2], ["LIMIT", 1]]
+  ↳ app/views/employees/show.html.erb:50
+  Rendered employees/show.html.erb within layouts/application (Duration: 42.2ms | Allocations: 26889)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 73ms (Views: 48.5ms | ActiveRecord: 1.4ms | Allocations: 44578)
+
+
+Started GET "/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCdz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--ebdc04f109e08c4db4f935f88391a1e67dbf39cf/bootstrap-social-logo.png" for 127.0.0.1 at 2020-11-18 17:30:39 +0000
+Processing by ActiveStorage::BlobsController#show as PNG
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCdz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--ebdc04f109e08c4db4f935f88391a1e67dbf39cf", "filename"=>"bootstrap-social-logo"}
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+[36m  Disk Storage (0.8ms) [0m[34mGenerated URL for file at key: 7so1vk90hte3chc6bjx5n30ha4u6 (http://127.0.0.1:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWhOM052TVhack9UQm9kR1V6WTJoak5tSnFlRFZ1TXpCb1lUUjFOZ1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpWFdsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW1KdmIzUnpkSEpoY0MxemIyTnBZV3d0Ykc5bmJ5NXdibWNpT3lCbWFXeGxibUZ0WlNvOVZWUkdMVGduSjJKdmIzUnpkSEpoY0MxemIyTnBZV3d0Ykc5bmJ5NXdibWNHT3daVU9oRmpiMjUwWlc1MFgzUjVjR1ZKSWc1cGJXRm5aUzl3Ym1jR093WlUiLCJleHAiOiIyMDIwLTExLTE4VDE3OjM1OjM5LjY1N1oiLCJwdXIiOiJibG9iX2tleSJ9fQ==--4e86c9d98ba7fc0d62fd01210c5d547aa36ef48f/bootstrap-social-logo.png?content_type=image%2Fpng&disposition=inline%3B+filename%3D%22bootstrap-social-logo.png%22%3B+filename%2A%3DUTF-8%27%27bootstrap-social-logo.png)[0m
+Redirected to http://127.0.0.1:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWhOM052TVhack9UQm9kR1V6WTJoak5tSnFlRFZ1TXpCb1lUUjFOZ1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpWFdsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW1KdmIzUnpkSEpoY0MxemIyTnBZV3d0Ykc5bmJ5NXdibWNpT3lCbWFXeGxibUZ0WlNvOVZWUkdMVGduSjJKdmIzUnpkSEpoY0MxemIyTnBZV3d0Ykc5bmJ5NXdibWNHT3daVU9oRmpiMjUwWlc1MFgzUjVjR1ZKSWc1cGJXRm5aUzl3Ym1jR093WlUiLCJleHAiOiIyMDIwLTExLTE4VDE3OjM1OjM5LjY1N1oiLCJwdXIiOiJibG9iX2tleSJ9fQ==--4e86c9d98ba7fc0d62fd01210c5d547aa36ef48f/bootstrap-social-logo.png?content_type=image%2Fpng&disposition=inline%3B+filename%3D%22bootstrap-social-logo.png%22%3B+filename%2A%3DUTF-8%27%27bootstrap-social-logo.png
+Completed 302 Found in 5ms (ActiveRecord: 0.1ms | Allocations: 2411)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWhOM052TVhack9UQm9kR1V6WTJoak5tSnFlRFZ1TXpCb1lUUjFOZ1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpWFdsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW1KdmIzUnpkSEpoY0MxemIyTnBZV3d0Ykc5bmJ5NXdibWNpT3lCbWFXeGxibUZ0WlNvOVZWUkdMVGduSjJKdmIzUnpkSEpoY0MxemIyTnBZV3d0Ykc5bmJ5NXdibWNHT3daVU9oRmpiMjUwWlc1MFgzUjVjR1ZKSWc1cGJXRm5aUzl3Ym1jR093WlUiLCJleHAiOiIyMDIwLTExLTE4VDE3OjM1OjM5LjY1N1oiLCJwdXIiOiJibG9iX2tleSJ9fQ==--4e86c9d98ba7fc0d62fd01210c5d547aa36ef48f/bootstrap-social-logo.png?content_type=image%2Fpng&disposition=inline%3B+filename%3D%22bootstrap-social-logo.png%22%3B+filename%2A%3DUTF-8%27%27bootstrap-social-logo.png" for 127.0.0.1 at 2020-11-18 17:30:39 +0000
+Processing by ActiveStorage::DiskController#show as PNG
+  Parameters: {"content_type"=>"image/png", "disposition"=>"inline; filename=\"bootstrap-social-logo.png\"; filename*=UTF-8''bootstrap-social-logo.png", "encoded_key"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWhOM052TVhack9UQm9kR1V6WTJoak5tSnFlRFZ1TXpCb1lUUjFOZ1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpWFdsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW1KdmIzUnpkSEpoY0MxemIyTnBZV3d0Ykc5bmJ5NXdibWNpT3lCbWFXeGxibUZ0WlNvOVZWUkdMVGduSjJKdmIzUnpkSEpoY0MxemIyTnBZV3d0Ykc5bmJ5NXdibWNHT3daVU9oRmpiMjUwWlc1MFgzUjVjR1ZKSWc1cGJXRm5aUzl3Ym1jR093WlUiLCJleHAiOiIyMDIwLTExLTE4VDE3OjM1OjM5LjY1N1oiLCJwdXIiOiJibG9iX2tleSJ9fQ==--4e86c9d98ba7fc0d62fd01210c5d547aa36ef48f", "filename"=>"bootstrap-social-logo"}
+Completed 200 OK in 1ms (ActiveRecord: 0.0ms | Allocations: 700)
+
+
+Started GET "/" for 127.0.0.1 at 2020-11-18 17:51:02 +0000
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by EmployeesController#show as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mEmployee Load (0.2ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."user_id" = ? LIMIT ?[0m  [["user_id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/employees_controller.rb:72:in `set_employee'
+  [1m[36mTimer Load (0.3ms)[0m  [1m[34mSELECT "timers".* FROM "timers" WHERE "timers"."employee_id" = ? ORDER BY "timers"."id" DESC LIMIT ?[0m  [["employee_id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/employees_controller.rb:16:in `show'
+  [1m[36mCACHE Timer Load (0.1ms)[0m  [1m[34mSELECT "timers".* FROM "timers" WHERE "timers"."employee_id" = ? ORDER BY "timers"."id" DESC LIMIT ?[0m  [["employee_id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/employees_controller.rb:16:in `show'
+  [1m[36mCACHE Timer Load (0.0ms)[0m  [1m[34mSELECT "timers".* FROM "timers" WHERE "timers"."employee_id" = ? ORDER BY "timers"."id" DESC LIMIT ?[0m  [["employee_id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/employees_controller.rb:16:in `show'
+  [1m[36mCACHE Timer Load (0.0ms)[0m  [1m[34mSELECT "timers".* FROM "timers" WHERE "timers"."employee_id" = ? ORDER BY "timers"."id" DESC LIMIT ?[0m  [["employee_id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/employees_controller.rb:16:in `show'
+  Rendering employees/show.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 2], ["record_type", "Employee"], ["name", "picture"], ["LIMIT", 1]]
+  ↳ app/views/employees/show.html.erb:5
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/employees/show.html.erb:5
+  [1m[36mCACHE Timer Load (0.0ms)[0m  [1m[34mSELECT "timers".* FROM "timers" WHERE "timers"."employee_id" = ? ORDER BY "timers"."id" DESC LIMIT ?[0m  [["employee_id", 2], ["LIMIT", 1]]
+  ↳ app/views/employees/show.html.erb:39
+  [1m[36mCACHE Timer Load (0.0ms)[0m  [1m[34mSELECT "timers".* FROM "timers" WHERE "timers"."employee_id" = ? ORDER BY "timers"."id" DESC LIMIT ?[0m  [["employee_id", 2], ["LIMIT", 1]]
+  ↳ app/views/employees/show.html.erb:39
+  [1m[36mCACHE Timer Load (0.0ms)[0m  [1m[34mSELECT "timers".* FROM "timers" WHERE "timers"."employee_id" = ? ORDER BY "timers"."id" DESC LIMIT ?[0m  [["employee_id", 2], ["LIMIT", 1]]
+  ↳ app/views/employees/show.html.erb:46
+  [1m[36mCACHE Timer Load (0.0ms)[0m  [1m[34mSELECT "timers".* FROM "timers" WHERE "timers"."employee_id" = ? ORDER BY "timers"."id" DESC LIMIT ?[0m  [["employee_id", 2], ["LIMIT", 1]]
+  ↳ app/views/employees/show.html.erb:46
+  [1m[36mCACHE Timer Load (0.0ms)[0m  [1m[34mSELECT "timers".* FROM "timers" WHERE "timers"."employee_id" = ? ORDER BY "timers"."id" DESC LIMIT ?[0m  [["employee_id", 2], ["LIMIT", 1]]
+  ↳ app/views/employees/show.html.erb:46
+  [1m[36mCACHE Timer Load (0.0ms)[0m  [1m[34mSELECT "timers".* FROM "timers" WHERE "timers"."employee_id" = ? ORDER BY "timers"."id" DESC LIMIT ?[0m  [["employee_id", 2], ["LIMIT", 1]]
+  ↳ app/views/employees/show.html.erb:46
+  [1m[36mCACHE Timer Load (0.0ms)[0m  [1m[34mSELECT "timers".* FROM "timers" WHERE "timers"."employee_id" = ? ORDER BY "timers"."id" DESC LIMIT ?[0m  [["employee_id", 2], ["LIMIT", 1]]
+  ↳ app/views/employees/show.html.erb:50
+  [1m[36mCACHE Timer Load (0.9ms)[0m  [1m[34mSELECT "timers".* FROM "timers" WHERE "timers"."employee_id" = ? ORDER BY "timers"."id" DESC LIMIT ?[0m  [["employee_id", 2], ["LIMIT", 1]]
+  ↳ app/views/employees/show.html.erb:50
+  Rendered employees/show.html.erb within layouts/application (Duration: 49.6ms | Allocations: 19842)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 126ms (Views: 59.9ms | ActiveRecord: 2.1ms | Allocations: 45770)
+
+
+Started GET "/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCdz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--ebdc04f109e08c4db4f935f88391a1e67dbf39cf/bootstrap-social-logo.png" for 127.0.0.1 at 2020-11-18 17:51:03 +0000
+Processing by ActiveStorage::BlobsController#show as PNG
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCdz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--ebdc04f109e08c4db4f935f88391a1e67dbf39cf", "filename"=>"bootstrap-social-logo"}
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+[36m  Disk Storage (0.5ms) [0m[34mGenerated URL for file at key: 7so1vk90hte3chc6bjx5n30ha4u6 (http://127.0.0.1:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWhOM052TVhack9UQm9kR1V6WTJoak5tSnFlRFZ1TXpCb1lUUjFOZ1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpWFdsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW1KdmIzUnpkSEpoY0MxemIyTnBZV3d0Ykc5bmJ5NXdibWNpT3lCbWFXeGxibUZ0WlNvOVZWUkdMVGduSjJKdmIzUnpkSEpoY0MxemIyTnBZV3d0Ykc5bmJ5NXdibWNHT3daVU9oRmpiMjUwWlc1MFgzUjVjR1ZKSWc1cGJXRm5aUzl3Ym1jR093WlUiLCJleHAiOiIyMDIwLTExLTE4VDE3OjU2OjAzLjI0OFoiLCJwdXIiOiJibG9iX2tleSJ9fQ==--3f4c95ae33ee151a322cb068e99cba3fb5a54fe4/bootstrap-social-logo.png?content_type=image%2Fpng&disposition=inline%3B+filename%3D%22bootstrap-social-logo.png%22%3B+filename%2A%3DUTF-8%27%27bootstrap-social-logo.png)[0m
+Redirected to http://127.0.0.1:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWhOM052TVhack9UQm9kR1V6WTJoak5tSnFlRFZ1TXpCb1lUUjFOZ1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpWFdsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW1KdmIzUnpkSEpoY0MxemIyTnBZV3d0Ykc5bmJ5NXdibWNpT3lCbWFXeGxibUZ0WlNvOVZWUkdMVGduSjJKdmIzUnpkSEpoY0MxemIyTnBZV3d0Ykc5bmJ5NXdibWNHT3daVU9oRmpiMjUwWlc1MFgzUjVjR1ZKSWc1cGJXRm5aUzl3Ym1jR093WlUiLCJleHAiOiIyMDIwLTExLTE4VDE3OjU2OjAzLjI0OFoiLCJwdXIiOiJibG9iX2tleSJ9fQ==--3f4c95ae33ee151a322cb068e99cba3fb5a54fe4/bootstrap-social-logo.png?content_type=image%2Fpng&disposition=inline%3B+filename%3D%22bootstrap-social-logo.png%22%3B+filename%2A%3DUTF-8%27%27bootstrap-social-logo.png
+Completed 302 Found in 4ms (ActiveRecord: 0.1ms | Allocations: 2415)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWhOM052TVhack9UQm9kR1V6WTJoak5tSnFlRFZ1TXpCb1lUUjFOZ1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpWFdsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW1KdmIzUnpkSEpoY0MxemIyTnBZV3d0Ykc5bmJ5NXdibWNpT3lCbWFXeGxibUZ0WlNvOVZWUkdMVGduSjJKdmIzUnpkSEpoY0MxemIyTnBZV3d0Ykc5bmJ5NXdibWNHT3daVU9oRmpiMjUwWlc1MFgzUjVjR1ZKSWc1cGJXRm5aUzl3Ym1jR093WlUiLCJleHAiOiIyMDIwLTExLTE4VDE3OjU2OjAzLjI0OFoiLCJwdXIiOiJibG9iX2tleSJ9fQ==--3f4c95ae33ee151a322cb068e99cba3fb5a54fe4/bootstrap-social-logo.png?content_type=image%2Fpng&disposition=inline%3B+filename%3D%22bootstrap-social-logo.png%22%3B+filename%2A%3DUTF-8%27%27bootstrap-social-logo.png" for 127.0.0.1 at 2020-11-18 17:51:03 +0000
+Processing by ActiveStorage::DiskController#show as PNG
+  Parameters: {"content_type"=>"image/png", "disposition"=>"inline; filename=\"bootstrap-social-logo.png\"; filename*=UTF-8''bootstrap-social-logo.png", "encoded_key"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWhOM052TVhack9UQm9kR1V6WTJoak5tSnFlRFZ1TXpCb1lUUjFOZ1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpWFdsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW1KdmIzUnpkSEpoY0MxemIyTnBZV3d0Ykc5bmJ5NXdibWNpT3lCbWFXeGxibUZ0WlNvOVZWUkdMVGduSjJKdmIzUnpkSEpoY0MxemIyTnBZV3d0Ykc5bmJ5NXdibWNHT3daVU9oRmpiMjUwWlc1MFgzUjVjR1ZKSWc1cGJXRm5aUzl3Ym1jR093WlUiLCJleHAiOiIyMDIwLTExLTE4VDE3OjU2OjAzLjI0OFoiLCJwdXIiOiJibG9iX2tleSJ9fQ==--3f4c95ae33ee151a322cb068e99cba3fb5a54fe4", "filename"=>"bootstrap-social-logo"}
+Completed 200 OK in 2ms (ActiveRecord: 0.0ms | Allocations: 706)
+
+
+Started GET "/" for 127.0.0.1 at 2020-11-18 18:11:23 +0000
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by EmployeesController#show as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mEmployee Load (0.2ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."user_id" = ? LIMIT ?[0m  [["user_id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/employees_controller.rb:73:in `set_employee'
+  [1m[36mTimer Load (0.2ms)[0m  [1m[34mSELECT "timers".* FROM "timers" WHERE "timers"."employee_id" = ? ORDER BY "timers"."id" DESC LIMIT ?[0m  [["employee_id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/employees_controller.rb:16:in `show'
+  [1m[36mCACHE Timer Load (0.0ms)[0m  [1m[34mSELECT "timers".* FROM "timers" WHERE "timers"."employee_id" = ? ORDER BY "timers"."id" DESC LIMIT ?[0m  [["employee_id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/employees_controller.rb:16:in `show'
+  [1m[36mCACHE Timer Load (0.0ms)[0m  [1m[34mSELECT "timers".* FROM "timers" WHERE "timers"."employee_id" = ? ORDER BY "timers"."id" DESC LIMIT ?[0m  [["employee_id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/employees_controller.rb:16:in `show'
+  [1m[36mCACHE Timer Load (0.0ms)[0m  [1m[34mSELECT "timers".* FROM "timers" WHERE "timers"."employee_id" = ? ORDER BY "timers"."id" DESC LIMIT ?[0m  [["employee_id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/employees_controller.rb:16:in `show'
+  [1m[36mCACHE Timer Load (0.0ms)[0m  [1m[34mSELECT "timers".* FROM "timers" WHERE "timers"."employee_id" = ? ORDER BY "timers"."id" DESC LIMIT ?[0m  [["employee_id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/employees_controller.rb:17:in `show'
+  [1m[36mCACHE Timer Load (0.0ms)[0m  [1m[34mSELECT "timers".* FROM "timers" WHERE "timers"."employee_id" = ? ORDER BY "timers"."id" DESC LIMIT ?[0m  [["employee_id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/employees_controller.rb:17:in `show'
+  Rendering employees/show.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 2], ["record_type", "Employee"], ["name", "picture"], ["LIMIT", 1]]
+  ↳ app/views/employees/show.html.erb:5
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/employees/show.html.erb:5
+  [1m[36mCACHE Timer Load (0.0ms)[0m  [1m[34mSELECT "timers".* FROM "timers" WHERE "timers"."employee_id" = ? ORDER BY "timers"."id" DESC LIMIT ?[0m  [["employee_id", 2], ["LIMIT", 1]]
+  ↳ app/views/employees/show.html.erb:41
+  [1m[36mCACHE Timer Load (0.0ms)[0m  [1m[34mSELECT "timers".* FROM "timers" WHERE "timers"."employee_id" = ? ORDER BY "timers"."id" DESC LIMIT ?[0m  [["employee_id", 2], ["LIMIT", 1]]
+  ↳ app/views/employees/show.html.erb:41
+  Rendered employees/show.html.erb within layouts/application (Duration: 35.1ms | Allocations: 15342)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 80ms (Views: 42.1ms | ActiveRecord: 1.2ms | Allocations: 42677)
+
+
+Started GET "/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCdz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--ebdc04f109e08c4db4f935f88391a1e67dbf39cf/bootstrap-social-logo.png" for 127.0.0.1 at 2020-11-18 18:11:24 +0000
+Processing by ActiveStorage::BlobsController#show as PNG
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCdz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--ebdc04f109e08c4db4f935f88391a1e67dbf39cf", "filename"=>"bootstrap-social-logo"}
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+[36m  Disk Storage (0.6ms) [0m[34mGenerated URL for file at key: 7so1vk90hte3chc6bjx5n30ha4u6 (http://127.0.0.1:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWhOM052TVhack9UQm9kR1V6WTJoak5tSnFlRFZ1TXpCb1lUUjFOZ1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpWFdsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW1KdmIzUnpkSEpoY0MxemIyTnBZV3d0Ykc5bmJ5NXdibWNpT3lCbWFXeGxibUZ0WlNvOVZWUkdMVGduSjJKdmIzUnpkSEpoY0MxemIyTnBZV3d0Ykc5bmJ5NXdibWNHT3daVU9oRmpiMjUwWlc1MFgzUjVjR1ZKSWc1cGJXRm5aUzl3Ym1jR093WlUiLCJleHAiOiIyMDIwLTExLTE4VDE4OjE2OjI0LjczMVoiLCJwdXIiOiJibG9iX2tleSJ9fQ==--8468ba5a399ea6cf9a33a942d5d10809474eb007/bootstrap-social-logo.png?content_type=image%2Fpng&disposition=inline%3B+filename%3D%22bootstrap-social-logo.png%22%3B+filename%2A%3DUTF-8%27%27bootstrap-social-logo.png)[0m
+Redirected to http://127.0.0.1:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWhOM052TVhack9UQm9kR1V6WTJoak5tSnFlRFZ1TXpCb1lUUjFOZ1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpWFdsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW1KdmIzUnpkSEpoY0MxemIyTnBZV3d0Ykc5bmJ5NXdibWNpT3lCbWFXeGxibUZ0WlNvOVZWUkdMVGduSjJKdmIzUnpkSEpoY0MxemIyTnBZV3d0Ykc5bmJ5NXdibWNHT3daVU9oRmpiMjUwWlc1MFgzUjVjR1ZKSWc1cGJXRm5aUzl3Ym1jR093WlUiLCJleHAiOiIyMDIwLTExLTE4VDE4OjE2OjI0LjczMVoiLCJwdXIiOiJibG9iX2tleSJ9fQ==--8468ba5a399ea6cf9a33a942d5d10809474eb007/bootstrap-social-logo.png?content_type=image%2Fpng&disposition=inline%3B+filename%3D%22bootstrap-social-logo.png%22%3B+filename%2A%3DUTF-8%27%27bootstrap-social-logo.png
+Completed 302 Found in 5ms (ActiveRecord: 0.1ms | Allocations: 2424)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWhOM052TVhack9UQm9kR1V6WTJoak5tSnFlRFZ1TXpCb1lUUjFOZ1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpWFdsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW1KdmIzUnpkSEpoY0MxemIyTnBZV3d0Ykc5bmJ5NXdibWNpT3lCbWFXeGxibUZ0WlNvOVZWUkdMVGduSjJKdmIzUnpkSEpoY0MxemIyTnBZV3d0Ykc5bmJ5NXdibWNHT3daVU9oRmpiMjUwWlc1MFgzUjVjR1ZKSWc1cGJXRm5aUzl3Ym1jR093WlUiLCJleHAiOiIyMDIwLTExLTE4VDE4OjE2OjI0LjczMVoiLCJwdXIiOiJibG9iX2tleSJ9fQ==--8468ba5a399ea6cf9a33a942d5d10809474eb007/bootstrap-social-logo.png?content_type=image%2Fpng&disposition=inline%3B+filename%3D%22bootstrap-social-logo.png%22%3B+filename%2A%3DUTF-8%27%27bootstrap-social-logo.png" for 127.0.0.1 at 2020-11-18 18:11:24 +0000
+Processing by ActiveStorage::DiskController#show as PNG
+  Parameters: {"content_type"=>"image/png", "disposition"=>"inline; filename=\"bootstrap-social-logo.png\"; filename*=UTF-8''bootstrap-social-logo.png", "encoded_key"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWhOM052TVhack9UQm9kR1V6WTJoak5tSnFlRFZ1TXpCb1lUUjFOZ1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpWFdsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW1KdmIzUnpkSEpoY0MxemIyTnBZV3d0Ykc5bmJ5NXdibWNpT3lCbWFXeGxibUZ0WlNvOVZWUkdMVGduSjJKdmIzUnpkSEpoY0MxemIyTnBZV3d0Ykc5bmJ5NXdibWNHT3daVU9oRmpiMjUwWlc1MFgzUjVjR1ZKSWc1cGJXRm5aUzl3Ym1jR093WlUiLCJleHAiOiIyMDIwLTExLTE4VDE4OjE2OjI0LjczMVoiLCJwdXIiOiJibG9iX2tleSJ9fQ==--8468ba5a399ea6cf9a33a942d5d10809474eb007", "filename"=>"bootstrap-social-logo"}
+Completed 200 OK in 1ms (ActiveRecord: 0.0ms | Allocations: 710)
+
+
+Started GET "/timers/clockout" for 127.0.0.1 at 2020-11-18 18:11:44 +0000
+Processing by TimersController#clockout as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mTimer Load (0.2ms)[0m  [1m[34mSELECT "timers".* FROM "timers" ORDER BY "timers"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/timers_controller.rb:71:in `clockout'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/timers_controller.rb:73:in `clockout'
+  [1m[36mEmployee Load (0.2ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/timers_controller.rb:73:in `clockout'
+  [1m[36mTimer Update (0.3ms)[0m  [1m[33mUPDATE "timers" SET "time_out" = ?, "updated_at" = ? WHERE "timers"."id" = ?[0m  [["time_out", "2020-11-18 18:11:44.314354"], ["updated_at", "2020-11-18 18:11:44.323132"], ["id", 4]]
+  ↳ app/controllers/timers_controller.rb:73:in `clockout'
+  [1m[35m (8.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/timers_controller.rb:73:in `clockout'
+Redirected to http://127.0.0.1:3000/employees/3
+Completed 302 Found in 27ms (ActiveRecord: 9.1ms | Allocations: 7513)
+
+
+Started GET "/employees/3" for 127.0.0.1 at 2020-11-18 18:11:44 +0000
+Processing by EmployeesController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mEmployee Load (0.1ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."user_id" = ? LIMIT ?[0m  [["user_id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/employees_controller.rb:73:in `set_employee'
+  [1m[36mTimer Load (0.1ms)[0m  [1m[34mSELECT "timers".* FROM "timers" WHERE "timers"."employee_id" = ? ORDER BY "timers"."id" DESC LIMIT ?[0m  [["employee_id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/employees_controller.rb:16:in `show'
+  [1m[36mCACHE Timer Load (0.0ms)[0m  [1m[34mSELECT "timers".* FROM "timers" WHERE "timers"."employee_id" = ? ORDER BY "timers"."id" DESC LIMIT ?[0m  [["employee_id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/employees_controller.rb:16:in `show'
+  [1m[36mCACHE Timer Load (0.0ms)[0m  [1m[34mSELECT "timers".* FROM "timers" WHERE "timers"."employee_id" = ? ORDER BY "timers"."id" DESC LIMIT ?[0m  [["employee_id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/employees_controller.rb:16:in `show'
+  [1m[36mCACHE Timer Load (0.0ms)[0m  [1m[34mSELECT "timers".* FROM "timers" WHERE "timers"."employee_id" = ? ORDER BY "timers"."id" DESC LIMIT ?[0m  [["employee_id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/employees_controller.rb:16:in `show'
+  [1m[36mCACHE Timer Load (0.0ms)[0m  [1m[34mSELECT "timers".* FROM "timers" WHERE "timers"."employee_id" = ? ORDER BY "timers"."id" DESC LIMIT ?[0m  [["employee_id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/employees_controller.rb:17:in `show'
+  [1m[36mCACHE Timer Load (0.0ms)[0m  [1m[34mSELECT "timers".* FROM "timers" WHERE "timers"."employee_id" = ? ORDER BY "timers"."id" DESC LIMIT ?[0m  [["employee_id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/employees_controller.rb:17:in `show'
+  Rendering employees/show.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 2], ["record_type", "Employee"], ["name", "picture"], ["LIMIT", 1]]
+  ↳ app/views/employees/show.html.erb:5
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/employees/show.html.erb:5
+  [1m[36mCACHE Timer Load (0.0ms)[0m  [1m[34mSELECT "timers".* FROM "timers" WHERE "timers"."employee_id" = ? ORDER BY "timers"."id" DESC LIMIT ?[0m  [["employee_id", 2], ["LIMIT", 1]]
+  ↳ app/views/employees/show.html.erb:41
+  [1m[36mCACHE Timer Load (0.0ms)[0m  [1m[34mSELECT "timers".* FROM "timers" WHERE "timers"."employee_id" = ? ORDER BY "timers"."id" DESC LIMIT ?[0m  [["employee_id", 2], ["LIMIT", 1]]
+  ↳ app/views/employees/show.html.erb:41
+  Rendered employees/show.html.erb within layouts/application (Duration: 7.8ms | Allocations: 3583)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 29ms (Views: 16.2ms | ActiveRecord: 0.8ms | Allocations: 13929)
+
+
+Started GET "/timers/clockout" for 127.0.0.1 at 2020-11-18 18:11:51 +0000
+Processing by TimersController#clockout as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mTimer Load (0.1ms)[0m  [1m[34mSELECT "timers".* FROM "timers" ORDER BY "timers"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/timers_controller.rb:71:in `clockout'
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/timers_controller.rb:73:in `clockout'
+  [1m[36mEmployee Load (0.1ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/timers_controller.rb:73:in `clockout'
+  [1m[36mTimer Update (0.8ms)[0m  [1m[33mUPDATE "timers" SET "time_out" = ?, "updated_at" = ? WHERE "timers"."id" = ?[0m  [["time_out", "2020-11-18 18:11:51.089188"], ["updated_at", "2020-11-18 18:11:51.091831"], ["id", 4]]
+  ↳ app/controllers/timers_controller.rb:73:in `clockout'
+  [1m[35m (2.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/timers_controller.rb:73:in `clockout'
+Redirected to http://127.0.0.1:3000/employees/3
+Completed 302 Found in 16ms (ActiveRecord: 4.1ms | Allocations: 7178)
+
+
+Started GET "/employees/3" for 127.0.0.1 at 2020-11-18 18:11:51 +0000
+Processing by EmployeesController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mEmployee Load (0.1ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."user_id" = ? LIMIT ?[0m  [["user_id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/employees_controller.rb:73:in `set_employee'
+  [1m[36mTimer Load (0.1ms)[0m  [1m[34mSELECT "timers".* FROM "timers" WHERE "timers"."employee_id" = ? ORDER BY "timers"."id" DESC LIMIT ?[0m  [["employee_id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/employees_controller.rb:16:in `show'
+  [1m[36mCACHE Timer Load (0.0ms)[0m  [1m[34mSELECT "timers".* FROM "timers" WHERE "timers"."employee_id" = ? ORDER BY "timers"."id" DESC LIMIT ?[0m  [["employee_id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/employees_controller.rb:16:in `show'
+  [1m[36mCACHE Timer Load (0.0ms)[0m  [1m[34mSELECT "timers".* FROM "timers" WHERE "timers"."employee_id" = ? ORDER BY "timers"."id" DESC LIMIT ?[0m  [["employee_id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/employees_controller.rb:16:in `show'
+  [1m[36mCACHE Timer Load (0.0ms)[0m  [1m[34mSELECT "timers".* FROM "timers" WHERE "timers"."employee_id" = ? ORDER BY "timers"."id" DESC LIMIT ?[0m  [["employee_id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/employees_controller.rb:16:in `show'
+  [1m[36mCACHE Timer Load (0.0ms)[0m  [1m[34mSELECT "timers".* FROM "timers" WHERE "timers"."employee_id" = ? ORDER BY "timers"."id" DESC LIMIT ?[0m  [["employee_id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/employees_controller.rb:17:in `show'
+  [1m[36mCACHE Timer Load (0.2ms)[0m  [1m[34mSELECT "timers".* FROM "timers" WHERE "timers"."employee_id" = ? ORDER BY "timers"."id" DESC LIMIT ?[0m  [["employee_id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/employees_controller.rb:17:in `show'
+  Rendering employees/show.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 2], ["record_type", "Employee"], ["name", "picture"], ["LIMIT", 1]]
+  ↳ app/views/employees/show.html.erb:5
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/employees/show.html.erb:5
+  [1m[36mCACHE Timer Load (0.0ms)[0m  [1m[34mSELECT "timers".* FROM "timers" WHERE "timers"."employee_id" = ? ORDER BY "timers"."id" DESC LIMIT ?[0m  [["employee_id", 2], ["LIMIT", 1]]
+  ↳ app/views/employees/show.html.erb:41
+  [1m[36mCACHE Timer Load (0.0ms)[0m  [1m[34mSELECT "timers".* FROM "timers" WHERE "timers"."employee_id" = ? ORDER BY "timers"."id" DESC LIMIT ?[0m  [["employee_id", 2], ["LIMIT", 1]]
+  ↳ app/views/employees/show.html.erb:41
+  Rendered employees/show.html.erb within layouts/application (Duration: 4.0ms | Allocations: 3574)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 64ms (Views: 48.1ms | ActiveRecord: 0.7ms | Allocations: 13906)
+
+
+Started DELETE "/users/sign_out" for 127.0.0.1 at 2020-11-18 18:15:24 +0000
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"EwPczuqpznKYGM5A8V/QkAuJNsWx5qG1hrL6xxXN9NCM4DsKIZ2VliFAByaNwY7Ywpd/JvGNPn3qDxQ3eY0OSw=="}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+Redirected to http://127.0.0.1:3000/
+Completed 302 Found in 36ms (ActiveRecord: 0.7ms | Allocations: 9995)
+
+
+Started GET "/" for 127.0.0.1 at 2020-11-18 18:15:24 +0000
+Processing by EmployeesController#show as HTML
+Completed 401 Unauthorized in 7ms (ActiveRecord: 0.0ms | Allocations: 676)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2020-11-18 18:15:24 +0000
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.7ms | Allocations: 602)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 6.8ms | Allocations: 2857)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 31ms (Views: 29.3ms | ActiveRecord: 0.0ms | Allocations: 16657)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2020-11-18 18:15:33 +0000
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"UWDoTzhcGd/YwlkzgotF16l8v38We05jLMnE2Ybv32s8IDAJtSDBuuq5wLl8IOzW0FlBU4dhn0ZoHREaqJjL6A==", "user"=>{"email"=>"p_kay5@hotmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "p_kay5@hotmail.com"], ["LIMIT", 1]]
+Redirected to http://127.0.0.1:3000/
+Completed 302 Found in 235ms (ActiveRecord: 0.3ms | Allocations: 4957)
+
+
+Started GET "/" for 127.0.0.1 at 2020-11-18 18:15:33 +0000
+Processing by EmployeesController#show as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mEmployee Load (0.4ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."user_id" = ? LIMIT ?[0m  [["user_id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/employees_controller.rb:73:in `set_employee'
+  [1m[36mTimer Load (0.1ms)[0m  [1m[34mSELECT "timers".* FROM "timers" WHERE "timers"."employee_id" = ? ORDER BY "timers"."id" DESC LIMIT ?[0m  [["employee_id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/employees_controller.rb:16:in `show'
+  [1m[36mCACHE Timer Load (0.0ms)[0m  [1m[34mSELECT "timers".* FROM "timers" WHERE "timers"."employee_id" = ? ORDER BY "timers"."id" DESC LIMIT ?[0m  [["employee_id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/employees_controller.rb:16:in `show'
+  [1m[36mCACHE Timer Load (0.0ms)[0m  [1m[34mSELECT "timers".* FROM "timers" WHERE "timers"."employee_id" = ? ORDER BY "timers"."id" DESC LIMIT ?[0m  [["employee_id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/employees_controller.rb:16:in `show'
+  [1m[36mCACHE Timer Load (0.0ms)[0m  [1m[34mSELECT "timers".* FROM "timers" WHERE "timers"."employee_id" = ? ORDER BY "timers"."id" DESC LIMIT ?[0m  [["employee_id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/employees_controller.rb:16:in `show'
+  [1m[36mCACHE Timer Load (0.0ms)[0m  [1m[34mSELECT "timers".* FROM "timers" WHERE "timers"."employee_id" = ? ORDER BY "timers"."id" DESC LIMIT ?[0m  [["employee_id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/employees_controller.rb:17:in `show'
+  [1m[36mCACHE Timer Load (0.0ms)[0m  [1m[34mSELECT "timers".* FROM "timers" WHERE "timers"."employee_id" = ? ORDER BY "timers"."id" DESC LIMIT ?[0m  [["employee_id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/employees_controller.rb:17:in `show'
+  Rendering employees/show.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 1], ["record_type", "Employee"], ["name", "picture"], ["LIMIT", 1]]
+  ↳ app/views/employees/show.html.erb:5
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/employees/show.html.erb:5
+  [1m[36mCACHE Timer Load (0.0ms)[0m  [1m[34mSELECT "timers".* FROM "timers" WHERE "timers"."employee_id" = ? ORDER BY "timers"."id" DESC LIMIT ?[0m  [["employee_id", 1], ["LIMIT", 1]]
+  ↳ app/views/employees/show.html.erb:41
+  [1m[36mCACHE Timer Load (0.0ms)[0m  [1m[34mSELECT "timers".* FROM "timers" WHERE "timers"."employee_id" = ? ORDER BY "timers"."id" DESC LIMIT ?[0m  [["employee_id", 1], ["LIMIT", 1]]
+  ↳ app/views/employees/show.html.erb:41
+  Rendered employees/show.html.erb within layouts/application (Duration: 41.3ms | Allocations: 18394)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 88ms (Views: 43.9ms | ActiveRecord: 4.0ms | Allocations: 43673)
+
+
+Started GET "/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--f1cb47cb37f6416dd074a522b321cba55331a453/test3.png" for 127.0.0.1 at 2020-11-18 18:15:33 +0000
+Processing by ActiveStorage::BlobsController#show as PNG
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--f1cb47cb37f6416dd074a522b321cba55331a453", "filename"=>"test3"}
+  [1m[36mActiveStorage::Blob Load (2.8ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[36m  Disk Storage (0.8ms) [0m[34mGenerated URL for file at key: up4gu1nkfp7ao6r9ulscd898vbtf (http://127.0.0.1:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWhkWEEwWjNVeGJtdG1jRGRoYnpaeU9YVnNjMk5rT0RrNGRtSjBaZ1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpUFdsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW5SbGMzUXpMbkJ1WnlJN0lHWnBiR1Z1WVcxbEtqMVZWRVl0T0NjbmRHVnpkRE11Y0c1bkJqc0dWRG9SWTI5dWRHVnVkRjkwZVhCbFNTSU9hVzFoWjJVdmNHNW5CanNHVkE9PSIsImV4cCI6IjIwMjAtMTEtMThUMTg6MjA6MzMuNzI4WiIsInB1ciI6ImJsb2Jfa2V5In19--71a7d3b55dd75e12bf2edb14c3b43c2e5807591a/test3.png?content_type=image%2Fpng&disposition=inline%3B+filename%3D%22test3.png%22%3B+filename%2A%3DUTF-8%27%27test3.png)[0m
+Redirected to http://127.0.0.1:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWhkWEEwWjNVeGJtdG1jRGRoYnpaeU9YVnNjMk5rT0RrNGRtSjBaZ1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpUFdsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW5SbGMzUXpMbkJ1WnlJN0lHWnBiR1Z1WVcxbEtqMVZWRVl0T0NjbmRHVnpkRE11Y0c1bkJqc0dWRG9SWTI5dWRHVnVkRjkwZVhCbFNTSU9hVzFoWjJVdmNHNW5CanNHVkE9PSIsImV4cCI6IjIwMjAtMTEtMThUMTg6MjA6MzMuNzI4WiIsInB1ciI6ImJsb2Jfa2V5In19--71a7d3b55dd75e12bf2edb14c3b43c2e5807591a/test3.png?content_type=image%2Fpng&disposition=inline%3B+filename%3D%22test3.png%22%3B+filename%2A%3DUTF-8%27%27test3.png
+Completed 302 Found in 7ms (ActiveRecord: 2.8ms | Allocations: 2471)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWhkWEEwWjNVeGJtdG1jRGRoYnpaeU9YVnNjMk5rT0RrNGRtSjBaZ1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpUFdsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW5SbGMzUXpMbkJ1WnlJN0lHWnBiR1Z1WVcxbEtqMVZWRVl0T0NjbmRHVnpkRE11Y0c1bkJqc0dWRG9SWTI5dWRHVnVkRjkwZVhCbFNTSU9hVzFoWjJVdmNHNW5CanNHVkE9PSIsImV4cCI6IjIwMjAtMTEtMThUMTg6MjA6MzMuNzI4WiIsInB1ciI6ImJsb2Jfa2V5In19--71a7d3b55dd75e12bf2edb14c3b43c2e5807591a/test3.png?content_type=image%2Fpng&disposition=inline%3B+filename%3D%22test3.png%22%3B+filename%2A%3DUTF-8%27%27test3.png" for 127.0.0.1 at 2020-11-18 18:15:33 +0000
+Processing by ActiveStorage::DiskController#show as PNG
+  Parameters: {"content_type"=>"image/png", "disposition"=>"inline; filename=\"test3.png\"; filename*=UTF-8''test3.png", "encoded_key"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWhkWEEwWjNVeGJtdG1jRGRoYnpaeU9YVnNjMk5rT0RrNGRtSjBaZ1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpUFdsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW5SbGMzUXpMbkJ1WnlJN0lHWnBiR1Z1WVcxbEtqMVZWRVl0T0NjbmRHVnpkRE11Y0c1bkJqc0dWRG9SWTI5dWRHVnVkRjkwZVhCbFNTSU9hVzFoWjJVdmNHNW5CanNHVkE9PSIsImV4cCI6IjIwMjAtMTEtMThUMTg6MjA6MzMuNzI4WiIsInB1ciI6ImJsb2Jfa2V5In19--71a7d3b55dd75e12bf2edb14c3b43c2e5807591a", "filename"=>"test3"}
+Completed 200 OK in 1ms (ActiveRecord: 0.0ms | Allocations: 723)
+
+
+Started GET "/timers/clockout" for 127.0.0.1 at 2020-11-18 18:15:51 +0000
+Processing by TimersController#clockout as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTimer Load (0.2ms)[0m  [1m[34mSELECT "timers".* FROM "timers" ORDER BY "timers"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/timers_controller.rb:71:in `clockout'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/timers_controller.rb:73:in `clockout'
+  [1m[36mEmployee Load (0.1ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/timers_controller.rb:73:in `clockout'
+  [1m[36mTimer Update (0.2ms)[0m  [1m[33mUPDATE "timers" SET "time_out" = ?, "updated_at" = ? WHERE "timers"."id" = ?[0m  [["time_out", "2020-11-18 18:15:51.469545"], ["updated_at", "2020-11-18 18:15:51.472189"], ["id", 4]]
+  ↳ app/controllers/timers_controller.rb:73:in `clockout'
+  [1m[35m (2.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/timers_controller.rb:73:in `clockout'
+Redirected to http://127.0.0.1:3000/employees/1
+Completed 302 Found in 17ms (ActiveRecord: 2.8ms | Allocations: 7595)
+
+
+Started GET "/employees/1" for 127.0.0.1 at 2020-11-18 18:15:51 +0000
+Processing by EmployeesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mEmployee Load (0.1ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."user_id" = ? LIMIT ?[0m  [["user_id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/employees_controller.rb:73:in `set_employee'
+  [1m[36mTimer Load (0.1ms)[0m  [1m[34mSELECT "timers".* FROM "timers" WHERE "timers"."employee_id" = ? ORDER BY "timers"."id" DESC LIMIT ?[0m  [["employee_id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/employees_controller.rb:16:in `show'
+  [1m[36mCACHE Timer Load (0.1ms)[0m  [1m[34mSELECT "timers".* FROM "timers" WHERE "timers"."employee_id" = ? ORDER BY "timers"."id" DESC LIMIT ?[0m  [["employee_id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/employees_controller.rb:16:in `show'
+  [1m[36mCACHE Timer Load (0.0ms)[0m  [1m[34mSELECT "timers".* FROM "timers" WHERE "timers"."employee_id" = ? ORDER BY "timers"."id" DESC LIMIT ?[0m  [["employee_id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/employees_controller.rb:16:in `show'
+  [1m[36mCACHE Timer Load (0.0ms)[0m  [1m[34mSELECT "timers".* FROM "timers" WHERE "timers"."employee_id" = ? ORDER BY "timers"."id" DESC LIMIT ?[0m  [["employee_id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/employees_controller.rb:16:in `show'
+  [1m[36mCACHE Timer Load (0.0ms)[0m  [1m[34mSELECT "timers".* FROM "timers" WHERE "timers"."employee_id" = ? ORDER BY "timers"."id" DESC LIMIT ?[0m  [["employee_id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/employees_controller.rb:17:in `show'
+  [1m[36mCACHE Timer Load (0.0ms)[0m  [1m[34mSELECT "timers".* FROM "timers" WHERE "timers"."employee_id" = ? ORDER BY "timers"."id" DESC LIMIT ?[0m  [["employee_id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/employees_controller.rb:17:in `show'
+  Rendering employees/show.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 1], ["record_type", "Employee"], ["name", "picture"], ["LIMIT", 1]]
+  ↳ app/views/employees/show.html.erb:5
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/employees/show.html.erb:5
+  [1m[36mCACHE Timer Load (0.0ms)[0m  [1m[34mSELECT "timers".* FROM "timers" WHERE "timers"."employee_id" = ? ORDER BY "timers"."id" DESC LIMIT ?[0m  [["employee_id", 1], ["LIMIT", 1]]
+  ↳ app/views/employees/show.html.erb:41
+  [1m[36mCACHE Timer Load (0.0ms)[0m  [1m[34mSELECT "timers".* FROM "timers" WHERE "timers"."employee_id" = ? ORDER BY "timers"."id" DESC LIMIT ?[0m  [["employee_id", 1], ["LIMIT", 1]]
+  ↳ app/views/employees/show.html.erb:41
+  Rendered employees/show.html.erb within layouts/application (Duration: 5.7ms | Allocations: 3576)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 28ms (Views: 13.5ms | ActiveRecord: 0.7ms | Allocations: 13921)
+
+
+Started GET "/employees/1" for 127.0.0.1 at 2020-11-18 18:17:23 +0000
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by EmployeesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mEmployee Load (0.1ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."user_id" = ? LIMIT ?[0m  [["user_id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/employees_controller.rb:72:in `set_employee'
+  [1m[36mTimer Load (2.8ms)[0m  [1m[34mSELECT "timers".* FROM "timers" WHERE "timers"."employee_id" = ? ORDER BY "timers"."id" DESC LIMIT ?[0m  [["employee_id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/employees_controller.rb:16:in `show'
+  [1m[36mCACHE Timer Load (0.0ms)[0m  [1m[34mSELECT "timers".* FROM "timers" WHERE "timers"."employee_id" = ? ORDER BY "timers"."id" DESC LIMIT ?[0m  [["employee_id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/employees_controller.rb:16:in `show'
+  [1m[36mCACHE Timer Load (0.0ms)[0m  [1m[34mSELECT "timers".* FROM "timers" WHERE "timers"."employee_id" = ? ORDER BY "timers"."id" DESC LIMIT ?[0m  [["employee_id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/employees_controller.rb:16:in `show'
+  [1m[36mCACHE Timer Load (0.0ms)[0m  [1m[34mSELECT "timers".* FROM "timers" WHERE "timers"."employee_id" = ? ORDER BY "timers"."id" DESC LIMIT ?[0m  [["employee_id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/employees_controller.rb:16:in `show'
+  Rendering employees/show.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 1], ["record_type", "Employee"], ["name", "picture"], ["LIMIT", 1]]
+  ↳ app/views/employees/show.html.erb:5
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/employees/show.html.erb:5
+  [1m[36mCACHE Timer Load (0.0ms)[0m  [1m[34mSELECT "timers".* FROM "timers" WHERE "timers"."employee_id" = ? ORDER BY "timers"."id" DESC LIMIT ?[0m  [["employee_id", 1], ["LIMIT", 1]]
+  ↳ app/views/employees/show.html.erb:39
+  [1m[36mCACHE Timer Load (0.0ms)[0m  [1m[34mSELECT "timers".* FROM "timers" WHERE "timers"."employee_id" = ? ORDER BY "timers"."id" DESC LIMIT ?[0m  [["employee_id", 1], ["LIMIT", 1]]
+  ↳ app/views/employees/show.html.erb:39
+  [1m[36mCACHE Timer Load (0.0ms)[0m  [1m[34mSELECT "timers".* FROM "timers" WHERE "timers"."employee_id" = ? ORDER BY "timers"."id" DESC LIMIT ?[0m  [["employee_id", 1], ["LIMIT", 1]]
+  ↳ app/views/employees/show.html.erb:46
+  [1m[36mCACHE Timer Load (0.0ms)[0m  [1m[34mSELECT "timers".* FROM "timers" WHERE "timers"."employee_id" = ? ORDER BY "timers"."id" DESC LIMIT ?[0m  [["employee_id", 1], ["LIMIT", 1]]
+  ↳ app/views/employees/show.html.erb:46
+  [1m[36mCACHE Timer Load (0.0ms)[0m  [1m[34mSELECT "timers".* FROM "timers" WHERE "timers"."employee_id" = ? ORDER BY "timers"."id" DESC LIMIT ?[0m  [["employee_id", 1], ["LIMIT", 1]]
+  ↳ app/views/employees/show.html.erb:46
+  [1m[36mCACHE Timer Load (0.0ms)[0m  [1m[34mSELECT "timers".* FROM "timers" WHERE "timers"."employee_id" = ? ORDER BY "timers"."id" DESC LIMIT ?[0m  [["employee_id", 1], ["LIMIT", 1]]
+  ↳ app/views/employees/show.html.erb:46
+  [1m[36mCACHE Timer Load (0.0ms)[0m  [1m[34mSELECT "timers".* FROM "timers" WHERE "timers"."employee_id" = ? ORDER BY "timers"."id" DESC LIMIT ?[0m  [["employee_id", 1], ["LIMIT", 1]]
+  ↳ app/views/employees/show.html.erb:50
+  [1m[36mCACHE Timer Load (0.0ms)[0m  [1m[34mSELECT "timers".* FROM "timers" WHERE "timers"."employee_id" = ? ORDER BY "timers"."id" DESC LIMIT ?[0m  [["employee_id", 1], ["LIMIT", 1]]
+  ↳ app/views/employees/show.html.erb:50
+  Rendered employees/show.html.erb within layouts/application (Duration: 29.1ms | Allocations: 20685)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 69ms (Views: 32.7ms | ActiveRecord: 6.0ms | Allocations: 47703)
+
+
+Started GET "/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--f1cb47cb37f6416dd074a522b321cba55331a453/test3.png" for 127.0.0.1 at 2020-11-18 18:17:24 +0000
+Processing by ActiveStorage::BlobsController#show as PNG
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--f1cb47cb37f6416dd074a522b321cba55331a453", "filename"=>"test3"}
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[36m  Disk Storage (0.7ms) [0m[34mGenerated URL for file at key: up4gu1nkfp7ao6r9ulscd898vbtf (http://127.0.0.1:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWhkWEEwWjNVeGJtdG1jRGRoYnpaeU9YVnNjMk5rT0RrNGRtSjBaZ1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpUFdsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW5SbGMzUXpMbkJ1WnlJN0lHWnBiR1Z1WVcxbEtqMVZWRVl0T0NjbmRHVnpkRE11Y0c1bkJqc0dWRG9SWTI5dWRHVnVkRjkwZVhCbFNTSU9hVzFoWjJVdmNHNW5CanNHVkE9PSIsImV4cCI6IjIwMjAtMTEtMThUMTg6MjI6MjQuMjE5WiIsInB1ciI6ImJsb2Jfa2V5In19--d0032de9e91983b64abc7d2c1fddaa7a7a10fc8c/test3.png?content_type=image%2Fpng&disposition=inline%3B+filename%3D%22test3.png%22%3B+filename%2A%3DUTF-8%27%27test3.png)[0m
+Redirected to http://127.0.0.1:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWhkWEEwWjNVeGJtdG1jRGRoYnpaeU9YVnNjMk5rT0RrNGRtSjBaZ1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpUFdsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW5SbGMzUXpMbkJ1WnlJN0lHWnBiR1Z1WVcxbEtqMVZWRVl0T0NjbmRHVnpkRE11Y0c1bkJqc0dWRG9SWTI5dWRHVnVkRjkwZVhCbFNTSU9hVzFoWjJVdmNHNW5CanNHVkE9PSIsImV4cCI6IjIwMjAtMTEtMThUMTg6MjI6MjQuMjE5WiIsInB1ciI6ImJsb2Jfa2V5In19--d0032de9e91983b64abc7d2c1fddaa7a7a10fc8c/test3.png?content_type=image%2Fpng&disposition=inline%3B+filename%3D%22test3.png%22%3B+filename%2A%3DUTF-8%27%27test3.png
+Completed 302 Found in 7ms (ActiveRecord: 0.1ms | Allocations: 2420)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWhkWEEwWjNVeGJtdG1jRGRoYnpaeU9YVnNjMk5rT0RrNGRtSjBaZ1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpUFdsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW5SbGMzUXpMbkJ1WnlJN0lHWnBiR1Z1WVcxbEtqMVZWRVl0T0NjbmRHVnpkRE11Y0c1bkJqc0dWRG9SWTI5dWRHVnVkRjkwZVhCbFNTSU9hVzFoWjJVdmNHNW5CanNHVkE9PSIsImV4cCI6IjIwMjAtMTEtMThUMTg6MjI6MjQuMjE5WiIsInB1ciI6ImJsb2Jfa2V5In19--d0032de9e91983b64abc7d2c1fddaa7a7a10fc8c/test3.png?content_type=image%2Fpng&disposition=inline%3B+filename%3D%22test3.png%22%3B+filename%2A%3DUTF-8%27%27test3.png" for 127.0.0.1 at 2020-11-18 18:17:24 +0000
+Processing by ActiveStorage::DiskController#show as PNG
+  Parameters: {"content_type"=>"image/png", "disposition"=>"inline; filename=\"test3.png\"; filename*=UTF-8''test3.png", "encoded_key"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWhkWEEwWjNVeGJtdG1jRGRoYnpaeU9YVnNjMk5rT0RrNGRtSjBaZ1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpUFdsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW5SbGMzUXpMbkJ1WnlJN0lHWnBiR1Z1WVcxbEtqMVZWRVl0T0NjbmRHVnpkRE11Y0c1bkJqc0dWRG9SWTI5dWRHVnVkRjkwZVhCbFNTSU9hVzFoWjJVdmNHNW5CanNHVkE9PSIsImV4cCI6IjIwMjAtMTEtMThUMTg6MjI6MjQuMjE5WiIsInB1ciI6ImJsb2Jfa2V5In19--d0032de9e91983b64abc7d2c1fddaa7a7a10fc8c", "filename"=>"test3"}
+Completed 200 OK in 1ms (ActiveRecord: 0.0ms | Allocations: 706)
+
+
+Started GET "/employees/1" for 127.0.0.1 at 2020-11-18 18:35:12 +0000
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by EmployeesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mEmployee Load (0.2ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."user_id" = ? LIMIT ?[0m  [["user_id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/employees_controller.rb:72:in `set_employee'
+  [1m[36mTimer Load (0.2ms)[0m  [1m[34mSELECT "timers".* FROM "timers" WHERE "timers"."employee_id" = ? ORDER BY "timers"."id" DESC LIMIT ?[0m  [["employee_id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/employees_controller.rb:16:in `show'
+  [1m[36mCACHE Timer Load (0.0ms)[0m  [1m[34mSELECT "timers".* FROM "timers" WHERE "timers"."employee_id" = ? ORDER BY "timers"."id" DESC LIMIT ?[0m  [["employee_id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/employees_controller.rb:16:in `show'
+  [1m[36mCACHE Timer Load (0.0ms)[0m  [1m[34mSELECT "timers".* FROM "timers" WHERE "timers"."employee_id" = ? ORDER BY "timers"."id" DESC LIMIT ?[0m  [["employee_id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/employees_controller.rb:16:in `show'
+  [1m[36mCACHE Timer Load (0.0ms)[0m  [1m[34mSELECT "timers".* FROM "timers" WHERE "timers"."employee_id" = ? ORDER BY "timers"."id" DESC LIMIT ?[0m  [["employee_id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/employees_controller.rb:16:in `show'
+  Rendering employees/show.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 1], ["record_type", "Employee"], ["name", "picture"], ["LIMIT", 1]]
+  ↳ app/views/employees/show.html.erb:5
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/employees/show.html.erb:5
+  [1m[36mCACHE Timer Load (0.0ms)[0m  [1m[34mSELECT "timers".* FROM "timers" WHERE "timers"."employee_id" = ? ORDER BY "timers"."id" DESC LIMIT ?[0m  [["employee_id", 1], ["LIMIT", 1]]
+  ↳ app/views/employees/show.html.erb:39
+  [1m[36mCACHE Timer Load (0.0ms)[0m  [1m[34mSELECT "timers".* FROM "timers" WHERE "timers"."employee_id" = ? ORDER BY "timers"."id" DESC LIMIT ?[0m  [["employee_id", 1], ["LIMIT", 1]]
+  ↳ app/views/employees/show.html.erb:39
+  [1m[36mCACHE Timer Load (0.0ms)[0m  [1m[34mSELECT "timers".* FROM "timers" WHERE "timers"."employee_id" = ? ORDER BY "timers"."id" DESC LIMIT ?[0m  [["employee_id", 1], ["LIMIT", 1]]
+  ↳ app/views/employees/show.html.erb:46
+  [1m[36mCACHE Timer Load (0.0ms)[0m  [1m[34mSELECT "timers".* FROM "timers" WHERE "timers"."employee_id" = ? ORDER BY "timers"."id" DESC LIMIT ?[0m  [["employee_id", 1], ["LIMIT", 1]]
+  ↳ app/views/employees/show.html.erb:46
+  [1m[36mCACHE Timer Load (0.0ms)[0m  [1m[34mSELECT "timers".* FROM "timers" WHERE "timers"."employee_id" = ? ORDER BY "timers"."id" DESC LIMIT ?[0m  [["employee_id", 1], ["LIMIT", 1]]
+  ↳ app/views/employees/show.html.erb:46
+  [1m[36mCACHE Timer Load (0.0ms)[0m  [1m[34mSELECT "timers".* FROM "timers" WHERE "timers"."employee_id" = ? ORDER BY "timers"."id" DESC LIMIT ?[0m  [["employee_id", 1], ["LIMIT", 1]]
+  ↳ app/views/employees/show.html.erb:46
+  [1m[36mCACHE Timer Load (0.0ms)[0m  [1m[34mSELECT "timers".* FROM "timers" WHERE "timers"."employee_id" = ? ORDER BY "timers"."id" DESC LIMIT ?[0m  [["employee_id", 1], ["LIMIT", 1]]
+  ↳ app/views/employees/show.html.erb:50
+  [1m[36mCACHE Timer Load (0.0ms)[0m  [1m[34mSELECT "timers".* FROM "timers" WHERE "timers"."employee_id" = ? ORDER BY "timers"."id" DESC LIMIT ?[0m  [["employee_id", 1], ["LIMIT", 1]]
+  ↳ app/views/employees/show.html.erb:50
+  Rendered employees/show.html.erb within layouts/application (Duration: 12.2ms | Allocations: 8111)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 34ms (Views: 19.0ms | ActiveRecord: 1.1ms | Allocations: 17115)
+
+
+Started GET "/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--f1cb47cb37f6416dd074a522b321cba55331a453/test3.png" for 127.0.0.1 at 2020-11-18 18:35:13 +0000
+Processing by ActiveStorage::BlobsController#show as PNG
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--f1cb47cb37f6416dd074a522b321cba55331a453", "filename"=>"test3"}
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[36m  Disk Storage (0.4ms) [0m[34mGenerated URL for file at key: up4gu1nkfp7ao6r9ulscd898vbtf (http://127.0.0.1:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWhkWEEwWjNVeGJtdG1jRGRoYnpaeU9YVnNjMk5rT0RrNGRtSjBaZ1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpUFdsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW5SbGMzUXpMbkJ1WnlJN0lHWnBiR1Z1WVcxbEtqMVZWRVl0T0NjbmRHVnpkRE11Y0c1bkJqc0dWRG9SWTI5dWRHVnVkRjkwZVhCbFNTSU9hVzFoWjJVdmNHNW5CanNHVkE9PSIsImV4cCI6IjIwMjAtMTEtMThUMTg6NDA6MTMuMjA0WiIsInB1ciI6ImJsb2Jfa2V5In19--2a32304c990431f77e1f787b15c1f3ab8616f860/test3.png?content_type=image%2Fpng&disposition=inline%3B+filename%3D%22test3.png%22%3B+filename%2A%3DUTF-8%27%27test3.png)[0m
+Redirected to http://127.0.0.1:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWhkWEEwWjNVeGJtdG1jRGRoYnpaeU9YVnNjMk5rT0RrNGRtSjBaZ1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpUFdsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW5SbGMzUXpMbkJ1WnlJN0lHWnBiR1Z1WVcxbEtqMVZWRVl0T0NjbmRHVnpkRE11Y0c1bkJqc0dWRG9SWTI5dWRHVnVkRjkwZVhCbFNTSU9hVzFoWjJVdmNHNW5CanNHVkE9PSIsImV4cCI6IjIwMjAtMTEtMThUMTg6NDA6MTMuMjA0WiIsInB1ciI6ImJsb2Jfa2V5In19--2a32304c990431f77e1f787b15c1f3ab8616f860/test3.png?content_type=image%2Fpng&disposition=inline%3B+filename%3D%22test3.png%22%3B+filename%2A%3DUTF-8%27%27test3.png
+Completed 302 Found in 3ms (ActiveRecord: 0.1ms | Allocations: 2086)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWhkWEEwWjNVeGJtdG1jRGRoYnpaeU9YVnNjMk5rT0RrNGRtSjBaZ1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpUFdsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW5SbGMzUXpMbkJ1WnlJN0lHWnBiR1Z1WVcxbEtqMVZWRVl0T0NjbmRHVnpkRE11Y0c1bkJqc0dWRG9SWTI5dWRHVnVkRjkwZVhCbFNTSU9hVzFoWjJVdmNHNW5CanNHVkE9PSIsImV4cCI6IjIwMjAtMTEtMThUMTg6NDA6MTMuMjA0WiIsInB1ciI6ImJsb2Jfa2V5In19--2a32304c990431f77e1f787b15c1f3ab8616f860/test3.png?content_type=image%2Fpng&disposition=inline%3B+filename%3D%22test3.png%22%3B+filename%2A%3DUTF-8%27%27test3.png" for 127.0.0.1 at 2020-11-18 18:35:13 +0000
+Processing by ActiveStorage::DiskController#show as PNG
+  Parameters: {"content_type"=>"image/png", "disposition"=>"inline; filename=\"test3.png\"; filename*=UTF-8''test3.png", "encoded_key"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWhkWEEwWjNVeGJtdG1jRGRoYnpaeU9YVnNjMk5rT0RrNGRtSjBaZ1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpUFdsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW5SbGMzUXpMbkJ1WnlJN0lHWnBiR1Z1WVcxbEtqMVZWRVl0T0NjbmRHVnpkRE11Y0c1bkJqc0dWRG9SWTI5dWRHVnVkRjkwZVhCbFNTSU9hVzFoWjJVdmNHNW5CanNHVkE9PSIsImV4cCI6IjIwMjAtMTEtMThUMTg6NDA6MTMuMjA0WiIsInB1ciI6ImJsb2Jfa2V5In19--2a32304c990431f77e1f787b15c1f3ab8616f860", "filename"=>"test3"}
+Completed 200 OK in 1ms (ActiveRecord: 0.0ms | Allocations: 660)
+
+
+Started DELETE "/users/sign_out" for 127.0.0.1 at 2020-11-18 18:35:48 +0000
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"zaylUMZJbs7A6bpU3H4TWG/Xh057hB4C4DfRRmvu7SveigbibuPE3Pq/RlLO7ljWZDbIgMRExlusMBHCd6w1wA=="}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Redirected to http://127.0.0.1:3000/
+Completed 302 Found in 4ms (ActiveRecord: 0.1ms | Allocations: 2685)
+
+
+Started GET "/" for 127.0.0.1 at 2020-11-18 18:35:48 +0000
+Processing by EmployeesController#show as HTML
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms | Allocations: 605)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2020-11-18 18:35:48 +0000
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.8ms | Allocations: 526)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 4.7ms | Allocations: 1868)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 12ms (Views: 11.1ms | ActiveRecord: 0.0ms | Allocations: 7042)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2020-11-18 18:36:04 +0000
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"iPRHJPVGXHZwNlhRX6vYgqF6tigmfhhzaP1kn6IJYufhjpHWNWdSDyHagwHnyC8IkAcu792+4eeOiWQBnAq7qw==", "user"=>{"email"=>"enreta@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "enreta@gmail.com"], ["LIMIT", 1]]
+Redirected to http://127.0.0.1:3000/
+Completed 302 Found in 231ms (ActiveRecord: 0.2ms | Allocations: 4027)
+
+
+Started GET "/" for 127.0.0.1 at 2020-11-18 18:36:04 +0000
+Processing by EmployeesController#show as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mEmployee Load (0.1ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."user_id" = ? LIMIT ?[0m  [["user_id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/employees_controller.rb:72:in `set_employee'
+Redirected to http://127.0.0.1:3000/employees/new
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.2ms | Allocations: 3560)
+
+
+  
+NoMethodError (undefined method `timers' for nil:NilClass):
+  
+app/controllers/employees_controller.rb:16:in `show'
+Started GET "/" for 127.0.0.1 at 2020-11-18 19:00:39 +0000
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by EmployeesController#show as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mEmployee Load (0.4ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."user_id" = ? LIMIT ?[0m  [["user_id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/employees_controller.rb:73:in `set_employee'
+Redirected to http://127.0.0.1:3000/employees/new
+Completed 500 Internal Server Error in 31ms (ActiveRecord: 0.7ms | Allocations: 15329)
+
+
+  
+NoMethodError (undefined method `last' for nil:NilClass):
+  
+app/controllers/employees_controller.rb:17:in `show'
+Started GET "/" for 127.0.0.1 at 2020-11-18 19:01:45 +0000
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by EmployeesController#show as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mEmployee Load (0.1ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."user_id" = ? LIMIT ?[0m  [["user_id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/employees_controller.rb:72:in `set_employee'
+Redirected to http://127.0.0.1:3000/employees/new
+Completed 500 Internal Server Error in 26ms (ActiveRecord: 1.6ms | Allocations: 15534)
+
+
+  
+NoMethodError (undefined method `last' for nil:NilClass):
+  
+app/controllers/employees_controller.rb:16:in `show'
+Started GET "/" for 127.0.0.1 at 2020-11-18 19:01:47 +0000
+Processing by EmployeesController#show as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mEmployee Load (0.1ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."user_id" = ? LIMIT ?[0m  [["user_id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/employees_controller.rb:72:in `set_employee'
+Redirected to http://127.0.0.1:3000/employees/new
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.2ms | Allocations: 3571)
+
+
+  
+NoMethodError (undefined method `last' for nil:NilClass):
+  
+app/controllers/employees_controller.rb:16:in `show'
+Started GET "/" for 127.0.0.1 at 2020-11-18 19:16:42 +0000
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by EmployeesController#show as HTML
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mEmployee Load (0.3ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."user_id" = ? LIMIT ?[0m  [["user_id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/employees_controller.rb:72:in `set_employee'
+Redirected to http://127.0.0.1:3000/employees/new
+Completed 500 Internal Server Error in 42ms (ActiveRecord: 1.1ms | Allocations: 14766)
+
+
+  
+NoMethodError (undefined method `timers' for nil:NilClass):
+  
+app/controllers/employees_controller.rb:16:in `show'
+Started GET "/" for 127.0.0.1 at 2020-11-18 19:37:25 +0000
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by EmployeesController#show as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mEmployee Load (0.1ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."user_id" = ? LIMIT ?[0m  [["user_id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/employees_controller.rb:71:in `set_employee'
+Redirected to http://127.0.0.1:3000/employees/new
+Completed 302 Found in 20ms (ActiveRecord: 0.3ms | Allocations: 13965)
+
+
+Started GET "/employees/new" for 127.0.0.1 at 2020-11-18 19:37:25 +0000
+Processing by EmployeesController#new as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering employees/new.html.erb within layouts/application
+  Rendered employees/_form.html.erb (Duration: 3.8ms | Allocations: 2220)
+  Rendered employees/new.html.erb within layouts/application (Duration: 4.7ms | Allocations: 2554)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 14ms (Views: 10.1ms | ActiveRecord: 0.1ms | Allocations: 9162)
+
+
+Started GET "/timers/" for 127.0.0.1 at 2020-11-18 19:39:15 +0000
+Processing by TimersController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mEmployee Load (0.1ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."user_id" = ? LIMIT ?[0m  [["user_id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/timers_controller.rb:7:in `index'
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.3ms | Allocations: 3494)
+
+
+  
+NoMethodError (undefined method `timers' for nil:NilClass):
+  
+app/controllers/timers_controller.rb:7:in `index'
+Started GET "/timers/1" for 127.0.0.1 at 2020-11-18 19:50:05 +0000
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by TimersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mTimer Load (0.1ms)[0m  [1m[34mSELECT "timers".* FROM "timers" WHERE "timers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/timers_controller.rb:80:in `set_timer'
+  Rendering timers/show.html.erb within layouts/application
+  Rendered timers/show.html.erb within layouts/application (Duration: 0.7ms | Allocations: 315)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 24ms (Views: 7.1ms | ActiveRecord: 0.8ms | Allocations: 14344)
+
+
+Started GET "/timers/2" for 127.0.0.1 at 2020-11-18 19:50:16 +0000
+Processing by TimersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mTimer Load (0.1ms)[0m  [1m[34mSELECT "timers".* FROM "timers" WHERE "timers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/timers_controller.rb:80:in `set_timer'
+  Rendering timers/show.html.erb within layouts/application
+  Rendered timers/show.html.erb within layouts/application (Duration: 0.3ms | Allocations: 100)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 7ms (Views: 4.7ms | ActiveRecord: 0.2ms | Allocations: 5872)
+
+
+Started GET "/timers/3" for 127.0.0.1 at 2020-11-18 19:50:26 +0000
+Processing by TimersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mTimer Load (0.2ms)[0m  [1m[34mSELECT "timers".* FROM "timers" WHERE "timers"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/timers_controller.rb:80:in `set_timer'
+  Rendering timers/show.html.erb within layouts/application
+  Rendered timers/show.html.erb within layouts/application (Duration: 0.4ms | Allocations: 117)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 10ms (Views: 6.2ms | ActiveRecord: 0.3ms | Allocations: 5879)
+
+
+Started GET "/timers/4" for 127.0.0.1 at 2020-11-18 19:50:41 +0000
+Processing by TimersController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mTimer Load (0.1ms)[0m  [1m[34mSELECT "timers".* FROM "timers" WHERE "timers"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/timers_controller.rb:80:in `set_timer'
+  Rendering timers/show.html.erb within layouts/application
+  Rendered timers/show.html.erb within layouts/application (Duration: 0.3ms | Allocations: 117)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 13ms (Views: 6.9ms | ActiveRecord: 0.2ms | Allocations: 5877)
+
+
+Started GET "/timers/5" for 127.0.0.1 at 2020-11-18 19:50:50 +0000
+Processing by TimersController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mTimer Load (0.1ms)[0m  [1m[34mSELECT "timers".* FROM "timers" WHERE "timers"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/timers_controller.rb:80:in `set_timer'
+Completed 404 Not Found in 3ms (ActiveRecord: 0.2ms | Allocations: 2835)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Timer with 'id'=5):
+  
+app/controllers/timers_controller.rb:80:in `set_timer'
+Started GET "/" for 127.0.0.1 at 2020-11-18 19:51:27 +0000
+Processing by EmployeesController#show as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mEmployee Load (0.2ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."user_id" = ? LIMIT ?[0m  [["user_id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/employees_controller.rb:71:in `set_employee'
+Redirected to http://127.0.0.1:3000/employees/new
+Completed 302 Found in 3ms (ActiveRecord: 0.3ms | Allocations: 2734)
+
+
+Started GET "/employees/new" for 127.0.0.1 at 2020-11-18 19:51:27 +0000
+Processing by EmployeesController#new as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering employees/new.html.erb within layouts/application
+  Rendered employees/_form.html.erb (Duration: 6.4ms | Allocations: 1343)
+  Rendered employees/new.html.erb within layouts/application (Duration: 7.0ms | Allocations: 1426)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 15ms (Views: 12.8ms | ActiveRecord: 0.1ms | Allocations: 6693)
+
+
+Started DELETE "/users/sign_out" for 127.0.0.1 at 2020-11-18 19:52:05 +0000
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"2Aj/zdJ6DlA1RSHe6eJArnCxz7u548MJX69erq0DRUbKrAoKs0XoWZ4LRsQyKvIIVppiMQmO9N5kZLA13aOTGw=="}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+Redirected to http://127.0.0.1:3000/
+Completed 302 Found in 7ms (ActiveRecord: 0.1ms | Allocations: 2703)
+
+
+Started GET "/" for 127.0.0.1 at 2020-11-18 19:52:05 +0000
+Processing by EmployeesController#show as HTML
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms | Allocations: 590)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2020-11-18 19:52:05 +0000
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.6ms | Allocations: 527)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 4.6ms | Allocations: 1869)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 13ms (Views: 12.4ms | ActiveRecord: 0.0ms | Allocations: 7040)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2020-11-18 19:52:28 +0000
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"tY3QlBTSqX3ePb6dQYJQbjG/DsAp3go3EAJutZbSRQKI9XdvYsJ0cZTxe14PIKKdpNlUCxcZeXyf4e+nhgWb9w==", "user"=>{"email"=>"test@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "test@gmail.com"], ["LIMIT", 1]]
+Redirected to http://127.0.0.1:3000/
+Completed 302 Found in 221ms (ActiveRecord: 0.2ms | Allocations: 4032)
+
+
+Started GET "/" for 127.0.0.1 at 2020-11-18 19:52:28 +0000
+Processing by EmployeesController#show as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mEmployee Load (0.1ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."user_id" = ? LIMIT ?[0m  [["user_id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/employees_controller.rb:71:in `set_employee'
+  Rendering employees/show.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 2], ["record_type", "Employee"], ["name", "picture"], ["LIMIT", 1]]
+  ↳ app/views/employees/show.html.erb:5
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/employees/show.html.erb:5
+  [1m[36mTimer Load (0.2ms)[0m  [1m[34mSELECT "timers".* FROM "timers" WHERE "timers"."employee_id" = ? ORDER BY "timers"."id" DESC LIMIT ?[0m  [["employee_id", 2], ["LIMIT", 1]]
+  ↳ app/views/employees/show.html.erb:32
+  [1m[36mCACHE Timer Load (0.0ms)[0m  [1m[34mSELECT "timers".* FROM "timers" WHERE "timers"."employee_id" = ? ORDER BY "timers"."id" DESC LIMIT ?[0m  [["employee_id", 2], ["LIMIT", 1]]
+  ↳ app/views/employees/show.html.erb:32
+  [1m[36mCACHE Timer Load (0.0ms)[0m  [1m[34mSELECT "timers".* FROM "timers" WHERE "timers"."employee_id" = ? ORDER BY "timers"."id" DESC LIMIT ?[0m  [["employee_id", 2], ["LIMIT", 1]]
+  ↳ app/views/employees/show.html.erb:32
+  [1m[36mCACHE Timer Load (0.0ms)[0m  [1m[34mSELECT "timers".* FROM "timers" WHERE "timers"."employee_id" = ? ORDER BY "timers"."id" DESC LIMIT ?[0m  [["employee_id", 2], ["LIMIT", 1]]
+  ↳ app/views/employees/show.html.erb:32
+  [1m[36mCACHE Timer Load (0.0ms)[0m  [1m[34mSELECT "timers".* FROM "timers" WHERE "timers"."employee_id" = ? ORDER BY "timers"."id" DESC LIMIT ?[0m  [["employee_id", 2], ["LIMIT", 1]]
+  ↳ app/views/employees/show.html.erb:39
+  [1m[36mCACHE Timer Load (0.0ms)[0m  [1m[34mSELECT "timers".* FROM "timers" WHERE "timers"."employee_id" = ? ORDER BY "timers"."id" DESC LIMIT ?[0m  [["employee_id", 2], ["LIMIT", 1]]
+  ↳ app/views/employees/show.html.erb:39
+  [1m[36mCACHE Timer Load (0.0ms)[0m  [1m[34mSELECT "timers".* FROM "timers" WHERE "timers"."employee_id" = ? ORDER BY "timers"."id" DESC LIMIT ?[0m  [["employee_id", 2], ["LIMIT", 1]]
+  ↳ app/views/employees/show.html.erb:46
+  [1m[36mCACHE Timer Load (0.0ms)[0m  [1m[34mSELECT "timers".* FROM "timers" WHERE "timers"."employee_id" = ? ORDER BY "timers"."id" DESC LIMIT ?[0m  [["employee_id", 2], ["LIMIT", 1]]
+  ↳ app/views/employees/show.html.erb:46
+  [1m[36mCACHE Timer Load (0.0ms)[0m  [1m[34mSELECT "timers".* FROM "timers" WHERE "timers"."employee_id" = ? ORDER BY "timers"."id" DESC LIMIT ?[0m  [["employee_id", 2], ["LIMIT", 1]]
+  ↳ app/views/employees/show.html.erb:46
+  [1m[36mCACHE Timer Load (0.0ms)[0m  [1m[34mSELECT "timers".* FROM "timers" WHERE "timers"."employee_id" = ? ORDER BY "timers"."id" DESC LIMIT ?[0m  [["employee_id", 2], ["LIMIT", 1]]
+  ↳ app/views/employees/show.html.erb:46
+  [1m[36mCACHE Timer Load (0.0ms)[0m  [1m[34mSELECT "timers".* FROM "timers" WHERE "timers"."employee_id" = ? ORDER BY "timers"."id" DESC LIMIT ?[0m  [["employee_id", 2], ["LIMIT", 1]]
+  ↳ app/views/employees/show.html.erb:50
+  [1m[36mCACHE Timer Load (0.0ms)[0m  [1m[34mSELECT "timers".* FROM "timers" WHERE "timers"."employee_id" = ? ORDER BY "timers"."id" DESC LIMIT ?[0m  [["employee_id", 2], ["LIMIT", 1]]
+  ↳ app/views/employees/show.html.erb:50
+  Rendered employees/show.html.erb within layouts/application (Duration: 34.2ms | Allocations: 24812)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 43ms (Views: 36.9ms | ActiveRecord: 2.6ms | Allocations: 31316)
+
+
+Started GET "/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCdz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--ebdc04f109e08c4db4f935f88391a1e67dbf39cf/bootstrap-social-logo.png" for 127.0.0.1 at 2020-11-18 19:52:28 +0000
+Processing by ActiveStorage::BlobsController#show as PNG
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCdz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--ebdc04f109e08c4db4f935f88391a1e67dbf39cf", "filename"=>"bootstrap-social-logo"}
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+[36m  Disk Storage (1.4ms) [0m[34mGenerated URL for file at key: 7so1vk90hte3chc6bjx5n30ha4u6 (http://127.0.0.1:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWhOM052TVhack9UQm9kR1V6WTJoak5tSnFlRFZ1TXpCb1lUUjFOZ1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpWFdsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW1KdmIzUnpkSEpoY0MxemIyTnBZV3d0Ykc5bmJ5NXdibWNpT3lCbWFXeGxibUZ0WlNvOVZWUkdMVGduSjJKdmIzUnpkSEpoY0MxemIyTnBZV3d0Ykc5bmJ5NXdibWNHT3daVU9oRmpiMjUwWlc1MFgzUjVjR1ZKSWc1cGJXRm5aUzl3Ym1jR093WlUiLCJleHAiOiIyMDIwLTExLTE4VDE5OjU3OjI4LjkxMFoiLCJwdXIiOiJibG9iX2tleSJ9fQ==--dfc0bc6354f72c2c30a06b0541b339e17dbc76a1/bootstrap-social-logo.png?content_type=image%2Fpng&disposition=inline%3B+filename%3D%22bootstrap-social-logo.png%22%3B+filename%2A%3DUTF-8%27%27bootstrap-social-logo.png)[0m
+Redirected to http://127.0.0.1:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWhOM052TVhack9UQm9kR1V6WTJoak5tSnFlRFZ1TXpCb1lUUjFOZ1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpWFdsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW1KdmIzUnpkSEpoY0MxemIyTnBZV3d0Ykc5bmJ5NXdibWNpT3lCbWFXeGxibUZ0WlNvOVZWUkdMVGduSjJKdmIzUnpkSEpoY0MxemIyTnBZV3d0Ykc5bmJ5NXdibWNHT3daVU9oRmpiMjUwWlc1MFgzUjVjR1ZKSWc1cGJXRm5aUzl3Ym1jR093WlUiLCJleHAiOiIyMDIwLTExLTE4VDE5OjU3OjI4LjkxMFoiLCJwdXIiOiJibG9iX2tleSJ9fQ==--dfc0bc6354f72c2c30a06b0541b339e17dbc76a1/bootstrap-social-logo.png?content_type=image%2Fpng&disposition=inline%3B+filename%3D%22bootstrap-social-logo.png%22%3B+filename%2A%3DUTF-8%27%27bootstrap-social-logo.png
+Completed 302 Found in 6ms (ActiveRecord: 0.1ms | Allocations: 2411)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWhOM052TVhack9UQm9kR1V6WTJoak5tSnFlRFZ1TXpCb1lUUjFOZ1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpWFdsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW1KdmIzUnpkSEpoY0MxemIyTnBZV3d0Ykc5bmJ5NXdibWNpT3lCbWFXeGxibUZ0WlNvOVZWUkdMVGduSjJKdmIzUnpkSEpoY0MxemIyTnBZV3d0Ykc5bmJ5NXdibWNHT3daVU9oRmpiMjUwWlc1MFgzUjVjR1ZKSWc1cGJXRm5aUzl3Ym1jR093WlUiLCJleHAiOiIyMDIwLTExLTE4VDE5OjU3OjI4LjkxMFoiLCJwdXIiOiJibG9iX2tleSJ9fQ==--dfc0bc6354f72c2c30a06b0541b339e17dbc76a1/bootstrap-social-logo.png?content_type=image%2Fpng&disposition=inline%3B+filename%3D%22bootstrap-social-logo.png%22%3B+filename%2A%3DUTF-8%27%27bootstrap-social-logo.png" for 127.0.0.1 at 2020-11-18 19:52:29 +0000
+Processing by ActiveStorage::DiskController#show as PNG
+  Parameters: {"content_type"=>"image/png", "disposition"=>"inline; filename=\"bootstrap-social-logo.png\"; filename*=UTF-8''bootstrap-social-logo.png", "encoded_key"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWhOM052TVhack9UQm9kR1V6WTJoak5tSnFlRFZ1TXpCb1lUUjFOZ1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpWFdsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW1KdmIzUnpkSEpoY0MxemIyTnBZV3d0Ykc5bmJ5NXdibWNpT3lCbWFXeGxibUZ0WlNvOVZWUkdMVGduSjJKdmIzUnpkSEpoY0MxemIyTnBZV3d0Ykc5bmJ5NXdibWNHT3daVU9oRmpiMjUwWlc1MFgzUjVjR1ZKSWc1cGJXRm5aUzl3Ym1jR093WlUiLCJleHAiOiIyMDIwLTExLTE4VDE5OjU3OjI4LjkxMFoiLCJwdXIiOiJibG9iX2tleSJ9fQ==--dfc0bc6354f72c2c30a06b0541b339e17dbc76a1", "filename"=>"bootstrap-social-logo"}
+Completed 200 OK in 4ms (ActiveRecord: 0.0ms | Allocations: 700)
+
+
+Started DELETE "/users/sign_out" for 127.0.0.1 at 2020-11-18 19:52:58 +0000
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"47AG90VrBc9RWIfUCN1UcWR7GFho1VcS6XGAo0ENyy4vWL+26SDo2kKUgLtsP3nOM+krpf/WMY6y4MdekJC60Q=="}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+Redirected to http://127.0.0.1:3000/
+Completed 302 Found in 3ms (ActiveRecord: 0.1ms | Allocations: 2425)
+
+
+Started GET "/" for 127.0.0.1 at 2020-11-18 19:52:58 +0000
+Processing by EmployeesController#show as HTML
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms | Allocations: 603)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2020-11-18 19:52:58 +0000
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.2ms | Allocations: 131)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 2.0ms | Allocations: 1044)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 7ms (Views: 5.6ms | ActiveRecord: 0.0ms | Allocations: 5159)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2020-11-18 19:53:04 +0000
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"y14TOqfEO8KYCfCr/NHSMVyeD90+Rl1ujad6yTGPOcS2aSBebD+J0aD64yAHFpwZ4FB0rcZYGv1go0UqPGokWA==", "user"=>{"email"=>"p_kay5@hotmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "p_kay5@hotmail.com"], ["LIMIT", 1]]
+Redirected to http://127.0.0.1:3000/
+Completed 302 Found in 227ms (ActiveRecord: 0.2ms | Allocations: 2928)
+
+
+Started GET "/" for 127.0.0.1 at 2020-11-18 19:53:05 +0000
+Processing by EmployeesController#show as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mEmployee Load (0.1ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."user_id" = ? LIMIT ?[0m  [["user_id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/employees_controller.rb:71:in `set_employee'
+  Rendering employees/show.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 1], ["record_type", "Employee"], ["name", "picture"], ["LIMIT", 1]]
+  ↳ app/views/employees/show.html.erb:5
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/employees/show.html.erb:5
+  [1m[36mTimer Load (0.1ms)[0m  [1m[34mSELECT "timers".* FROM "timers" WHERE "timers"."employee_id" = ? ORDER BY "timers"."id" DESC LIMIT ?[0m  [["employee_id", 1], ["LIMIT", 1]]
+  ↳ app/views/employees/show.html.erb:32
+  [1m[36mCACHE Timer Load (0.0ms)[0m  [1m[34mSELECT "timers".* FROM "timers" WHERE "timers"."employee_id" = ? ORDER BY "timers"."id" DESC LIMIT ?[0m  [["employee_id", 1], ["LIMIT", 1]]
+  ↳ app/views/employees/show.html.erb:32
+  [1m[36mCACHE Timer Load (0.0ms)[0m  [1m[34mSELECT "timers".* FROM "timers" WHERE "timers"."employee_id" = ? ORDER BY "timers"."id" DESC LIMIT ?[0m  [["employee_id", 1], ["LIMIT", 1]]
+  ↳ app/views/employees/show.html.erb:32
+  [1m[36mCACHE Timer Load (0.0ms)[0m  [1m[34mSELECT "timers".* FROM "timers" WHERE "timers"."employee_id" = ? ORDER BY "timers"."id" DESC LIMIT ?[0m  [["employee_id", 1], ["LIMIT", 1]]
+  ↳ app/views/employees/show.html.erb:32
+  [1m[36mCACHE Timer Load (0.0ms)[0m  [1m[34mSELECT "timers".* FROM "timers" WHERE "timers"."employee_id" = ? ORDER BY "timers"."id" DESC LIMIT ?[0m  [["employee_id", 1], ["LIMIT", 1]]
+  ↳ app/views/employees/show.html.erb:39
+  [1m[36mCACHE Timer Load (0.0ms)[0m  [1m[34mSELECT "timers".* FROM "timers" WHERE "timers"."employee_id" = ? ORDER BY "timers"."id" DESC LIMIT ?[0m  [["employee_id", 1], ["LIMIT", 1]]
+  ↳ app/views/employees/show.html.erb:39
+  [1m[36mCACHE Timer Load (0.0ms)[0m  [1m[34mSELECT "timers".* FROM "timers" WHERE "timers"."employee_id" = ? ORDER BY "timers"."id" DESC LIMIT ?[0m  [["employee_id", 1], ["LIMIT", 1]]
+  ↳ app/views/employees/show.html.erb:46
+  [1m[36mCACHE Timer Load (0.0ms)[0m  [1m[34mSELECT "timers".* FROM "timers" WHERE "timers"."employee_id" = ? ORDER BY "timers"."id" DESC LIMIT ?[0m  [["employee_id", 1], ["LIMIT", 1]]
+  ↳ app/views/employees/show.html.erb:46
+  [1m[36mCACHE Timer Load (0.0ms)[0m  [1m[34mSELECT "timers".* FROM "timers" WHERE "timers"."employee_id" = ? ORDER BY "timers"."id" DESC LIMIT ?[0m  [["employee_id", 1], ["LIMIT", 1]]
+  ↳ app/views/employees/show.html.erb:46
+  [1m[36mCACHE Timer Load (0.0ms)[0m  [1m[34mSELECT "timers".* FROM "timers" WHERE "timers"."employee_id" = ? ORDER BY "timers"."id" DESC LIMIT ?[0m  [["employee_id", 1], ["LIMIT", 1]]
+  ↳ app/views/employees/show.html.erb:46
+  [1m[36mCACHE Timer Load (0.0ms)[0m  [1m[34mSELECT "timers".* FROM "timers" WHERE "timers"."employee_id" = ? ORDER BY "timers"."id" DESC LIMIT ?[0m  [["employee_id", 1], ["LIMIT", 1]]
+  ↳ app/views/employees/show.html.erb:50
+  [1m[36mCACHE Timer Load (0.0ms)[0m  [1m[34mSELECT "timers".* FROM "timers" WHERE "timers"."employee_id" = ? ORDER BY "timers"."id" DESC LIMIT ?[0m  [["employee_id", 1], ["LIMIT", 1]]
+  ↳ app/views/employees/show.html.erb:50
+  Rendered employees/show.html.erb within layouts/application (Duration: 12.8ms | Allocations: 11184)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 20ms (Views: 16.6ms | ActiveRecord: 0.5ms | Allocations: 17129)
+
+
+Started GET "/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--f1cb47cb37f6416dd074a522b321cba55331a453/test3.png" for 127.0.0.1 at 2020-11-18 19:53:05 +0000
+Processing by ActiveStorage::BlobsController#show as PNG
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--f1cb47cb37f6416dd074a522b321cba55331a453", "filename"=>"test3"}
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[36m  Disk Storage (0.5ms) [0m[34mGenerated URL for file at key: up4gu1nkfp7ao6r9ulscd898vbtf (http://127.0.0.1:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWhkWEEwWjNVeGJtdG1jRGRoYnpaeU9YVnNjMk5rT0RrNGRtSjBaZ1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpUFdsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW5SbGMzUXpMbkJ1WnlJN0lHWnBiR1Z1WVcxbEtqMVZWRVl0T0NjbmRHVnpkRE11Y0c1bkJqc0dWRG9SWTI5dWRHVnVkRjkwZVhCbFNTSU9hVzFoWjJVdmNHNW5CanNHVkE9PSIsImV4cCI6IjIwMjAtMTEtMThUMTk6NTg6MDUuMzE0WiIsInB1ciI6ImJsb2Jfa2V5In19--b4ecb91910e67ad6b8250e4c3602a372718d4491/test3.png?content_type=image%2Fpng&disposition=inline%3B+filename%3D%22test3.png%22%3B+filename%2A%3DUTF-8%27%27test3.png)[0m
+Redirected to http://127.0.0.1:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWhkWEEwWjNVeGJtdG1jRGRoYnpaeU9YVnNjMk5rT0RrNGRtSjBaZ1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpUFdsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW5SbGMzUXpMbkJ1WnlJN0lHWnBiR1Z1WVcxbEtqMVZWRVl0T0NjbmRHVnpkRE11Y0c1bkJqc0dWRG9SWTI5dWRHVnVkRjkwZVhCbFNTSU9hVzFoWjJVdmNHNW5CanNHVkE9PSIsImV4cCI6IjIwMjAtMTEtMThUMTk6NTg6MDUuMzE0WiIsInB1ciI6ImJsb2Jfa2V5In19--b4ecb91910e67ad6b8250e4c3602a372718d4491/test3.png?content_type=image%2Fpng&disposition=inline%3B+filename%3D%22test3.png%22%3B+filename%2A%3DUTF-8%27%27test3.png
+Completed 302 Found in 3ms (ActiveRecord: 0.1ms | Allocations: 2090)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWhkWEEwWjNVeGJtdG1jRGRoYnpaeU9YVnNjMk5rT0RrNGRtSjBaZ1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpUFdsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW5SbGMzUXpMbkJ1WnlJN0lHWnBiR1Z1WVcxbEtqMVZWRVl0T0NjbmRHVnpkRE11Y0c1bkJqc0dWRG9SWTI5dWRHVnVkRjkwZVhCbFNTSU9hVzFoWjJVdmNHNW5CanNHVkE9PSIsImV4cCI6IjIwMjAtMTEtMThUMTk6NTg6MDUuMzE0WiIsInB1ciI6ImJsb2Jfa2V5In19--b4ecb91910e67ad6b8250e4c3602a372718d4491/test3.png?content_type=image%2Fpng&disposition=inline%3B+filename%3D%22test3.png%22%3B+filename%2A%3DUTF-8%27%27test3.png" for 127.0.0.1 at 2020-11-18 19:53:05 +0000
+Processing by ActiveStorage::DiskController#show as PNG
+  Parameters: {"content_type"=>"image/png", "disposition"=>"inline; filename=\"test3.png\"; filename*=UTF-8''test3.png", "encoded_key"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWhkWEEwWjNVeGJtdG1jRGRoYnpaeU9YVnNjMk5rT0RrNGRtSjBaZ1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpUFdsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW5SbGMzUXpMbkJ1WnlJN0lHWnBiR1Z1WVcxbEtqMVZWRVl0T0NjbmRHVnpkRE11Y0c1bkJqc0dWRG9SWTI5dWRHVnVkRjkwZVhCbFNTSU9hVzFoWjJVdmNHNW5CanNHVkE9PSIsImV4cCI6IjIwMjAtMTEtMThUMTk6NTg6MDUuMzE0WiIsInB1ciI6ImJsb2Jfa2V5In19--b4ecb91910e67ad6b8250e4c3602a372718d4491", "filename"=>"test3"}
+Completed 200 OK in 1ms (ActiveRecord: 0.0ms | Allocations: 666)
+
+
+Started DELETE "/users/sign_out" for 127.0.0.1 at 2020-11-18 20:48:16 +0000
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"30GgYSnO9q7cMnzvW91iQzGZ3ErSFqbMwbbyz74u5adfR/Fj3ivFYU3NbbIWEy450K7h0hTrTNbCfA3X5+Ib5Q=="}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Redirected to http://127.0.0.1:3000/
+Completed 302 Found in 10ms (ActiveRecord: 0.3ms | Allocations: 2439)
+
+
+Started GET "/" for 127.0.0.1 at 2020-11-18 20:48:16 +0000
+Processing by EmployeesController#show as HTML
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms | Allocations: 583)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2020-11-18 20:48:16 +0000
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 1.0ms | Allocations: 514)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 7.4ms | Allocations: 1848)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 20ms (Views: 18.3ms | ActiveRecord: 0.0ms | Allocations: 7642)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2020-11-18 20:48:37 +0000
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"crilvQE9JJ3TtihWW5IzI/kPqdbvFDGr1JbLQgsKyD3q51BXa2dxSFqGC47A+hwOBsQcQ1Qe6Y4SjSm1uZcpug==", "user"=>{"email"=>"enreta@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "enreta@gmail.com"], ["LIMIT", 1]]
+Redirected to http://127.0.0.1:3000/
+Completed 302 Found in 219ms (ActiveRecord: 0.2ms | Allocations: 4007)
+
+
+Started GET "/" for 127.0.0.1 at 2020-11-18 20:48:38 +0000
+Processing by EmployeesController#show as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mEmployee Load (0.3ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."user_id" = ? LIMIT ?[0m  [["user_id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/employees_controller.rb:71:in `set_employee'
+Redirected to http://127.0.0.1:3000/employees/new
+Completed 302 Found in 7ms (ActiveRecord: 0.4ms | Allocations: 2734)
+
+
+Started GET "/employees/new" for 127.0.0.1 at 2020-11-18 20:48:38 +0000
+Processing by EmployeesController#new as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering employees/new.html.erb within layouts/application
+  Rendered employees/_form.html.erb (Duration: 2.8ms | Allocations: 1795)
+  Rendered employees/new.html.erb within layouts/application (Duration: 4.7ms | Allocations: 2124)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 13ms (Views: 10.5ms | ActiveRecord: 0.1ms | Allocations: 8058)
+
+
+Started POST "/employees" for 127.0.0.1 at 2020-11-18 20:49:42 +0000
+Processing by EmployeesController#create as HTML
+  Parameters: {"authenticity_token"=>"hDgUA3XhyYLDqkDxKvYLttVXwJfVta1AtULhnF+KUuioqXTTgF48GpQ4j10Xhv/oBAQfl8ipCGlsQsCNzDdhSw==", "employee"=>{"first_name"=>"Henrietta", "last_name"=>"Osei-Tutu", "ssn"=>"12345678910", "picture"=>#<ActionDispatch::Http::UploadedFile:0x00007f0c404d0190 @tempfile=#<Tempfile:/tmp/RackMultipart20201118-53536-zq3sbw.jpg>, @original_filename="hair.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"employee[picture]\"; filename=\"hair.jpg\"\r\nContent-Type: image/jpeg\r\n">, "address"=>"123 East Legon, Accra", "user_id"=>"2"}, "commit"=>"Create Employee"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/employees_controller.rb:33:in `block in create'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/employees_controller.rb:33:in `block in create'
+  [1m[36mEmployee Create (1.8ms)[0m  [1m[32mINSERT INTO "employees" ("first_name", "last_name", "ssn", "address", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["first_name", "Henrietta"], ["last_name", "Osei-Tutu"], ["ssn", "12345678910"], ["address", "123 East Legon, Accra"], ["user_id", 2], ["created_at", "2020-11-18 20:49:42.595089"], ["updated_at", "2020-11-18 20:49:42.595089"]]
+  ↳ app/controllers/employees_controller.rb:33:in `block in create'
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 3], ["record_type", "Employee"], ["name", "picture"], ["LIMIT", 1]]
+  ↳ app/controllers/employees_controller.rb:33:in `block in create'
+  [1m[36mActiveStorage::Blob Create (1.5ms)[0m  [1m[32mINSERT INTO "active_storage_blobs" ("key", "filename", "content_type", "metadata", "byte_size", "checksum", "created_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["key", "h0clgipfupvbbwwgv5yqcbmnj0in"], ["filename", "hair.jpg"], ["content_type", "image/jpeg"], ["metadata", "{\"identified\":true}"], ["byte_size", 78466], ["checksum", "7J/sbsRlmeSghBCXPuAFOQ=="], ["created_at", "2020-11-18 20:49:42.605131"]]
+  ↳ app/controllers/employees_controller.rb:33:in `block in create'
+  [1m[36mActiveStorage::Attachment Create (0.4ms)[0m  [1m[32mINSERT INTO "active_storage_attachments" ("name", "record_type", "record_id", "blob_id", "created_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "picture"], ["record_type", "Employee"], ["record_id", 3], ["blob_id", 3], ["created_at", "2020-11-18 20:49:42.611591"]]
+  ↳ app/controllers/employees_controller.rb:33:in `block in create'
+  [1m[36mEmployee Update (0.2ms)[0m  [1m[33mUPDATE "employees" SET "updated_at" = ? WHERE "employees"."id" = ?[0m  [["updated_at", "2020-11-18 20:49:42.615792"], ["id", 3]]
+  ↳ app/controllers/employees_controller.rb:33:in `block in create'
+  [1m[35m (7.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/employees_controller.rb:33:in `block in create'
+[36m  Disk Storage (4.5ms) [0m[32mUploaded file to key: h0clgipfupvbbwwgv5yqcbmnj0in (checksum: 7J/sbsRlmeSghBCXPuAFOQ==)[0m
+[ActiveJob] Enqueued ActiveStorage::AnalyzeJob (Job ID: 6f61ca25-dd30-4e6c-a63e-6bde4f3bcb8d) to Async(active_storage_analysis) with arguments: #<GlobalID:0x00007f0c406af380 @uri=#<URI::GID gid://attendance/ActiveStorage::Blob/3>>
+Redirected to http://127.0.0.1:3000/employees/3
+Completed 302 Found in 82ms (ActiveRecord: 11.8ms | Allocations: 34276)
+
+
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+[ActiveJob] [ActiveStorage::AnalyzeJob] [6f61ca25-dd30-4e6c-a63e-6bde4f3bcb8d] Performing ActiveStorage::AnalyzeJob (Job ID: 6f61ca25-dd30-4e6c-a63e-6bde4f3bcb8d) from Async(active_storage_analysis) enqueued at 2020-11-18T20:49:42Z with arguments: #<GlobalID:0x00007f0c40667710 @uri=#<URI::GID gid://attendance/ActiveStorage::Blob/3>>
+[ActiveJob] [ActiveStorage::AnalyzeJob] [6f61ca25-dd30-4e6c-a63e-6bde4f3bcb8d] [36m  Disk Storage (0.2ms) [0m[34mDownloaded file from key: h0clgipfupvbbwwgv5yqcbmnj0in[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [6f61ca25-dd30-4e6c-a63e-6bde4f3bcb8d] Skipping image analysis because the mini_magick gem isn't installed
+[ActiveJob] [ActiveStorage::AnalyzeJob] [6f61ca25-dd30-4e6c-a63e-6bde4f3bcb8d]   [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+Started GET "/employees/3" for 127.0.0.1 at 2020-11-18 20:49:42 +0000
+[ActiveJob] [ActiveStorage::AnalyzeJob] [6f61ca25-dd30-4e6c-a63e-6bde4f3bcb8d]   [1m[36mActiveStorage::Blob Update (0.3ms)[0m  [1m[33mUPDATE "active_storage_blobs" SET "metadata" = ? WHERE "active_storage_blobs"."id" = ?[0m  [["metadata", "{\"identified\":true,\"analyzed\":true}"], ["id", 3]]
+[ActiveJob] [ActiveStorage::AnalyzeJob] [6f61ca25-dd30-4e6c-a63e-6bde4f3bcb8d]   [1m[35m (4.0ms)[0m  [1m[36mcommit transaction[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [6f61ca25-dd30-4e6c-a63e-6bde4f3bcb8d] Performed ActiveStorage::AnalyzeJob (Job ID: 6f61ca25-dd30-4e6c-a63e-6bde4f3bcb8d) from Async(active_storage_analysis) in 21.9ms
+Processing by EmployeesController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mEmployee Load (0.1ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."user_id" = ? LIMIT ?[0m  [["user_id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/employees_controller.rb:71:in `set_employee'
+  Rendering employees/show.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 3], ["record_type", "Employee"], ["name", "picture"], ["LIMIT", 1]]
+  ↳ app/views/employees/show.html.erb:5
+  [1m[36mActiveStorage::Blob Load (0.3ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/employees/show.html.erb:5
+  [1m[36mTimer Load (0.2ms)[0m  [1m[34mSELECT "timers".* FROM "timers" WHERE "timers"."employee_id" = ?[0m  [["employee_id", 3]]
+  ↳ app/views/employees/show.html.erb:32
+  Rendered employees/show.html.erb within layouts/application (Duration: 12.2ms | Allocations: 5032)
+Completed 500 Internal Server Error in 33ms (ActiveRecord: 0.8ms | Allocations: 8050)
+
+
+  
+ActionView::Template::Error (undefined method `time_out' for nil:NilClass):
+    29:     </div>
+    30:     <div class="col-md-4">
+    31:       <div>
+    32:         <% if current_user.employee.timers.blank? or current_user.employee.timers.last.time_in.blank? or current_user.employee.timers.last.time_in.present? and current_user.employee.timers.last.time_out.present?%>
+    33:           <%= link_to 'Clock In', timers_clockin_path, class:'btn btn-success' %>
+    34:         <% else %>
+    35:           <%= link_to 'Clock Out', timers_clockout_path, class:'btn btn-danger' %>
+  
+app/views/employees/show.html.erb:32
+Started GET "/employees/3" for 127.0.0.1 at 2020-11-18 21:06:31 +0000
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by EmployeesController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mEmployee Load (0.2ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."user_id" = ? LIMIT ?[0m  [["user_id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/employees_controller.rb:71:in `set_employee'
+  Rendering employees/show.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 3], ["record_type", "Employee"], ["name", "picture"], ["LIMIT", 1]]
+  ↳ app/views/employees/show.html.erb:5
+  [1m[36mActiveStorage::Blob Load (0.3ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/employees/show.html.erb:5
+  [1m[36mTimer Load (0.3ms)[0m  [1m[34mSELECT "timers".* FROM "timers" WHERE "timers"."employee_id" = ?[0m  [["employee_id", 3]]
+  ↳ app/views/employees/show.html.erb:32
+  Rendered employees/show.html.erb within layouts/application (Duration: 19.6ms | Allocations: 4640)
+Completed 500 Internal Server Error in 27ms (ActiveRecord: 1.2ms | Allocations: 8402)
+
+
+  
+ActionView::Template::Error (undefined method `time_out' for nil:NilClass):
+    29:     </div>
+    30:     <div class="col-md-4">
+    31:       <div>
+    32:         <% if current_user.employee.timers.blank? or current_user.employee.timers.last.time_in.blank? or current_user.employee.timers.last.time_in.present? and current_user.employee.timers.last.time_out&.present?%>
+    33:           <%= link_to 'Clock In', timers_clockin_path, class:'btn btn-success' %>
+    34:         <% else %>
+    35:           <%= link_to 'Clock Out', timers_clockout_path, class:'btn btn-danger' %>
+  
+app/views/employees/show.html.erb:32
+Started GET "/" for 127.0.0.1 at 2020-11-18 21:21:54 +0000
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (1.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by EmployeesController#show as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mEmployee Load (0.4ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."user_id" = ? LIMIT ?[0m  [["user_id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/employees_controller.rb:71:in `set_employee'
+  Rendering employees/show.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 3], ["record_type", "Employee"], ["name", "picture"], ["LIMIT", 1]]
+  ↳ app/views/employees/show.html.erb:5
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/employees/show.html.erb:5
+  [1m[36mTimer Load (0.1ms)[0m  [1m[34mSELECT "timers".* FROM "timers" WHERE "timers"."employee_id" = ?[0m  [["employee_id", 3]]
+  ↳ app/views/employees/show.html.erb:32
+  Rendered employees/show.html.erb within layouts/application (Duration: 39.2ms | Allocations: 22244)
+Completed 500 Internal Server Error in 92ms (ActiveRecord: 3.8ms | Allocations: 43282)
+
+
+  
+ActionView::Template::Error (undefined method `time_out' for nil:NilClass):
+    29:     </div>
+    30:     <div class="col-md-4">
+    31:       <div>
+    32:         <% if current_user.employee.timers.blank? or current_user.employee.timers.last.time_in.blank? or current_user.employee.timers.last.time_in.present? and current_user.employee.timers.last.time_out&.present?%>
+    33:           <%= link_to 'Clock In', timers_clockin_path, class:'btn btn-success' %>
+    34:         <% else %>
+    35:           <%= link_to 'Clock Out', timers_clockout_path, class:'btn btn-danger' %>
+  
+app/views/employees/show.html.erb:32
+Started GET "/" for 127.0.0.1 at 2020-11-18 21:22:00 +0000
+Processing by EmployeesController#show as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mEmployee Load (0.3ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."user_id" = ? LIMIT ?[0m  [["user_id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/employees_controller.rb:71:in `set_employee'
+  Rendering employees/show.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 3], ["record_type", "Employee"], ["name", "picture"], ["LIMIT", 1]]
+  ↳ app/views/employees/show.html.erb:5
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/employees/show.html.erb:5
+  [1m[36mTimer Load (0.1ms)[0m  [1m[34mSELECT "timers".* FROM "timers" WHERE "timers"."employee_id" = ?[0m  [["employee_id", 3]]
+  ↳ app/views/employees/show.html.erb:32
+  Rendered employees/show.html.erb within layouts/application (Duration: 4.3ms | Allocations: 4163)
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.6ms | Allocations: 7122)
+
+
+  
+ActionView::Template::Error (undefined method `time_out' for nil:NilClass):
+    29:     </div>
+    30:     <div class="col-md-4">
+    31:       <div>
+    32:         <% if current_user.employee.timers.blank? or current_user.employee.timers.last.time_in.blank? or current_user.employee.timers.last.time_in.present? and current_user.employee.timers.last.time_out&.present?%>
+    33:           <%= link_to 'Clock In', timers_clockin_path, class:'btn btn-success' %>
+    34:         <% else %>
+    35:           <%= link_to 'Clock Out', timers_clockout_path, class:'btn btn-danger' %>
+  
+app/views/employees/show.html.erb:32
+Started GET "/" for 127.0.0.1 at 2020-11-18 21:22:20 +0000
+Processing by EmployeesController#show as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mEmployee Load (0.1ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."user_id" = ? LIMIT ?[0m  [["user_id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/employees_controller.rb:71:in `set_employee'
+  Rendering employees/show.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 3], ["record_type", "Employee"], ["name", "picture"], ["LIMIT", 1]]
+  ↳ app/views/employees/show.html.erb:5
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/employees/show.html.erb:5
+  [1m[36mTimer Load (0.1ms)[0m  [1m[34mSELECT "timers".* FROM "timers" WHERE "timers"."employee_id" = ?[0m  [["employee_id", 3]]
+  ↳ app/views/employees/show.html.erb:32
+  Rendered employees/show.html.erb within layouts/application (Duration: 6.5ms | Allocations: 4156)
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 0.5ms | Allocations: 7052)
+
+
+  
+ActionView::Template::Error (undefined method `time_out' for nil:NilClass):
+    29:     </div>
+    30:     <div class="col-md-4">
+    31:       <div>
+    32:         <% if current_user.employee.timers.blank? or current_user.employee.timers.last.time_in.blank? or current_user.employee.timers.last.time_in.present? and current_user.employee.timers.last.time_out&.present?%>
+    33:           <%= link_to 'Clock In', timers_clockin_path, class:'btn btn-success' %>
+    34:         <% else %>
+    35:           <%= link_to 'Clock Out', timers_clockout_path, class:'btn btn-danger' %>
+  
+app/views/employees/show.html.erb:32
+Started DELETE "/users/sign_out" for 127.0.0.1 at 2020-11-18 21:22:39 +0000
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"hDgUA3XhyYLDqkDxKvYLttVXwJfVta1AtULhnF+KUuioqXTTgF48GpQ4j10Xhv/oBAQfl8ipCGlsQsCNzDdhSw=="}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+Redirected to http://127.0.0.1:3000/
+Completed 302 Found in 7ms (ActiveRecord: 0.1ms | Allocations: 4769)
+
+
+Started GET "/" for 127.0.0.1 at 2020-11-18 21:22:39 +0000
+Processing by EmployeesController#show as HTML
+Completed 401 Unauthorized in 2ms (ActiveRecord: 0.0ms | Allocations: 622)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2020-11-18 21:22:39 +0000
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 2.5ms | Allocations: 598)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 6.7ms | Allocations: 2736)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 19ms (Views: 17.6ms | ActiveRecord: 0.0ms | Allocations: 11013)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2020-11-18 21:22:57 +0000
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"xSbpiBY++UvdpXBmWsnpd07wF4JNgnffV9soiU0hMYFyJNGPQZUhqn9i+YNpo/chX0BUDXKDKUAUxFQG78yoJg==", "user"=>{"email"=>"enreta@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "enreta@gmail.com"], ["LIMIT", 1]]
+Redirected to http://127.0.0.1:3000/
+Completed 302 Found in 223ms (ActiveRecord: 0.5ms | Allocations: 4639)
+
+
+Started GET "/" for 127.0.0.1 at 2020-11-18 21:22:57 +0000
+Processing by EmployeesController#show as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mEmployee Load (0.1ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."user_id" = ? LIMIT ?[0m  [["user_id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/employees_controller.rb:71:in `set_employee'
+  Rendering employees/show.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 3], ["record_type", "Employee"], ["name", "picture"], ["LIMIT", 1]]
+  ↳ app/views/employees/show.html.erb:5
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/employees/show.html.erb:5
+  [1m[36mTimer Load (0.1ms)[0m  [1m[34mSELECT "timers".* FROM "timers" WHERE "timers"."employee_id" = ?[0m  [["employee_id", 3]]
+  ↳ app/views/employees/show.html.erb:32
+  Rendered employees/show.html.erb within layouts/application (Duration: 4.5ms | Allocations: 4163)
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.3ms | Allocations: 7020)
+
+
+  
+ActionView::Template::Error (undefined method `time_out' for nil:NilClass):
+    29:     </div>
+    30:     <div class="col-md-4">
+    31:       <div>
+    32:         <% if current_user.employee.timers.blank? or current_user.employee.timers.last.time_in.blank? or current_user.employee.timers.last.time_in.present? and current_user.employee.timers.last.time_out&.present?%>
+    33:           <%= link_to 'Clock In', timers_clockin_path, class:'btn btn-success' %>
+    34:         <% else %>
+    35:           <%= link_to 'Clock Out', timers_clockout_path, class:'btn btn-danger' %>
+  
+app/views/employees/show.html.erb:32
+Started GET "/" for 127.0.0.1 at 2020-11-18 21:23:49 +0000
+Processing by EmployeesController#show as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mEmployee Load (0.5ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."user_id" = ? LIMIT ?[0m  [["user_id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/employees_controller.rb:71:in `set_employee'
+  Rendering employees/show.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 3], ["record_type", "Employee"], ["name", "picture"], ["LIMIT", 1]]
+  ↳ app/views/employees/show.html.erb:5
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/employees/show.html.erb:5
+  [1m[36mTimer Load (0.1ms)[0m  [1m[34mSELECT "timers".* FROM "timers" WHERE "timers"."employee_id" = ?[0m  [["employee_id", 3]]
+  ↳ app/views/employees/show.html.erb:32
+  Rendered employees/show.html.erb within layouts/application (Duration: 5.7ms | Allocations: 4591)
+Completed 500 Internal Server Error in 16ms (ActiveRecord: 0.9ms | Allocations: 8281)
+
+
+  
+ActionView::Template::Error (undefined method `time_out' for nil:NilClass):
+    29:     </div>
+    30:     <div class="col-md-4">
+    31:       <div>
+    32:         <% if current_user.employee.timers.blank? or current_user.employee.timers.last.time_in.blank? or current_user.employee.timers.last.time_in.present? and current_user.employee.timers.last.time_out.present?%>
+    33:           <%= link_to 'Clock In', timers_clockin_path, class:'btn btn-success' %>
+    34:         <% else %>
+    35:           <%= link_to 'Clock Out', timers_clockout_path, class:'btn btn-danger' %>
+  
+app/views/employees/show.html.erb:32
+Started GET "/" for 127.0.0.1 at 2020-11-18 21:26:12 +0000
+Processing by EmployeesController#show as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mEmployee Load (0.1ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."user_id" = ? LIMIT ?[0m  [["user_id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/employees_controller.rb:71:in `set_employee'
+  Rendering employees/show.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 3], ["record_type", "Employee"], ["name", "picture"], ["LIMIT", 1]]
+  ↳ app/views/employees/show.html.erb:5
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/employees/show.html.erb:5
+  [1m[36mTimer Load (0.1ms)[0m  [1m[34mSELECT "timers".* FROM "timers" WHERE "timers"."employee_id" = ?[0m  [["employee_id", 3]]
+  ↳ app/views/employees/show.html.erb:32
+  Rendered employees/show.html.erb within layouts/application (Duration: 249.1ms | Allocations: 141839)
+Completed 500 Internal Server Error in 253ms (ActiveRecord: 0.5ms | Allocations: 145547)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `timers' for #<#<Class:0x000055d913f021b0>:0x000055d913ee7518>
+Did you mean?  timers_url):
+    29:     </div>
+    30:     <div class="col-md-4">
+    31:       <div>
+    32:         <% if current_user.employee.timers.blank? or current_user.employee.timers.last.time_in.blank? or current_user.employee.timers.last.time_in.present? and current_user.employee.!timers.last.time_out.present?%>
+    33:           <%= link_to 'Clock In', timers_clockin_path, class:'btn btn-success' %>
+    34:         <% else %>
+    35:           <%= link_to 'Clock Out', timers_clockout_path, class:'btn btn-danger' %>
+  
+app/views/employees/show.html.erb:32
+Started GET "/" for 127.0.0.1 at 2020-11-18 21:42:56 +0000
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by EmployeesController#show as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mEmployee Load (0.2ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."user_id" = ? LIMIT ?[0m  [["user_id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/employees_controller.rb:71:in `set_employee'
+  Rendering employees/show.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 3], ["record_type", "Employee"], ["name", "picture"], ["LIMIT", 1]]
+  ↳ app/views/employees/show.html.erb:5
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/employees/show.html.erb:5
+  [1m[36mTimer Load (0.1ms)[0m  [1m[34mSELECT "timers".* FROM "timers" WHERE "timers"."employee_id" = ?[0m  [["employee_id", 3]]
+  ↳ app/views/employees/show.html.erb:32
+  Rendered employees/show.html.erb within layouts/application (Duration: 6.4ms | Allocations: 4708)
+Completed 500 Internal Server Error in 16ms (ActiveRecord: 0.8ms | Allocations: 8446)
+
+
+  
+ActionView::Template::Error (undefined method `time_in' for nil:NilClass):
+    38:         <% end %>
+    39:       </div>
+    40:       <br>
+    41:       <% if current_user.employee.timers.last.time_in.present? and current_user.employee.timers.last.time_out.blank? %>
+    42:       <p class="text-left">
+    43:         Welcome to work! Your last reporting time was on <b><%= current_user.employee.timers.last.time_in.strftime("%d, %b %Y,") %></b> at <b><%= current_user.employee.timers.last.time_in.strftime("%I:%M %p") %></b>
+    44:       </p>
+  
+app/views/employees/show.html.erb:41
+Started GET "/" for 127.0.0.1 at 2020-11-18 21:47:50 +0000
+Processing by EmployeesController#show as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mEmployee Load (0.1ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."user_id" = ? LIMIT ?[0m  [["user_id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/employees_controller.rb:71:in `set_employee'
+  Rendering employees/show.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 3], ["record_type", "Employee"], ["name", "picture"], ["LIMIT", 1]]
+  ↳ app/views/employees/show.html.erb:5
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/employees/show.html.erb:5
+  [1m[36mTimer Load (0.1ms)[0m  [1m[34mSELECT "timers".* FROM "timers" WHERE "timers"."employee_id" = ?[0m  [["employee_id", 3]]
+  ↳ app/views/employees/show.html.erb:32
+  Rendered employees/show.html.erb within layouts/application (Duration: 6.4ms | Allocations: 4653)
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 0.5ms | Allocations: 8343)
+
+
+  
+ActionView::Template::Error (undefined method `time_in' for nil:NilClass):
+    38:         <% end %>
+    39:       </div>
+    40:       <br>
+    41:       <% if current_user.employee.timers.last.time_in.empty? and current_user.employee.timers.last.time_out.blank? %>
+    42:       <p class="text-left">
+    43:         Welcome to work! Your last reporting time was on <b><%= current_user.employee.timers.last.time_in.strftime("%d, %b %Y,") %></b> at <b><%= current_user.employee.timers.last.time_in.strftime("%I:%M %p") %></b>
+    44:       </p>
+  
+app/views/employees/show.html.erb:41
+Started GET "/" for 127.0.0.1 at 2020-11-18 21:47:52 +0000
+Processing by EmployeesController#show as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mEmployee Load (0.1ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."user_id" = ? LIMIT ?[0m  [["user_id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/employees_controller.rb:71:in `set_employee'
+  Rendering employees/show.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 3], ["record_type", "Employee"], ["name", "picture"], ["LIMIT", 1]]
+  ↳ app/views/employees/show.html.erb:5
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/employees/show.html.erb:5
+  [1m[36mTimer Load (0.1ms)[0m  [1m[34mSELECT "timers".* FROM "timers" WHERE "timers"."employee_id" = ?[0m  [["employee_id", 3]]
+  ↳ app/views/employees/show.html.erb:32
+  Rendered employees/show.html.erb within layouts/application (Duration: 8.2ms | Allocations: 4182)
+Completed 500 Internal Server Error in 12ms (ActiveRecord: 0.5ms | Allocations: 7039)
+
+
+  
+ActionView::Template::Error (undefined method `time_in' for nil:NilClass):
+    38:         <% end %>
+    39:       </div>
+    40:       <br>
+    41:       <% if current_user.employee.timers.last.time_in.empty? and current_user.employee.timers.last.time_out.blank? %>
+    42:       <p class="text-left">
+    43:         Welcome to work! Your last reporting time was on <b><%= current_user.employee.timers.last.time_in.strftime("%d, %b %Y,") %></b> at <b><%= current_user.employee.timers.last.time_in.strftime("%I:%M %p") %></b>
+    44:       </p>
+  
+app/views/employees/show.html.erb:41
+Started GET "/" for 127.0.0.1 at 2020-11-18 21:51:46 +0000
+Processing by EmployeesController#show as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mEmployee Load (0.1ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."user_id" = ? LIMIT ?[0m  [["user_id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/employees_controller.rb:71:in `set_employee'
+  Rendering employees/show.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 3], ["record_type", "Employee"], ["name", "picture"], ["LIMIT", 1]]
+  ↳ app/views/employees/show.html.erb:5
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/employees/show.html.erb:5
+  [1m[36mTimer Load (0.1ms)[0m  [1m[34mSELECT "timers".* FROM "timers" WHERE "timers"."employee_id" = ?[0m  [["employee_id", 3]]
+  ↳ app/views/employees/show.html.erb:32
+  Rendered employees/show.html.erb within layouts/application (Duration: 4.5ms | Allocations: 3285)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 16ms (Views: 10.6ms | ActiveRecord: 0.4ms | Allocations: 10565)
+
+
+Started GET "/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBDQT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--0edf40e8edbfc1bdb57e692027b43183d2bdf0b3/hair.jpg" for 127.0.0.1 at 2020-11-18 21:51:47 +0000
+Processing by ActiveStorage::BlobsController#show as JPEG
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBDQT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--0edf40e8edbfc1bdb57e692027b43183d2bdf0b3", "filename"=>"hair"}
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+[36m  Disk Storage (1.0ms) [0m[34mGenerated URL for file at key: h0clgipfupvbbwwgv5yqcbmnj0in (http://127.0.0.1:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWhhREJqYkdkcGNHWjFjSFppWW5kM1ozWTFlWEZqWW0xdWFqQnBiZ1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpTzJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW1oaGFYSXVhbkJuSWpzZ1ptbHNaVzVoYldVcVBWVlVSaTA0Snlkb1lXbHlMbXB3WndZN0JsUTZFV052Ym5SbGJuUmZkSGx3WlVraUQybHRZV2RsTDJwd1pXY0dPd1pVIiwiZXhwIjoiMjAyMC0xMS0xOFQyMTo1Njo0Ny4xMjZaIiwicHVyIjoiYmxvYl9rZXkifX0=--baaec670f4e10713a040ba69904e4828122be1f2/hair.jpg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%22hair.jpg%22%3B+filename%2A%3DUTF-8%27%27hair.jpg)[0m
+Redirected to http://127.0.0.1:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWhhREJqYkdkcGNHWjFjSFppWW5kM1ozWTFlWEZqWW0xdWFqQnBiZ1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpTzJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW1oaGFYSXVhbkJuSWpzZ1ptbHNaVzVoYldVcVBWVlVSaTA0Snlkb1lXbHlMbXB3WndZN0JsUTZFV052Ym5SbGJuUmZkSGx3WlVraUQybHRZV2RsTDJwd1pXY0dPd1pVIiwiZXhwIjoiMjAyMC0xMS0xOFQyMTo1Njo0Ny4xMjZaIiwicHVyIjoiYmxvYl9rZXkifX0=--baaec670f4e10713a040ba69904e4828122be1f2/hair.jpg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%22hair.jpg%22%3B+filename%2A%3DUTF-8%27%27hair.jpg
+Completed 302 Found in 6ms (ActiveRecord: 0.1ms | Allocations: 2468)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWhhREJqYkdkcGNHWjFjSFppWW5kM1ozWTFlWEZqWW0xdWFqQnBiZ1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpTzJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW1oaGFYSXVhbkJuSWpzZ1ptbHNaVzVoYldVcVBWVlVSaTA0Snlkb1lXbHlMbXB3WndZN0JsUTZFV052Ym5SbGJuUmZkSGx3WlVraUQybHRZV2RsTDJwd1pXY0dPd1pVIiwiZXhwIjoiMjAyMC0xMS0xOFQyMTo1Njo0Ny4xMjZaIiwicHVyIjoiYmxvYl9rZXkifX0=--baaec670f4e10713a040ba69904e4828122be1f2/hair.jpg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%22hair.jpg%22%3B+filename%2A%3DUTF-8%27%27hair.jpg" for 127.0.0.1 at 2020-11-18 21:51:47 +0000
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"content_type"=>"image/jpeg", "disposition"=>"inline; filename=\"hair.jpg\"; filename*=UTF-8''hair.jpg", "encoded_key"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWhhREJqYkdkcGNHWjFjSFppWW5kM1ozWTFlWEZqWW0xdWFqQnBiZ1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpTzJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW1oaGFYSXVhbkJuSWpzZ1ptbHNaVzVoYldVcVBWVlVSaTA0Snlkb1lXbHlMbXB3WndZN0JsUTZFV052Ym5SbGJuUmZkSGx3WlVraUQybHRZV2RsTDJwd1pXY0dPd1pVIiwiZXhwIjoiMjAyMC0xMS0xOFQyMTo1Njo0Ny4xMjZaIiwicHVyIjoiYmxvYl9rZXkifX0=--baaec670f4e10713a040ba69904e4828122be1f2", "filename"=>"hair"}
+Completed 200 OK in 1ms (ActiveRecord: 0.0ms | Allocations: 727)
+
+
+Started GET "/timers/clockin" for 127.0.0.1 at 2020-11-18 21:52:12 +0000
+Processing by TimersController#clockin as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mEmployee Load (0.1ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."user_id" = ? LIMIT ?[0m  [["user_id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/timers_controller.rb:66:in `clockin'
+  [1m[35m (0.9ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/timers_controller.rb:66:in `clockin'
+  [1m[36mEmployee Load (0.2ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/timers_controller.rb:66:in `clockin'
+  [1m[36mTimer Create (0.3ms)[0m  [1m[32mINSERT INTO "timers" ("employee_id", "time_in", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["employee_id", 3], ["time_in", "2020-11-18 21:52:12.997545"], ["created_at", "2020-11-18 21:52:13.009107"], ["updated_at", "2020-11-18 21:52:13.009107"]]
+  ↳ app/controllers/timers_controller.rb:66:in `clockin'
+  [1m[35m (1.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/timers_controller.rb:66:in `clockin'
+Redirected to http://127.0.0.1:3000/employees/2
+Completed 302 Found in 19ms (ActiveRecord: 3.1ms | Allocations: 11213)
+
+
+Started GET "/employees/2" for 127.0.0.1 at 2020-11-18 21:52:13 +0000
+Processing by EmployeesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mEmployee Load (0.1ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."user_id" = ? LIMIT ?[0m  [["user_id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/employees_controller.rb:71:in `set_employee'
+  Rendering employees/show.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 3], ["record_type", "Employee"], ["name", "picture"], ["LIMIT", 1]]
+  ↳ app/views/employees/show.html.erb:5
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/employees/show.html.erb:5
+  [1m[36mTimer Load (0.1ms)[0m  [1m[34mSELECT "timers".* FROM "timers" WHERE "timers"."employee_id" = ?[0m  [["employee_id", 3]]
+  ↳ app/views/employees/show.html.erb:32
+  Rendered employees/show.html.erb within layouts/application (Duration: 10.8ms | Allocations: 2891)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 21ms (Views: 16.9ms | ActiveRecord: 0.8ms | Allocations: 8856)
+
+
+Started GET "/employees/3/edit" for 127.0.0.1 at 2020-11-18 21:55:26 +0000
+Processing by EmployeesController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mEmployee Load (0.1ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."user_id" = ? LIMIT ?[0m  [["user_id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/employees_controller.rb:71:in `set_employee'
+  Rendering employees/edit.html.erb within layouts/application
+  Rendered employees/_form.html.erb (Duration: 12.1ms | Allocations: 7403)
+  Rendered employees/edit.html.erb within layouts/application (Duration: 13.0ms | Allocations: 7786)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 22ms (Views: 17.6ms | ActiveRecord: 0.2ms | Allocations: 13796)
+
+
+Started PATCH "/employees/3" for 127.0.0.1 at 2020-11-18 21:55:31 +0000
+Processing by EmployeesController#update as HTML
+  Parameters: {"authenticity_token"=>"/t6IXwlBrY7S3Dn2gQmwul+cg/tm65qALIn+chuDer8COjTtj3/F0LB1SUU2ZYWU9LlbWQ+OZd16mGpmxFwW4g==", "employee"=>{"first_name"=>"Henrietta", "last_name"=>"Osei-Tutu", "ssn"=>"12345678910", "address"=>"123 East Legon, Accra", "user_id"=>"2"}, "commit"=>"Update Employee", "id"=>"3"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mEmployee Load (0.1ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."user_id" = ? LIMIT ?[0m  [["user_id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/employees_controller.rb:71:in `set_employee'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/employees_controller.rb:47:in `block in update'
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 3], ["record_type", "Employee"], ["name", "picture"], ["LIMIT", 1]]
+  ↳ app/controllers/employees_controller.rb:47:in `block in update'
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/employees_controller.rb:47:in `block in update'
+Redirected to http://127.0.0.1:3000/employees/3
+Completed 302 Found in 10ms (ActiveRecord: 0.4ms | Allocations: 6491)
+
+
+Started GET "/employees/3" for 127.0.0.1 at 2020-11-18 21:55:31 +0000
+Processing by EmployeesController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mEmployee Load (0.1ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."user_id" = ? LIMIT ?[0m  [["user_id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/employees_controller.rb:71:in `set_employee'
+  Rendering employees/show.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 3], ["record_type", "Employee"], ["name", "picture"], ["LIMIT", 1]]
+  ↳ app/views/employees/show.html.erb:5
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/employees/show.html.erb:5
+  [1m[36mTimer Load (0.1ms)[0m  [1m[34mSELECT "timers".* FROM "timers" WHERE "timers"."employee_id" = ?[0m  [["employee_id", 3]]
+  ↳ app/views/employees/show.html.erb:32
+  Rendered employees/show.html.erb within layouts/application (Duration: 8.5ms | Allocations: 2881)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 18ms (Views: 14.3ms | ActiveRecord: 0.5ms | Allocations: 8857)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWhhREJqYkdkcGNHWjFjSFppWW5kM1ozWTFlWEZqWW0xdWFqQnBiZ1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpTzJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW1oaGFYSXVhbkJuSWpzZ1ptbHNaVzVoYldVcVBWVlVSaTA0Snlkb1lXbHlMbXB3WndZN0JsUTZFV052Ym5SbGJuUmZkSGx3WlVraUQybHRZV2RsTDJwd1pXY0dPd1pVIiwiZXhwIjoiMjAyMC0xMS0xOFQyMTo1Njo0Ny4xMjZaIiwicHVyIjoiYmxvYl9rZXkifX0=--baaec670f4e10713a040ba69904e4828122be1f2/hair.jpg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%22hair.jpg%22%3B+filename%2A%3DUTF-8%27%27hair.jpg" for 127.0.0.1 at 2020-11-18 21:55:32 +0000
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"content_type"=>"image/jpeg", "disposition"=>"inline; filename=\"hair.jpg\"; filename*=UTF-8''hair.jpg", "encoded_key"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWhhREJqYkdkcGNHWjFjSFppWW5kM1ozWTFlWEZqWW0xdWFqQnBiZ1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpTzJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW1oaGFYSXVhbkJuSWpzZ1ptbHNaVzVoYldVcVBWVlVSaTA0Snlkb1lXbHlMbXB3WndZN0JsUTZFV052Ym5SbGJuUmZkSGx3WlVraUQybHRZV2RsTDJwd1pXY0dPd1pVIiwiZXhwIjoiMjAyMC0xMS0xOFQyMTo1Njo0Ny4xMjZaIiwicHVyIjoiYmxvYl9rZXkifX0=--baaec670f4e10713a040ba69904e4828122be1f2", "filename"=>"hair"}
+Completed 304 Not Modified in 1ms (ActiveRecord: 0.0ms | Allocations: 647)
+
+
+Started GET "/timers/clockout" for 127.0.0.1 at 2020-11-18 21:55:35 +0000
+Processing by TimersController#clockout as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mTimer Load (0.2ms)[0m  [1m[34mSELECT "timers".* FROM "timers" ORDER BY "timers"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/timers_controller.rb:71:in `clockout'
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/timers_controller.rb:73:in `clockout'
+  [1m[36mEmployee Load (0.1ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/timers_controller.rb:73:in `clockout'
+  [1m[36mTimer Update (0.3ms)[0m  [1m[33mUPDATE "timers" SET "time_out" = ?, "updated_at" = ? WHERE "timers"."id" = ?[0m  [["time_out", "2020-11-18 21:55:35.550215"], ["updated_at", "2020-11-18 21:55:35.552446"], ["id", 5]]
+  ↳ app/controllers/timers_controller.rb:73:in `clockout'
+  [1m[35m (1.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/timers_controller.rb:73:in `clockout'
+Redirected to http://127.0.0.1:3000/employees/2
+Completed 302 Found in 13ms (ActiveRecord: 2.2ms | Allocations: 7233)
+
+
+Started GET "/employees/2" for 127.0.0.1 at 2020-11-18 21:55:35 +0000
+Processing by EmployeesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mEmployee Load (0.3ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."user_id" = ? LIMIT ?[0m  [["user_id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/employees_controller.rb:71:in `set_employee'
+  Rendering employees/show.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 3], ["record_type", "Employee"], ["name", "picture"], ["LIMIT", 1]]
+  ↳ app/views/employees/show.html.erb:5
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/employees/show.html.erb:5
+  [1m[36mTimer Load (0.1ms)[0m  [1m[34mSELECT "timers".* FROM "timers" WHERE "timers"."employee_id" = ?[0m  [["employee_id", 3]]
+  ↳ app/views/employees/show.html.erb:32
+  Rendered employees/show.html.erb within layouts/application (Duration: 11.1ms | Allocations: 2914)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 24ms (Views: 18.5ms | ActiveRecord: 0.8ms | Allocations: 8879)
+
+
