@@ -13,6 +13,7 @@ class EmployeesController < ApplicationController
     if current_user.employee.blank?
       redirect_to new_employee_path
     end
+    @clock_type = current_user.employee.timers.last.blank? or current_user.employee.timers.last.time_in.blank? or current_user.employee.timers.last.time_in.present? and current_user.employee.timers.last.time_out.present?
   end
 
   # GET /employees/new
