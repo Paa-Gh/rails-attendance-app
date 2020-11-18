@@ -29,14 +29,14 @@
     </div>
     <div class="col-md-4">
       <div>
-        <% if @clock_type %>
+        <% if @clocker_type %>
           <%= link_to 'Clock In', timers_clockin_path, class:'btn btn-success' %>
         <% else %>
           <%= link_to 'Clock Out', timers_clockout_path, class:'btn btn-danger' %>
         <% end %>
       </div>
       <br>
-      <% if current_user.employee.timers.last.time_in.present? and current_user.employee.timers.last.time_out.blank? %>
+      <% if @clocker_display %>
       <p class="text-left">
         Welcome to work! Your last reporting time was on <b><%= current_user.employee.timers.last.time_in.strftime("%d, %b %Y,") %></b> at <b><%= current_user.employee.timers.last.time_in.strftime("%I:%M %p") %></b>
       </p>
