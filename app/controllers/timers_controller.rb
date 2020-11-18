@@ -4,12 +4,13 @@ class TimersController < ApplicationController
   # GET /timers
   # GET /timers.json
   def index
-    @timers = current_user.employee.timers.order(id: :desc)
+    
   end
 
   # GET /timers/1
   # GET /timers/1.json
   def show
+    @timers = current_user.employee.timers.order(id: :desc)
   end
 
   # GET /timers/new
