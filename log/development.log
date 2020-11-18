@@ -4155,3 +4155,446 @@ Processing by ActiveStorage::DiskController#show as PNG
 Completed 304 Not Modified in 1ms (ActiveRecord: 0.0ms | Allocations: 653)
 
 
+Started GET "/" for 127.0.0.1 at 2020-11-18 15:38:55 +0000
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by EmployeesController#show as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mEmployee Load (0.2ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."user_id" = ? LIMIT ?[0m  [["user_id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/employees_controller.rb:71:in `set_employee'
+  Rendering employees/show.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 2], ["record_type", "Employee"], ["name", "picture"], ["LIMIT", 1]]
+  ↳ app/views/employees/show.html.erb:5
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/employees/show.html.erb:5
+  [1m[36mTimer Load (0.1ms)[0m  [1m[34mSELECT "timers".* FROM "timers" WHERE "timers"."employee_id" = ? ORDER BY "timers"."id" DESC LIMIT ?[0m  [["employee_id", 2], ["LIMIT", 1]]
+  ↳ app/views/employees/show.html.erb:32
+  [1m[36mCACHE Timer Load (0.0ms)[0m  [1m[34mSELECT "timers".* FROM "timers" WHERE "timers"."employee_id" = ? ORDER BY "timers"."id" DESC LIMIT ?[0m  [["employee_id", 2], ["LIMIT", 1]]
+  ↳ app/views/employees/show.html.erb:32
+  [1m[36mCACHE Timer Load (0.0ms)[0m  [1m[34mSELECT "timers".* FROM "timers" WHERE "timers"."employee_id" = ? ORDER BY "timers"."id" DESC LIMIT ?[0m  [["employee_id", 2], ["LIMIT", 1]]
+  ↳ app/views/employees/show.html.erb:32
+  [1m[36mCACHE Timer Load (0.0ms)[0m  [1m[34mSELECT "timers".* FROM "timers" WHERE "timers"."employee_id" = ? ORDER BY "timers"."id" DESC LIMIT ?[0m  [["employee_id", 2], ["LIMIT", 1]]
+  ↳ app/views/employees/show.html.erb:32
+  [1m[36mCACHE Timer Load (0.0ms)[0m  [1m[34mSELECT "timers".* FROM "timers" WHERE "timers"."employee_id" = ? ORDER BY "timers"."id" DESC LIMIT ?[0m  [["employee_id", 2], ["LIMIT", 1]]
+  ↳ app/views/employees/show.html.erb:39
+  [1m[36mCACHE Timer Load (0.0ms)[0m  [1m[34mSELECT "timers".* FROM "timers" WHERE "timers"."employee_id" = ? ORDER BY "timers"."id" DESC LIMIT ?[0m  [["employee_id", 2], ["LIMIT", 1]]
+  ↳ app/views/employees/show.html.erb:39
+  [1m[36mCACHE Timer Load (0.0ms)[0m  [1m[34mSELECT "timers".* FROM "timers" WHERE "timers"."employee_id" = ? ORDER BY "timers"."id" DESC LIMIT ?[0m  [["employee_id", 2], ["LIMIT", 1]]
+  ↳ app/views/employees/show.html.erb:46
+  [1m[36mCACHE Timer Load (0.1ms)[0m  [1m[34mSELECT "timers".* FROM "timers" WHERE "timers"."employee_id" = ? ORDER BY "timers"."id" DESC LIMIT ?[0m  [["employee_id", 2], ["LIMIT", 1]]
+  ↳ app/views/employees/show.html.erb:46
+  [1m[36mCACHE Timer Load (0.0ms)[0m  [1m[34mSELECT "timers".* FROM "timers" WHERE "timers"."employee_id" = ? ORDER BY "timers"."id" DESC LIMIT ?[0m  [["employee_id", 2], ["LIMIT", 1]]
+  ↳ app/views/employees/show.html.erb:46
+  [1m[36mCACHE Timer Load (0.0ms)[0m  [1m[34mSELECT "timers".* FROM "timers" WHERE "timers"."employee_id" = ? ORDER BY "timers"."id" DESC LIMIT ?[0m  [["employee_id", 2], ["LIMIT", 1]]
+  ↳ app/views/employees/show.html.erb:46
+  [1m[36mCACHE Timer Load (0.0ms)[0m  [1m[34mSELECT "timers".* FROM "timers" WHERE "timers"."employee_id" = ? ORDER BY "timers"."id" DESC LIMIT ?[0m  [["employee_id", 2], ["LIMIT", 1]]
+  ↳ app/views/employees/show.html.erb:50
+  [1m[36mCACHE Timer Load (0.0ms)[0m  [1m[34mSELECT "timers".* FROM "timers" WHERE "timers"."employee_id" = ? ORDER BY "timers"."id" DESC LIMIT ?[0m  [["employee_id", 2], ["LIMIT", 1]]
+  ↳ app/views/employees/show.html.erb:50
+  Rendered employees/show.html.erb within layouts/application (Duration: 22.9ms | Allocations: 11230)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 120ms (Views: 110.9ms | ActiveRecord: 1.2ms | Allocations: 27145)
+
+
+Started GET "/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCdz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--ebdc04f109e08c4db4f935f88391a1e67dbf39cf/bootstrap-social-logo.png" for 127.0.0.1 at 2020-11-18 15:38:56 +0000
+Processing by ActiveStorage::BlobsController#show as PNG
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCdz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--ebdc04f109e08c4db4f935f88391a1e67dbf39cf", "filename"=>"bootstrap-social-logo"}
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+[36m  Disk Storage (0.6ms) [0m[34mGenerated URL for file at key: 7so1vk90hte3chc6bjx5n30ha4u6 (http://127.0.0.1:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWhOM052TVhack9UQm9kR1V6WTJoak5tSnFlRFZ1TXpCb1lUUjFOZ1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpWFdsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW1KdmIzUnpkSEpoY0MxemIyTnBZV3d0Ykc5bmJ5NXdibWNpT3lCbWFXeGxibUZ0WlNvOVZWUkdMVGduSjJKdmIzUnpkSEpoY0MxemIyTnBZV3d0Ykc5bmJ5NXdibWNHT3daVU9oRmpiMjUwWlc1MFgzUjVjR1ZKSWc1cGJXRm5aUzl3Ym1jR093WlUiLCJleHAiOiIyMDIwLTExLTE4VDE1OjQzOjU2LjgyMloiLCJwdXIiOiJibG9iX2tleSJ9fQ==--8616919073d40e81f1b8969fc98db4ec19fc30a3/bootstrap-social-logo.png?content_type=image%2Fpng&disposition=inline%3B+filename%3D%22bootstrap-social-logo.png%22%3B+filename%2A%3DUTF-8%27%27bootstrap-social-logo.png)[0m
+Redirected to http://127.0.0.1:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWhOM052TVhack9UQm9kR1V6WTJoak5tSnFlRFZ1TXpCb1lUUjFOZ1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpWFdsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW1KdmIzUnpkSEpoY0MxemIyTnBZV3d0Ykc5bmJ5NXdibWNpT3lCbWFXeGxibUZ0WlNvOVZWUkdMVGduSjJKdmIzUnpkSEpoY0MxemIyTnBZV3d0Ykc5bmJ5NXdibWNHT3daVU9oRmpiMjUwWlc1MFgzUjVjR1ZKSWc1cGJXRm5aUzl3Ym1jR093WlUiLCJleHAiOiIyMDIwLTExLTE4VDE1OjQzOjU2LjgyMloiLCJwdXIiOiJibG9iX2tleSJ9fQ==--8616919073d40e81f1b8969fc98db4ec19fc30a3/bootstrap-social-logo.png?content_type=image%2Fpng&disposition=inline%3B+filename%3D%22bootstrap-social-logo.png%22%3B+filename%2A%3DUTF-8%27%27bootstrap-social-logo.png
+Completed 302 Found in 3ms (ActiveRecord: 0.1ms | Allocations: 2083)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWhOM052TVhack9UQm9kR1V6WTJoak5tSnFlRFZ1TXpCb1lUUjFOZ1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpWFdsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW1KdmIzUnpkSEpoY0MxemIyTnBZV3d0Ykc5bmJ5NXdibWNpT3lCbWFXeGxibUZ0WlNvOVZWUkdMVGduSjJKdmIzUnpkSEpoY0MxemIyTnBZV3d0Ykc5bmJ5NXdibWNHT3daVU9oRmpiMjUwWlc1MFgzUjVjR1ZKSWc1cGJXRm5aUzl3Ym1jR093WlUiLCJleHAiOiIyMDIwLTExLTE4VDE1OjQzOjU2LjgyMloiLCJwdXIiOiJibG9iX2tleSJ9fQ==--8616919073d40e81f1b8969fc98db4ec19fc30a3/bootstrap-social-logo.png?content_type=image%2Fpng&disposition=inline%3B+filename%3D%22bootstrap-social-logo.png%22%3B+filename%2A%3DUTF-8%27%27bootstrap-social-logo.png" for 127.0.0.1 at 2020-11-18 15:38:56 +0000
+Processing by ActiveStorage::DiskController#show as PNG
+  Parameters: {"content_type"=>"image/png", "disposition"=>"inline; filename=\"bootstrap-social-logo.png\"; filename*=UTF-8''bootstrap-social-logo.png", "encoded_key"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWhOM052TVhack9UQm9kR1V6WTJoak5tSnFlRFZ1TXpCb1lUUjFOZ1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpWFdsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW1KdmIzUnpkSEpoY0MxemIyTnBZV3d0Ykc5bmJ5NXdibWNpT3lCbWFXeGxibUZ0WlNvOVZWUkdMVGduSjJKdmIzUnpkSEpoY0MxemIyTnBZV3d0Ykc5bmJ5NXdibWNHT3daVU9oRmpiMjUwWlc1MFgzUjVjR1ZKSWc1cGJXRm5aUzl3Ym1jR093WlUiLCJleHAiOiIyMDIwLTExLTE4VDE1OjQzOjU2LjgyMloiLCJwdXIiOiJibG9iX2tleSJ9fQ==--8616919073d40e81f1b8969fc98db4ec19fc30a3", "filename"=>"bootstrap-social-logo"}
+Completed 200 OK in 1ms (ActiveRecord: 0.0ms | Allocations: 666)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2020-11-18 15:40:32 +0000
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.2ms | Allocations: 131)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 1.9ms | Allocations: 1048)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 8ms (Views: 6.9ms | ActiveRecord: 0.0ms | Allocations: 4742)
+
+
+Started GET "/" for 127.0.0.1 at 2020-11-18 15:45:04 +0000
+Processing by EmployeesController#show as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mEmployee Load (0.1ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."user_id" = ? LIMIT ?[0m  [["user_id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/employees_controller.rb:71:in `set_employee'
+  Rendering employees/show.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 2], ["record_type", "Employee"], ["name", "picture"], ["LIMIT", 1]]
+  ↳ app/views/employees/show.html.erb:5
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/employees/show.html.erb:5
+  [1m[36mTimer Load (0.1ms)[0m  [1m[34mSELECT "timers".* FROM "timers" WHERE "timers"."employee_id" = ? ORDER BY "timers"."id" DESC LIMIT ?[0m  [["employee_id", 2], ["LIMIT", 1]]
+  ↳ app/views/employees/show.html.erb:32
+  [1m[36mCACHE Timer Load (0.0ms)[0m  [1m[34mSELECT "timers".* FROM "timers" WHERE "timers"."employee_id" = ? ORDER BY "timers"."id" DESC LIMIT ?[0m  [["employee_id", 2], ["LIMIT", 1]]
+  ↳ app/views/employees/show.html.erb:32
+  [1m[36mCACHE Timer Load (0.0ms)[0m  [1m[34mSELECT "timers".* FROM "timers" WHERE "timers"."employee_id" = ? ORDER BY "timers"."id" DESC LIMIT ?[0m  [["employee_id", 2], ["LIMIT", 1]]
+  ↳ app/views/employees/show.html.erb:32
+  [1m[36mCACHE Timer Load (0.0ms)[0m  [1m[34mSELECT "timers".* FROM "timers" WHERE "timers"."employee_id" = ? ORDER BY "timers"."id" DESC LIMIT ?[0m  [["employee_id", 2], ["LIMIT", 1]]
+  ↳ app/views/employees/show.html.erb:32
+  [1m[36mCACHE Timer Load (0.0ms)[0m  [1m[34mSELECT "timers".* FROM "timers" WHERE "timers"."employee_id" = ? ORDER BY "timers"."id" DESC LIMIT ?[0m  [["employee_id", 2], ["LIMIT", 1]]
+  ↳ app/views/employees/show.html.erb:39
+  [1m[36mCACHE Timer Load (0.0ms)[0m  [1m[34mSELECT "timers".* FROM "timers" WHERE "timers"."employee_id" = ? ORDER BY "timers"."id" DESC LIMIT ?[0m  [["employee_id", 2], ["LIMIT", 1]]
+  ↳ app/views/employees/show.html.erb:39
+  [1m[36mCACHE Timer Load (0.0ms)[0m  [1m[34mSELECT "timers".* FROM "timers" WHERE "timers"."employee_id" = ? ORDER BY "timers"."id" DESC LIMIT ?[0m  [["employee_id", 2], ["LIMIT", 1]]
+  ↳ app/views/employees/show.html.erb:46
+  [1m[36mCACHE Timer Load (0.0ms)[0m  [1m[34mSELECT "timers".* FROM "timers" WHERE "timers"."employee_id" = ? ORDER BY "timers"."id" DESC LIMIT ?[0m  [["employee_id", 2], ["LIMIT", 1]]
+  ↳ app/views/employees/show.html.erb:46
+  [1m[36mCACHE Timer Load (0.0ms)[0m  [1m[34mSELECT "timers".* FROM "timers" WHERE "timers"."employee_id" = ? ORDER BY "timers"."id" DESC LIMIT ?[0m  [["employee_id", 2], ["LIMIT", 1]]
+  ↳ app/views/employees/show.html.erb:46
+  [1m[36mCACHE Timer Load (0.0ms)[0m  [1m[34mSELECT "timers".* FROM "timers" WHERE "timers"."employee_id" = ? ORDER BY "timers"."id" DESC LIMIT ?[0m  [["employee_id", 2], ["LIMIT", 1]]
+  ↳ app/views/employees/show.html.erb:46
+  [1m[36mCACHE Timer Load (0.0ms)[0m  [1m[34mSELECT "timers".* FROM "timers" WHERE "timers"."employee_id" = ? ORDER BY "timers"."id" DESC LIMIT ?[0m  [["employee_id", 2], ["LIMIT", 1]]
+  ↳ app/views/employees/show.html.erb:50
+  [1m[36mCACHE Timer Load (0.0ms)[0m  [1m[34mSELECT "timers".* FROM "timers" WHERE "timers"."employee_id" = ? ORDER BY "timers"."id" DESC LIMIT ?[0m  [["employee_id", 2], ["LIMIT", 1]]
+  ↳ app/views/employees/show.html.erb:50
+  Rendered employees/show.html.erb within layouts/application (Duration: 19.9ms | Allocations: 11621)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 39ms (Views: 34.5ms | ActiveRecord: 0.7ms | Allocations: 18891)
+
+
+Started GET "/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCdz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--ebdc04f109e08c4db4f935f88391a1e67dbf39cf/bootstrap-social-logo.png" for 127.0.0.1 at 2020-11-18 15:45:06 +0000
+Processing by ActiveStorage::BlobsController#show as PNG
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCdz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--ebdc04f109e08c4db4f935f88391a1e67dbf39cf", "filename"=>"bootstrap-social-logo"}
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+[36m  Disk Storage (0.4ms) [0m[34mGenerated URL for file at key: 7so1vk90hte3chc6bjx5n30ha4u6 (http://127.0.0.1:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWhOM052TVhack9UQm9kR1V6WTJoak5tSnFlRFZ1TXpCb1lUUjFOZ1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpWFdsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW1KdmIzUnpkSEpoY0MxemIyTnBZV3d0Ykc5bmJ5NXdibWNpT3lCbWFXeGxibUZ0WlNvOVZWUkdMVGduSjJKdmIzUnpkSEpoY0MxemIyTnBZV3d0Ykc5bmJ5NXdibWNHT3daVU9oRmpiMjUwWlc1MFgzUjVjR1ZKSWc1cGJXRm5aUzl3Ym1jR093WlUiLCJleHAiOiIyMDIwLTExLTE4VDE1OjUwOjA2LjIzOFoiLCJwdXIiOiJibG9iX2tleSJ9fQ==--43efb50e52d68deda85ab126dac410dd6de44313/bootstrap-social-logo.png?content_type=image%2Fpng&disposition=inline%3B+filename%3D%22bootstrap-social-logo.png%22%3B+filename%2A%3DUTF-8%27%27bootstrap-social-logo.png)[0m
+Redirected to http://127.0.0.1:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWhOM052TVhack9UQm9kR1V6WTJoak5tSnFlRFZ1TXpCb1lUUjFOZ1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpWFdsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW1KdmIzUnpkSEpoY0MxemIyTnBZV3d0Ykc5bmJ5NXdibWNpT3lCbWFXeGxibUZ0WlNvOVZWUkdMVGduSjJKdmIzUnpkSEpoY0MxemIyTnBZV3d0Ykc5bmJ5NXdibWNHT3daVU9oRmpiMjUwWlc1MFgzUjVjR1ZKSWc1cGJXRm5aUzl3Ym1jR093WlUiLCJleHAiOiIyMDIwLTExLTE4VDE1OjUwOjA2LjIzOFoiLCJwdXIiOiJibG9iX2tleSJ9fQ==--43efb50e52d68deda85ab126dac410dd6de44313/bootstrap-social-logo.png?content_type=image%2Fpng&disposition=inline%3B+filename%3D%22bootstrap-social-logo.png%22%3B+filename%2A%3DUTF-8%27%27bootstrap-social-logo.png
+Completed 302 Found in 3ms (ActiveRecord: 0.1ms | Allocations: 2083)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWhOM052TVhack9UQm9kR1V6WTJoak5tSnFlRFZ1TXpCb1lUUjFOZ1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpWFdsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW1KdmIzUnpkSEpoY0MxemIyTnBZV3d0Ykc5bmJ5NXdibWNpT3lCbWFXeGxibUZ0WlNvOVZWUkdMVGduSjJKdmIzUnpkSEpoY0MxemIyTnBZV3d0Ykc5bmJ5NXdibWNHT3daVU9oRmpiMjUwWlc1MFgzUjVjR1ZKSWc1cGJXRm5aUzl3Ym1jR093WlUiLCJleHAiOiIyMDIwLTExLTE4VDE1OjUwOjA2LjIzOFoiLCJwdXIiOiJibG9iX2tleSJ9fQ==--43efb50e52d68deda85ab126dac410dd6de44313/bootstrap-social-logo.png?content_type=image%2Fpng&disposition=inline%3B+filename%3D%22bootstrap-social-logo.png%22%3B+filename%2A%3DUTF-8%27%27bootstrap-social-logo.png" for 127.0.0.1 at 2020-11-18 15:45:06 +0000
+Processing by ActiveStorage::DiskController#show as PNG
+  Parameters: {"content_type"=>"image/png", "disposition"=>"inline; filename=\"bootstrap-social-logo.png\"; filename*=UTF-8''bootstrap-social-logo.png", "encoded_key"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWhOM052TVhack9UQm9kR1V6WTJoak5tSnFlRFZ1TXpCb1lUUjFOZ1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpWFdsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW1KdmIzUnpkSEpoY0MxemIyTnBZV3d0Ykc5bmJ5NXdibWNpT3lCbWFXeGxibUZ0WlNvOVZWUkdMVGduSjJKdmIzUnpkSEpoY0MxemIyTnBZV3d0Ykc5bmJ5NXdibWNHT3daVU9oRmpiMjUwWlc1MFgzUjVjR1ZKSWc1cGJXRm5aUzl3Ym1jR093WlUiLCJleHAiOiIyMDIwLTExLTE4VDE1OjUwOjA2LjIzOFoiLCJwdXIiOiJibG9iX2tleSJ9fQ==--43efb50e52d68deda85ab126dac410dd6de44313", "filename"=>"bootstrap-social-logo"}
+Completed 200 OK in 1ms (ActiveRecord: 0.0ms | Allocations: 660)
+
+
+Started GET "/" for 127.0.0.1 at 2020-11-18 15:45:08 +0000
+Processing by EmployeesController#show as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mEmployee Load (0.1ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."user_id" = ? LIMIT ?[0m  [["user_id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/employees_controller.rb:71:in `set_employee'
+  Rendering employees/show.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 2], ["record_type", "Employee"], ["name", "picture"], ["LIMIT", 1]]
+  ↳ app/views/employees/show.html.erb:5
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/employees/show.html.erb:5
+  [1m[36mTimer Load (0.4ms)[0m  [1m[34mSELECT "timers".* FROM "timers" WHERE "timers"."employee_id" = ? ORDER BY "timers"."id" DESC LIMIT ?[0m  [["employee_id", 2], ["LIMIT", 1]]
+  ↳ app/views/employees/show.html.erb:32
+  [1m[36mCACHE Timer Load (0.0ms)[0m  [1m[34mSELECT "timers".* FROM "timers" WHERE "timers"."employee_id" = ? ORDER BY "timers"."id" DESC LIMIT ?[0m  [["employee_id", 2], ["LIMIT", 1]]
+  ↳ app/views/employees/show.html.erb:32
+  [1m[36mCACHE Timer Load (0.0ms)[0m  [1m[34mSELECT "timers".* FROM "timers" WHERE "timers"."employee_id" = ? ORDER BY "timers"."id" DESC LIMIT ?[0m  [["employee_id", 2], ["LIMIT", 1]]
+  ↳ app/views/employees/show.html.erb:32
+  [1m[36mCACHE Timer Load (0.0ms)[0m  [1m[34mSELECT "timers".* FROM "timers" WHERE "timers"."employee_id" = ? ORDER BY "timers"."id" DESC LIMIT ?[0m  [["employee_id", 2], ["LIMIT", 1]]
+  ↳ app/views/employees/show.html.erb:32
+  [1m[36mCACHE Timer Load (0.0ms)[0m  [1m[34mSELECT "timers".* FROM "timers" WHERE "timers"."employee_id" = ? ORDER BY "timers"."id" DESC LIMIT ?[0m  [["employee_id", 2], ["LIMIT", 1]]
+  ↳ app/views/employees/show.html.erb:39
+  [1m[36mCACHE Timer Load (0.0ms)[0m  [1m[34mSELECT "timers".* FROM "timers" WHERE "timers"."employee_id" = ? ORDER BY "timers"."id" DESC LIMIT ?[0m  [["employee_id", 2], ["LIMIT", 1]]
+  ↳ app/views/employees/show.html.erb:39
+  [1m[36mCACHE Timer Load (0.0ms)[0m  [1m[34mSELECT "timers".* FROM "timers" WHERE "timers"."employee_id" = ? ORDER BY "timers"."id" DESC LIMIT ?[0m  [["employee_id", 2], ["LIMIT", 1]]
+  ↳ app/views/employees/show.html.erb:46
+  [1m[36mCACHE Timer Load (0.0ms)[0m  [1m[34mSELECT "timers".* FROM "timers" WHERE "timers"."employee_id" = ? ORDER BY "timers"."id" DESC LIMIT ?[0m  [["employee_id", 2], ["LIMIT", 1]]
+  ↳ app/views/employees/show.html.erb:46
+  [1m[36mCACHE Timer Load (0.0ms)[0m  [1m[34mSELECT "timers".* FROM "timers" WHERE "timers"."employee_id" = ? ORDER BY "timers"."id" DESC LIMIT ?[0m  [["employee_id", 2], ["LIMIT", 1]]
+  ↳ app/views/employees/show.html.erb:46
+  [1m[36mCACHE Timer Load (0.0ms)[0m  [1m[34mSELECT "timers".* FROM "timers" WHERE "timers"."employee_id" = ? ORDER BY "timers"."id" DESC LIMIT ?[0m  [["employee_id", 2], ["LIMIT", 1]]
+  ↳ app/views/employees/show.html.erb:46
+  [1m[36mCACHE Timer Load (0.0ms)[0m  [1m[34mSELECT "timers".* FROM "timers" WHERE "timers"."employee_id" = ? ORDER BY "timers"."id" DESC LIMIT ?[0m  [["employee_id", 2], ["LIMIT", 1]]
+  ↳ app/views/employees/show.html.erb:50
+  [1m[36mCACHE Timer Load (0.0ms)[0m  [1m[34mSELECT "timers".* FROM "timers" WHERE "timers"."employee_id" = ? ORDER BY "timers"."id" DESC LIMIT ?[0m  [["employee_id", 2], ["LIMIT", 1]]
+  ↳ app/views/employees/show.html.erb:50
+  Rendered employees/show.html.erb within layouts/application (Duration: 21.3ms | Allocations: 11191)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 31ms (Views: 26.1ms | ActiveRecord: 1.1ms | Allocations: 17134)
+
+
+Started GET "/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCdz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--ebdc04f109e08c4db4f935f88391a1e67dbf39cf/bootstrap-social-logo.png" for 127.0.0.1 at 2020-11-18 15:45:09 +0000
+Processing by ActiveStorage::BlobsController#show as PNG
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCdz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--ebdc04f109e08c4db4f935f88391a1e67dbf39cf", "filename"=>"bootstrap-social-logo"}
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+[36m  Disk Storage (0.5ms) [0m[34mGenerated URL for file at key: 7so1vk90hte3chc6bjx5n30ha4u6 (http://127.0.0.1:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWhOM052TVhack9UQm9kR1V6WTJoak5tSnFlRFZ1TXpCb1lUUjFOZ1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpWFdsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW1KdmIzUnpkSEpoY0MxemIyTnBZV3d0Ykc5bmJ5NXdibWNpT3lCbWFXeGxibUZ0WlNvOVZWUkdMVGduSjJKdmIzUnpkSEpoY0MxemIyTnBZV3d0Ykc5bmJ5NXdibWNHT3daVU9oRmpiMjUwWlc1MFgzUjVjR1ZKSWc1cGJXRm5aUzl3Ym1jR093WlUiLCJleHAiOiIyMDIwLTExLTE4VDE1OjUwOjA5LjE0MloiLCJwdXIiOiJibG9iX2tleSJ9fQ==--a7cc54bc18d2b9fc7a820e89ae4fb88d628d07c0/bootstrap-social-logo.png?content_type=image%2Fpng&disposition=inline%3B+filename%3D%22bootstrap-social-logo.png%22%3B+filename%2A%3DUTF-8%27%27bootstrap-social-logo.png)[0m
+Redirected to http://127.0.0.1:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWhOM052TVhack9UQm9kR1V6WTJoak5tSnFlRFZ1TXpCb1lUUjFOZ1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpWFdsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW1KdmIzUnpkSEpoY0MxemIyTnBZV3d0Ykc5bmJ5NXdibWNpT3lCbWFXeGxibUZ0WlNvOVZWUkdMVGduSjJKdmIzUnpkSEpoY0MxemIyTnBZV3d0Ykc5bmJ5NXdibWNHT3daVU9oRmpiMjUwWlc1MFgzUjVjR1ZKSWc1cGJXRm5aUzl3Ym1jR093WlUiLCJleHAiOiIyMDIwLTExLTE4VDE1OjUwOjA5LjE0MloiLCJwdXIiOiJibG9iX2tleSJ9fQ==--a7cc54bc18d2b9fc7a820e89ae4fb88d628d07c0/bootstrap-social-logo.png?content_type=image%2Fpng&disposition=inline%3B+filename%3D%22bootstrap-social-logo.png%22%3B+filename%2A%3DUTF-8%27%27bootstrap-social-logo.png
+Completed 302 Found in 3ms (ActiveRecord: 0.1ms | Allocations: 2084)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWhOM052TVhack9UQm9kR1V6WTJoak5tSnFlRFZ1TXpCb1lUUjFOZ1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpWFdsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW1KdmIzUnpkSEpoY0MxemIyTnBZV3d0Ykc5bmJ5NXdibWNpT3lCbWFXeGxibUZ0WlNvOVZWUkdMVGduSjJKdmIzUnpkSEpoY0MxemIyTnBZV3d0Ykc5bmJ5NXdibWNHT3daVU9oRmpiMjUwWlc1MFgzUjVjR1ZKSWc1cGJXRm5aUzl3Ym1jR093WlUiLCJleHAiOiIyMDIwLTExLTE4VDE1OjUwOjA5LjE0MloiLCJwdXIiOiJibG9iX2tleSJ9fQ==--a7cc54bc18d2b9fc7a820e89ae4fb88d628d07c0/bootstrap-social-logo.png?content_type=image%2Fpng&disposition=inline%3B+filename%3D%22bootstrap-social-logo.png%22%3B+filename%2A%3DUTF-8%27%27bootstrap-social-logo.png" for 127.0.0.1 at 2020-11-18 15:45:09 +0000
+Processing by ActiveStorage::DiskController#show as PNG
+  Parameters: {"content_type"=>"image/png", "disposition"=>"inline; filename=\"bootstrap-social-logo.png\"; filename*=UTF-8''bootstrap-social-logo.png", "encoded_key"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWhOM052TVhack9UQm9kR1V6WTJoak5tSnFlRFZ1TXpCb1lUUjFOZ1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpWFdsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW1KdmIzUnpkSEpoY0MxemIyTnBZV3d0Ykc5bmJ5NXdibWNpT3lCbWFXeGxibUZ0WlNvOVZWUkdMVGduSjJKdmIzUnpkSEpoY0MxemIyTnBZV3d0Ykc5bmJ5NXdibWNHT3daVU9oRmpiMjUwWlc1MFgzUjVjR1ZKSWc1cGJXRm5aUzl3Ym1jR093WlUiLCJleHAiOiIyMDIwLTExLTE4VDE1OjUwOjA5LjE0MloiLCJwdXIiOiJibG9iX2tleSJ9fQ==--a7cc54bc18d2b9fc7a820e89ae4fb88d628d07c0", "filename"=>"bootstrap-social-logo"}
+Completed 200 OK in 1ms (ActiveRecord: 0.0ms | Allocations: 666)
+
+
+Started GET "/" for 127.0.0.1 at 2020-11-18 15:46:14 +0000
+Processing by EmployeesController#show as HTML
+  [1m[36mUser Load (1.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mEmployee Load (0.6ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."user_id" = ? LIMIT ?[0m  [["user_id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/employees_controller.rb:71:in `set_employee'
+  Rendering employees/show.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (0.5ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 2], ["record_type", "Employee"], ["name", "picture"], ["LIMIT", 1]]
+  ↳ app/views/employees/show.html.erb:5
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/employees/show.html.erb:5
+  [1m[36mTimer Load (0.1ms)[0m  [1m[34mSELECT "timers".* FROM "timers" WHERE "timers"."employee_id" = ? ORDER BY "timers"."id" DESC LIMIT ?[0m  [["employee_id", 2], ["LIMIT", 1]]
+  ↳ app/views/employees/show.html.erb:32
+  [1m[36mCACHE Timer Load (0.0ms)[0m  [1m[34mSELECT "timers".* FROM "timers" WHERE "timers"."employee_id" = ? ORDER BY "timers"."id" DESC LIMIT ?[0m  [["employee_id", 2], ["LIMIT", 1]]
+  ↳ app/views/employees/show.html.erb:32
+  [1m[36mCACHE Timer Load (0.0ms)[0m  [1m[34mSELECT "timers".* FROM "timers" WHERE "timers"."employee_id" = ? ORDER BY "timers"."id" DESC LIMIT ?[0m  [["employee_id", 2], ["LIMIT", 1]]
+  ↳ app/views/employees/show.html.erb:32
+  [1m[36mCACHE Timer Load (0.0ms)[0m  [1m[34mSELECT "timers".* FROM "timers" WHERE "timers"."employee_id" = ? ORDER BY "timers"."id" DESC LIMIT ?[0m  [["employee_id", 2], ["LIMIT", 1]]
+  ↳ app/views/employees/show.html.erb:32
+  [1m[36mCACHE Timer Load (0.0ms)[0m  [1m[34mSELECT "timers".* FROM "timers" WHERE "timers"."employee_id" = ? ORDER BY "timers"."id" DESC LIMIT ?[0m  [["employee_id", 2], ["LIMIT", 1]]
+  ↳ app/views/employees/show.html.erb:39
+  [1m[36mCACHE Timer Load (0.0ms)[0m  [1m[34mSELECT "timers".* FROM "timers" WHERE "timers"."employee_id" = ? ORDER BY "timers"."id" DESC LIMIT ?[0m  [["employee_id", 2], ["LIMIT", 1]]
+  ↳ app/views/employees/show.html.erb:39
+  [1m[36mCACHE Timer Load (0.0ms)[0m  [1m[34mSELECT "timers".* FROM "timers" WHERE "timers"."employee_id" = ? ORDER BY "timers"."id" DESC LIMIT ?[0m  [["employee_id", 2], ["LIMIT", 1]]
+  ↳ app/views/employees/show.html.erb:46
+  [1m[36mCACHE Timer Load (0.0ms)[0m  [1m[34mSELECT "timers".* FROM "timers" WHERE "timers"."employee_id" = ? ORDER BY "timers"."id" DESC LIMIT ?[0m  [["employee_id", 2], ["LIMIT", 1]]
+  ↳ app/views/employees/show.html.erb:46
+  [1m[36mCACHE Timer Load (0.0ms)[0m  [1m[34mSELECT "timers".* FROM "timers" WHERE "timers"."employee_id" = ? ORDER BY "timers"."id" DESC LIMIT ?[0m  [["employee_id", 2], ["LIMIT", 1]]
+  ↳ app/views/employees/show.html.erb:46
+  [1m[36mCACHE Timer Load (0.0ms)[0m  [1m[34mSELECT "timers".* FROM "timers" WHERE "timers"."employee_id" = ? ORDER BY "timers"."id" DESC LIMIT ?[0m  [["employee_id", 2], ["LIMIT", 1]]
+  ↳ app/views/employees/show.html.erb:46
+  [1m[36mCACHE Timer Load (0.0ms)[0m  [1m[34mSELECT "timers".* FROM "timers" WHERE "timers"."employee_id" = ? ORDER BY "timers"."id" DESC LIMIT ?[0m  [["employee_id", 2], ["LIMIT", 1]]
+  ↳ app/views/employees/show.html.erb:50
+  [1m[36mCACHE Timer Load (0.0ms)[0m  [1m[34mSELECT "timers".* FROM "timers" WHERE "timers"."employee_id" = ? ORDER BY "timers"."id" DESC LIMIT ?[0m  [["employee_id", 2], ["LIMIT", 1]]
+  ↳ app/views/employees/show.html.erb:50
+  Rendered employees/show.html.erb within layouts/application (Duration: 19.1ms | Allocations: 11623)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 37ms (Views: 28.8ms | ActiveRecord: 3.3ms | Allocations: 18864)
+
+
+Started GET "/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCdz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--ebdc04f109e08c4db4f935f88391a1e67dbf39cf/bootstrap-social-logo.png" for 127.0.0.1 at 2020-11-18 15:46:15 +0000
+Processing by ActiveStorage::BlobsController#show as PNG
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCdz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--ebdc04f109e08c4db4f935f88391a1e67dbf39cf", "filename"=>"bootstrap-social-logo"}
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+[36m  Disk Storage (0.4ms) [0m[34mGenerated URL for file at key: 7so1vk90hte3chc6bjx5n30ha4u6 (http://127.0.0.1:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWhOM052TVhack9UQm9kR1V6WTJoak5tSnFlRFZ1TXpCb1lUUjFOZ1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpWFdsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW1KdmIzUnpkSEpoY0MxemIyTnBZV3d0Ykc5bmJ5NXdibWNpT3lCbWFXeGxibUZ0WlNvOVZWUkdMVGduSjJKdmIzUnpkSEpoY0MxemIyTnBZV3d0Ykc5bmJ5NXdibWNHT3daVU9oRmpiMjUwWlc1MFgzUjVjR1ZKSWc1cGJXRm5aUzl3Ym1jR093WlUiLCJleHAiOiIyMDIwLTExLTE4VDE1OjUxOjE1LjI0MloiLCJwdXIiOiJibG9iX2tleSJ9fQ==--e9e22f41b96205ee4b764b7402c25ebf1bd267a7/bootstrap-social-logo.png?content_type=image%2Fpng&disposition=inline%3B+filename%3D%22bootstrap-social-logo.png%22%3B+filename%2A%3DUTF-8%27%27bootstrap-social-logo.png)[0m
+Redirected to http://127.0.0.1:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWhOM052TVhack9UQm9kR1V6WTJoak5tSnFlRFZ1TXpCb1lUUjFOZ1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpWFdsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW1KdmIzUnpkSEpoY0MxemIyTnBZV3d0Ykc5bmJ5NXdibWNpT3lCbWFXeGxibUZ0WlNvOVZWUkdMVGduSjJKdmIzUnpkSEpoY0MxemIyTnBZV3d0Ykc5bmJ5NXdibWNHT3daVU9oRmpiMjUwWlc1MFgzUjVjR1ZKSWc1cGJXRm5aUzl3Ym1jR093WlUiLCJleHAiOiIyMDIwLTExLTE4VDE1OjUxOjE1LjI0MloiLCJwdXIiOiJibG9iX2tleSJ9fQ==--e9e22f41b96205ee4b764b7402c25ebf1bd267a7/bootstrap-social-logo.png?content_type=image%2Fpng&disposition=inline%3B+filename%3D%22bootstrap-social-logo.png%22%3B+filename%2A%3DUTF-8%27%27bootstrap-social-logo.png
+Completed 302 Found in 2ms (ActiveRecord: 0.1ms | Allocations: 2077)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWhOM052TVhack9UQm9kR1V6WTJoak5tSnFlRFZ1TXpCb1lUUjFOZ1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpWFdsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW1KdmIzUnpkSEpoY0MxemIyTnBZV3d0Ykc5bmJ5NXdibWNpT3lCbWFXeGxibUZ0WlNvOVZWUkdMVGduSjJKdmIzUnpkSEpoY0MxemIyTnBZV3d0Ykc5bmJ5NXdibWNHT3daVU9oRmpiMjUwWlc1MFgzUjVjR1ZKSWc1cGJXRm5aUzl3Ym1jR093WlUiLCJleHAiOiIyMDIwLTExLTE4VDE1OjUxOjE1LjI0MloiLCJwdXIiOiJibG9iX2tleSJ9fQ==--e9e22f41b96205ee4b764b7402c25ebf1bd267a7/bootstrap-social-logo.png?content_type=image%2Fpng&disposition=inline%3B+filename%3D%22bootstrap-social-logo.png%22%3B+filename%2A%3DUTF-8%27%27bootstrap-social-logo.png" for 127.0.0.1 at 2020-11-18 15:46:15 +0000
+Processing by ActiveStorage::DiskController#show as PNG
+  Parameters: {"content_type"=>"image/png", "disposition"=>"inline; filename=\"bootstrap-social-logo.png\"; filename*=UTF-8''bootstrap-social-logo.png", "encoded_key"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWhOM052TVhack9UQm9kR1V6WTJoak5tSnFlRFZ1TXpCb1lUUjFOZ1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpWFdsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW1KdmIzUnpkSEpoY0MxemIyTnBZV3d0Ykc5bmJ5NXdibWNpT3lCbWFXeGxibUZ0WlNvOVZWUkdMVGduSjJKdmIzUnpkSEpoY0MxemIyTnBZV3d0Ykc5bmJ5NXdibWNHT3daVU9oRmpiMjUwWlc1MFgzUjVjR1ZKSWc1cGJXRm5aUzl3Ym1jR093WlUiLCJleHAiOiIyMDIwLTExLTE4VDE1OjUxOjE1LjI0MloiLCJwdXIiOiJibG9iX2tleSJ9fQ==--e9e22f41b96205ee4b764b7402c25ebf1bd267a7", "filename"=>"bootstrap-social-logo"}
+Completed 200 OK in 1ms (ActiveRecord: 0.0ms | Allocations: 668)
+
+
+Started GET "/" for 127.0.0.1 at 2020-11-18 15:48:26 +0000
+Processing by EmployeesController#show as HTML
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mEmployee Load (0.1ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."user_id" = ? LIMIT ?[0m  [["user_id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/employees_controller.rb:71:in `set_employee'
+  Rendering employees/show.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 2], ["record_type", "Employee"], ["name", "picture"], ["LIMIT", 1]]
+  ↳ app/views/employees/show.html.erb:5
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/employees/show.html.erb:5
+  [1m[36mTimer Load (0.1ms)[0m  [1m[34mSELECT "timers".* FROM "timers" WHERE "timers"."employee_id" = ? ORDER BY "timers"."id" DESC LIMIT ?[0m  [["employee_id", 2], ["LIMIT", 1]]
+  ↳ app/views/employees/show.html.erb:32
+  [1m[36mCACHE Timer Load (0.0ms)[0m  [1m[34mSELECT "timers".* FROM "timers" WHERE "timers"."employee_id" = ? ORDER BY "timers"."id" DESC LIMIT ?[0m  [["employee_id", 2], ["LIMIT", 1]]
+  ↳ app/views/employees/show.html.erb:32
+  [1m[36mCACHE Timer Load (0.0ms)[0m  [1m[34mSELECT "timers".* FROM "timers" WHERE "timers"."employee_id" = ? ORDER BY "timers"."id" DESC LIMIT ?[0m  [["employee_id", 2], ["LIMIT", 1]]
+  ↳ app/views/employees/show.html.erb:32
+  [1m[36mCACHE Timer Load (0.5ms)[0m  [1m[34mSELECT "timers".* FROM "timers" WHERE "timers"."employee_id" = ? ORDER BY "timers"."id" DESC LIMIT ?[0m  [["employee_id", 2], ["LIMIT", 1]]
+  ↳ app/views/employees/show.html.erb:32
+  [1m[36mCACHE Timer Load (0.0ms)[0m  [1m[34mSELECT "timers".* FROM "timers" WHERE "timers"."employee_id" = ? ORDER BY "timers"."id" DESC LIMIT ?[0m  [["employee_id", 2], ["LIMIT", 1]]
+  ↳ app/views/employees/show.html.erb:39
+  [1m[36mCACHE Timer Load (0.0ms)[0m  [1m[34mSELECT "timers".* FROM "timers" WHERE "timers"."employee_id" = ? ORDER BY "timers"."id" DESC LIMIT ?[0m  [["employee_id", 2], ["LIMIT", 1]]
+  ↳ app/views/employees/show.html.erb:39
+  [1m[36mCACHE Timer Load (0.0ms)[0m  [1m[34mSELECT "timers".* FROM "timers" WHERE "timers"."employee_id" = ? ORDER BY "timers"."id" DESC LIMIT ?[0m  [["employee_id", 2], ["LIMIT", 1]]
+  ↳ app/views/employees/show.html.erb:46
+  [1m[36mCACHE Timer Load (0.0ms)[0m  [1m[34mSELECT "timers".* FROM "timers" WHERE "timers"."employee_id" = ? ORDER BY "timers"."id" DESC LIMIT ?[0m  [["employee_id", 2], ["LIMIT", 1]]
+  ↳ app/views/employees/show.html.erb:46
+  [1m[36mCACHE Timer Load (0.0ms)[0m  [1m[34mSELECT "timers".* FROM "timers" WHERE "timers"."employee_id" = ? ORDER BY "timers"."id" DESC LIMIT ?[0m  [["employee_id", 2], ["LIMIT", 1]]
+  ↳ app/views/employees/show.html.erb:46
+  [1m[36mCACHE Timer Load (0.0ms)[0m  [1m[34mSELECT "timers".* FROM "timers" WHERE "timers"."employee_id" = ? ORDER BY "timers"."id" DESC LIMIT ?[0m  [["employee_id", 2], ["LIMIT", 1]]
+  ↳ app/views/employees/show.html.erb:46
+  [1m[36mCACHE Timer Load (0.0ms)[0m  [1m[34mSELECT "timers".* FROM "timers" WHERE "timers"."employee_id" = ? ORDER BY "timers"."id" DESC LIMIT ?[0m  [["employee_id", 2], ["LIMIT", 1]]
+  ↳ app/views/employees/show.html.erb:50
+  [1m[36mCACHE Timer Load (0.0ms)[0m  [1m[34mSELECT "timers".* FROM "timers" WHERE "timers"."employee_id" = ? ORDER BY "timers"."id" DESC LIMIT ?[0m  [["employee_id", 2], ["LIMIT", 1]]
+  ↳ app/views/employees/show.html.erb:50
+  Rendered employees/show.html.erb within layouts/application (Duration: 33.6ms | Allocations: 11618)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 50ms (Views: 40.5ms | ActiveRecord: 2.6ms | Allocations: 18870)
+
+
+Started GET "/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCdz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--ebdc04f109e08c4db4f935f88391a1e67dbf39cf/bootstrap-social-logo.png" for 127.0.0.1 at 2020-11-18 15:48:26 +0000
+Processing by ActiveStorage::BlobsController#show as PNG
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCdz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--ebdc04f109e08c4db4f935f88391a1e67dbf39cf", "filename"=>"bootstrap-social-logo"}
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+[36m  Disk Storage (0.5ms) [0m[34mGenerated URL for file at key: 7so1vk90hte3chc6bjx5n30ha4u6 (http://127.0.0.1:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWhOM052TVhack9UQm9kR1V6WTJoak5tSnFlRFZ1TXpCb1lUUjFOZ1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpWFdsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW1KdmIzUnpkSEpoY0MxemIyTnBZV3d0Ykc5bmJ5NXdibWNpT3lCbWFXeGxibUZ0WlNvOVZWUkdMVGduSjJKdmIzUnpkSEpoY0MxemIyTnBZV3d0Ykc5bmJ5NXdibWNHT3daVU9oRmpiMjUwWlc1MFgzUjVjR1ZKSWc1cGJXRm5aUzl3Ym1jR093WlUiLCJleHAiOiIyMDIwLTExLTE4VDE1OjUzOjI2LjU3MVoiLCJwdXIiOiJibG9iX2tleSJ9fQ==--6596348e293b9ad067e1aa972d7159e582d524af/bootstrap-social-logo.png?content_type=image%2Fpng&disposition=inline%3B+filename%3D%22bootstrap-social-logo.png%22%3B+filename%2A%3DUTF-8%27%27bootstrap-social-logo.png)[0m
+Redirected to http://127.0.0.1:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWhOM052TVhack9UQm9kR1V6WTJoak5tSnFlRFZ1TXpCb1lUUjFOZ1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpWFdsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW1KdmIzUnpkSEpoY0MxemIyTnBZV3d0Ykc5bmJ5NXdibWNpT3lCbWFXeGxibUZ0WlNvOVZWUkdMVGduSjJKdmIzUnpkSEpoY0MxemIyTnBZV3d0Ykc5bmJ5NXdibWNHT3daVU9oRmpiMjUwWlc1MFgzUjVjR1ZKSWc1cGJXRm5aUzl3Ym1jR093WlUiLCJleHAiOiIyMDIwLTExLTE4VDE1OjUzOjI2LjU3MVoiLCJwdXIiOiJibG9iX2tleSJ9fQ==--6596348e293b9ad067e1aa972d7159e582d524af/bootstrap-social-logo.png?content_type=image%2Fpng&disposition=inline%3B+filename%3D%22bootstrap-social-logo.png%22%3B+filename%2A%3DUTF-8%27%27bootstrap-social-logo.png
+Completed 302 Found in 3ms (ActiveRecord: 0.1ms | Allocations: 2082)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWhOM052TVhack9UQm9kR1V6WTJoak5tSnFlRFZ1TXpCb1lUUjFOZ1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpWFdsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW1KdmIzUnpkSEpoY0MxemIyTnBZV3d0Ykc5bmJ5NXdibWNpT3lCbWFXeGxibUZ0WlNvOVZWUkdMVGduSjJKdmIzUnpkSEpoY0MxemIyTnBZV3d0Ykc5bmJ5NXdibWNHT3daVU9oRmpiMjUwWlc1MFgzUjVjR1ZKSWc1cGJXRm5aUzl3Ym1jR093WlUiLCJleHAiOiIyMDIwLTExLTE4VDE1OjUzOjI2LjU3MVoiLCJwdXIiOiJibG9iX2tleSJ9fQ==--6596348e293b9ad067e1aa972d7159e582d524af/bootstrap-social-logo.png?content_type=image%2Fpng&disposition=inline%3B+filename%3D%22bootstrap-social-logo.png%22%3B+filename%2A%3DUTF-8%27%27bootstrap-social-logo.png" for 127.0.0.1 at 2020-11-18 15:48:26 +0000
+Processing by ActiveStorage::DiskController#show as PNG
+  Parameters: {"content_type"=>"image/png", "disposition"=>"inline; filename=\"bootstrap-social-logo.png\"; filename*=UTF-8''bootstrap-social-logo.png", "encoded_key"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWhOM052TVhack9UQm9kR1V6WTJoak5tSnFlRFZ1TXpCb1lUUjFOZ1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpWFdsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW1KdmIzUnpkSEpoY0MxemIyTnBZV3d0Ykc5bmJ5NXdibWNpT3lCbWFXeGxibUZ0WlNvOVZWUkdMVGduSjJKdmIzUnpkSEpoY0MxemIyTnBZV3d0Ykc5bmJ5NXdibWNHT3daVU9oRmpiMjUwWlc1MFgzUjVjR1ZKSWc1cGJXRm5aUzl3Ym1jR093WlUiLCJleHAiOiIyMDIwLTExLTE4VDE1OjUzOjI2LjU3MVoiLCJwdXIiOiJibG9iX2tleSJ9fQ==--6596348e293b9ad067e1aa972d7159e582d524af", "filename"=>"bootstrap-social-logo"}
+Completed 200 OK in 1ms (ActiveRecord: 0.0ms | Allocations: 660)
+
+
+Started GET "/" for 127.0.0.1 at 2020-11-18 15:48:48 +0000
+Processing by EmployeesController#show as HTML
+  [1m[36mUser Load (11.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mEmployee Load (0.1ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."user_id" = ? LIMIT ?[0m  [["user_id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/employees_controller.rb:71:in `set_employee'
+  Rendering employees/show.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (0.9ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 2], ["record_type", "Employee"], ["name", "picture"], ["LIMIT", 1]]
+  ↳ app/views/employees/show.html.erb:5
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/employees/show.html.erb:5
+  [1m[36mTimer Load (0.1ms)[0m  [1m[34mSELECT "timers".* FROM "timers" WHERE "timers"."employee_id" = ? ORDER BY "timers"."id" DESC LIMIT ?[0m  [["employee_id", 2], ["LIMIT", 1]]
+  ↳ app/views/employees/show.html.erb:32
+  [1m[36mCACHE Timer Load (0.0ms)[0m  [1m[34mSELECT "timers".* FROM "timers" WHERE "timers"."employee_id" = ? ORDER BY "timers"."id" DESC LIMIT ?[0m  [["employee_id", 2], ["LIMIT", 1]]
+  ↳ app/views/employees/show.html.erb:32
+  [1m[36mCACHE Timer Load (0.0ms)[0m  [1m[34mSELECT "timers".* FROM "timers" WHERE "timers"."employee_id" = ? ORDER BY "timers"."id" DESC LIMIT ?[0m  [["employee_id", 2], ["LIMIT", 1]]
+  ↳ app/views/employees/show.html.erb:32
+  [1m[36mCACHE Timer Load (0.0ms)[0m  [1m[34mSELECT "timers".* FROM "timers" WHERE "timers"."employee_id" = ? ORDER BY "timers"."id" DESC LIMIT ?[0m  [["employee_id", 2], ["LIMIT", 1]]
+  ↳ app/views/employees/show.html.erb:32
+  [1m[36mCACHE Timer Load (0.0ms)[0m  [1m[34mSELECT "timers".* FROM "timers" WHERE "timers"."employee_id" = ? ORDER BY "timers"."id" DESC LIMIT ?[0m  [["employee_id", 2], ["LIMIT", 1]]
+  ↳ app/views/employees/show.html.erb:39
+  [1m[36mCACHE Timer Load (0.0ms)[0m  [1m[34mSELECT "timers".* FROM "timers" WHERE "timers"."employee_id" = ? ORDER BY "timers"."id" DESC LIMIT ?[0m  [["employee_id", 2], ["LIMIT", 1]]
+  ↳ app/views/employees/show.html.erb:39
+  [1m[36mCACHE Timer Load (0.0ms)[0m  [1m[34mSELECT "timers".* FROM "timers" WHERE "timers"."employee_id" = ? ORDER BY "timers"."id" DESC LIMIT ?[0m  [["employee_id", 2], ["LIMIT", 1]]
+  ↳ app/views/employees/show.html.erb:46
+  [1m[36mCACHE Timer Load (0.0ms)[0m  [1m[34mSELECT "timers".* FROM "timers" WHERE "timers"."employee_id" = ? ORDER BY "timers"."id" DESC LIMIT ?[0m  [["employee_id", 2], ["LIMIT", 1]]
+  ↳ app/views/employees/show.html.erb:46
+  [1m[36mCACHE Timer Load (0.0ms)[0m  [1m[34mSELECT "timers".* FROM "timers" WHERE "timers"."employee_id" = ? ORDER BY "timers"."id" DESC LIMIT ?[0m  [["employee_id", 2], ["LIMIT", 1]]
+  ↳ app/views/employees/show.html.erb:46
+  [1m[36mCACHE Timer Load (0.0ms)[0m  [1m[34mSELECT "timers".* FROM "timers" WHERE "timers"."employee_id" = ? ORDER BY "timers"."id" DESC LIMIT ?[0m  [["employee_id", 2], ["LIMIT", 1]]
+  ↳ app/views/employees/show.html.erb:46
+  [1m[36mCACHE Timer Load (0.0ms)[0m  [1m[34mSELECT "timers".* FROM "timers" WHERE "timers"."employee_id" = ? ORDER BY "timers"."id" DESC LIMIT ?[0m  [["employee_id", 2], ["LIMIT", 1]]
+  ↳ app/views/employees/show.html.erb:50
+  [1m[36mCACHE Timer Load (0.0ms)[0m  [1m[34mSELECT "timers".* FROM "timers" WHERE "timers"."employee_id" = ? ORDER BY "timers"."id" DESC LIMIT ?[0m  [["employee_id", 2], ["LIMIT", 1]]
+  ↳ app/views/employees/show.html.erb:50
+  Rendered employees/show.html.erb within layouts/application (Duration: 19.2ms | Allocations: 11619)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 40ms (Views: 23.4ms | ActiveRecord: 13.0ms | Allocations: 18861)
+
+
+Started GET "/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCdz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--ebdc04f109e08c4db4f935f88391a1e67dbf39cf/bootstrap-social-logo.png" for 127.0.0.1 at 2020-11-18 15:48:48 +0000
+Processing by ActiveStorage::BlobsController#show as PNG
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCdz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--ebdc04f109e08c4db4f935f88391a1e67dbf39cf", "filename"=>"bootstrap-social-logo"}
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+[36m  Disk Storage (0.4ms) [0m[34mGenerated URL for file at key: 7so1vk90hte3chc6bjx5n30ha4u6 (http://127.0.0.1:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWhOM052TVhack9UQm9kR1V6WTJoak5tSnFlRFZ1TXpCb1lUUjFOZ1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpWFdsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW1KdmIzUnpkSEpoY0MxemIyTnBZV3d0Ykc5bmJ5NXdibWNpT3lCbWFXeGxibUZ0WlNvOVZWUkdMVGduSjJKdmIzUnpkSEpoY0MxemIyTnBZV3d0Ykc5bmJ5NXdibWNHT3daVU9oRmpiMjUwWlc1MFgzUjVjR1ZKSWc1cGJXRm5aUzl3Ym1jR093WlUiLCJleHAiOiIyMDIwLTExLTE4VDE1OjUzOjQ4Ljk4MVoiLCJwdXIiOiJibG9iX2tleSJ9fQ==--4679a5b21d542ffbc55d0b1696498a78af2caea8/bootstrap-social-logo.png?content_type=image%2Fpng&disposition=inline%3B+filename%3D%22bootstrap-social-logo.png%22%3B+filename%2A%3DUTF-8%27%27bootstrap-social-logo.png)[0m
+Redirected to http://127.0.0.1:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWhOM052TVhack9UQm9kR1V6WTJoak5tSnFlRFZ1TXpCb1lUUjFOZ1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpWFdsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW1KdmIzUnpkSEpoY0MxemIyTnBZV3d0Ykc5bmJ5NXdibWNpT3lCbWFXeGxibUZ0WlNvOVZWUkdMVGduSjJKdmIzUnpkSEpoY0MxemIyTnBZV3d0Ykc5bmJ5NXdibWNHT3daVU9oRmpiMjUwWlc1MFgzUjVjR1ZKSWc1cGJXRm5aUzl3Ym1jR093WlUiLCJleHAiOiIyMDIwLTExLTE4VDE1OjUzOjQ4Ljk4MVoiLCJwdXIiOiJibG9iX2tleSJ9fQ==--4679a5b21d542ffbc55d0b1696498a78af2caea8/bootstrap-social-logo.png?content_type=image%2Fpng&disposition=inline%3B+filename%3D%22bootstrap-social-logo.png%22%3B+filename%2A%3DUTF-8%27%27bootstrap-social-logo.png
+Completed 302 Found in 3ms (ActiveRecord: 0.1ms | Allocations: 2095)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWhOM052TVhack9UQm9kR1V6WTJoak5tSnFlRFZ1TXpCb1lUUjFOZ1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpWFdsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW1KdmIzUnpkSEpoY0MxemIyTnBZV3d0Ykc5bmJ5NXdibWNpT3lCbWFXeGxibUZ0WlNvOVZWUkdMVGduSjJKdmIzUnpkSEpoY0MxemIyTnBZV3d0Ykc5bmJ5NXdibWNHT3daVU9oRmpiMjUwWlc1MFgzUjVjR1ZKSWc1cGJXRm5aUzl3Ym1jR093WlUiLCJleHAiOiIyMDIwLTExLTE4VDE1OjUzOjQ4Ljk4MVoiLCJwdXIiOiJibG9iX2tleSJ9fQ==--4679a5b21d542ffbc55d0b1696498a78af2caea8/bootstrap-social-logo.png?content_type=image%2Fpng&disposition=inline%3B+filename%3D%22bootstrap-social-logo.png%22%3B+filename%2A%3DUTF-8%27%27bootstrap-social-logo.png" for 127.0.0.1 at 2020-11-18 15:48:49 +0000
+Processing by ActiveStorage::DiskController#show as PNG
+  Parameters: {"content_type"=>"image/png", "disposition"=>"inline; filename=\"bootstrap-social-logo.png\"; filename*=UTF-8''bootstrap-social-logo.png", "encoded_key"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWhOM052TVhack9UQm9kR1V6WTJoak5tSnFlRFZ1TXpCb1lUUjFOZ1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpWFdsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW1KdmIzUnpkSEpoY0MxemIyTnBZV3d0Ykc5bmJ5NXdibWNpT3lCbWFXeGxibUZ0WlNvOVZWUkdMVGduSjJKdmIzUnpkSEpoY0MxemIyTnBZV3d0Ykc5bmJ5NXdibWNHT3daVU9oRmpiMjUwWlc1MFgzUjVjR1ZKSWc1cGJXRm5aUzl3Ym1jR093WlUiLCJleHAiOiIyMDIwLTExLTE4VDE1OjUzOjQ4Ljk4MVoiLCJwdXIiOiJibG9iX2tleSJ9fQ==--4679a5b21d542ffbc55d0b1696498a78af2caea8", "filename"=>"bootstrap-social-logo"}
+Completed 200 OK in 4ms (ActiveRecord: 0.0ms | Allocations: 666)
+
+
+Started GET "/" for 127.0.0.1 at 2020-11-18 15:49:30 +0000
+Processing by EmployeesController#show as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mEmployee Load (0.1ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."user_id" = ? LIMIT ?[0m  [["user_id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/employees_controller.rb:71:in `set_employee'
+  Rendering employees/show.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 2], ["record_type", "Employee"], ["name", "picture"], ["LIMIT", 1]]
+  ↳ app/views/employees/show.html.erb:5
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/employees/show.html.erb:5
+  [1m[36mTimer Load (0.2ms)[0m  [1m[34mSELECT "timers".* FROM "timers" WHERE "timers"."employee_id" = ? ORDER BY "timers"."id" DESC LIMIT ?[0m  [["employee_id", 2], ["LIMIT", 1]]
+  ↳ app/views/employees/show.html.erb:32
+  [1m[36mCACHE Timer Load (0.0ms)[0m  [1m[34mSELECT "timers".* FROM "timers" WHERE "timers"."employee_id" = ? ORDER BY "timers"."id" DESC LIMIT ?[0m  [["employee_id", 2], ["LIMIT", 1]]
+  ↳ app/views/employees/show.html.erb:32
+  [1m[36mCACHE Timer Load (0.0ms)[0m  [1m[34mSELECT "timers".* FROM "timers" WHERE "timers"."employee_id" = ? ORDER BY "timers"."id" DESC LIMIT ?[0m  [["employee_id", 2], ["LIMIT", 1]]
+  ↳ app/views/employees/show.html.erb:32
+  [1m[36mCACHE Timer Load (0.0ms)[0m  [1m[34mSELECT "timers".* FROM "timers" WHERE "timers"."employee_id" = ? ORDER BY "timers"."id" DESC LIMIT ?[0m  [["employee_id", 2], ["LIMIT", 1]]
+  ↳ app/views/employees/show.html.erb:32
+  [1m[36mCACHE Timer Load (0.0ms)[0m  [1m[34mSELECT "timers".* FROM "timers" WHERE "timers"."employee_id" = ? ORDER BY "timers"."id" DESC LIMIT ?[0m  [["employee_id", 2], ["LIMIT", 1]]
+  ↳ app/views/employees/show.html.erb:39
+  [1m[36mCACHE Timer Load (0.0ms)[0m  [1m[34mSELECT "timers".* FROM "timers" WHERE "timers"."employee_id" = ? ORDER BY "timers"."id" DESC LIMIT ?[0m  [["employee_id", 2], ["LIMIT", 1]]
+  ↳ app/views/employees/show.html.erb:39
+  [1m[36mCACHE Timer Load (0.0ms)[0m  [1m[34mSELECT "timers".* FROM "timers" WHERE "timers"."employee_id" = ? ORDER BY "timers"."id" DESC LIMIT ?[0m  [["employee_id", 2], ["LIMIT", 1]]
+  ↳ app/views/employees/show.html.erb:46
+  [1m[36mCACHE Timer Load (0.0ms)[0m  [1m[34mSELECT "timers".* FROM "timers" WHERE "timers"."employee_id" = ? ORDER BY "timers"."id" DESC LIMIT ?[0m  [["employee_id", 2], ["LIMIT", 1]]
+  ↳ app/views/employees/show.html.erb:46
+  [1m[36mCACHE Timer Load (0.0ms)[0m  [1m[34mSELECT "timers".* FROM "timers" WHERE "timers"."employee_id" = ? ORDER BY "timers"."id" DESC LIMIT ?[0m  [["employee_id", 2], ["LIMIT", 1]]
+  ↳ app/views/employees/show.html.erb:46
+  [1m[36mCACHE Timer Load (0.0ms)[0m  [1m[34mSELECT "timers".* FROM "timers" WHERE "timers"."employee_id" = ? ORDER BY "timers"."id" DESC LIMIT ?[0m  [["employee_id", 2], ["LIMIT", 1]]
+  ↳ app/views/employees/show.html.erb:46
+  [1m[36mCACHE Timer Load (0.0ms)[0m  [1m[34mSELECT "timers".* FROM "timers" WHERE "timers"."employee_id" = ? ORDER BY "timers"."id" DESC LIMIT ?[0m  [["employee_id", 2], ["LIMIT", 1]]
+  ↳ app/views/employees/show.html.erb:50
+  [1m[36mCACHE Timer Load (0.0ms)[0m  [1m[34mSELECT "timers".* FROM "timers" WHERE "timers"."employee_id" = ? ORDER BY "timers"."id" DESC LIMIT ?[0m  [["employee_id", 2], ["LIMIT", 1]]
+  ↳ app/views/employees/show.html.erb:50
+  Rendered employees/show.html.erb within layouts/application (Duration: 28.1ms | Allocations: 11619)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 45ms (Views: 39.5ms | ActiveRecord: 0.9ms | Allocations: 18868)
+
+
+Started GET "/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCdz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--ebdc04f109e08c4db4f935f88391a1e67dbf39cf/bootstrap-social-logo.png" for 127.0.0.1 at 2020-11-18 15:49:30 +0000
+Processing by ActiveStorage::BlobsController#show as PNG
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCdz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--ebdc04f109e08c4db4f935f88391a1e67dbf39cf", "filename"=>"bootstrap-social-logo"}
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+[36m  Disk Storage (0.4ms) [0m[34mGenerated URL for file at key: 7so1vk90hte3chc6bjx5n30ha4u6 (http://127.0.0.1:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWhOM052TVhack9UQm9kR1V6WTJoak5tSnFlRFZ1TXpCb1lUUjFOZ1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpWFdsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW1KdmIzUnpkSEpoY0MxemIyTnBZV3d0Ykc5bmJ5NXdibWNpT3lCbWFXeGxibUZ0WlNvOVZWUkdMVGduSjJKdmIzUnpkSEpoY0MxemIyTnBZV3d0Ykc5bmJ5NXdibWNHT3daVU9oRmpiMjUwWlc1MFgzUjVjR1ZKSWc1cGJXRm5aUzl3Ym1jR093WlUiLCJleHAiOiIyMDIwLTExLTE4VDE1OjU0OjMwLjk3NloiLCJwdXIiOiJibG9iX2tleSJ9fQ==--4bbee68f82307128334a0bf9ee88a368a88b39e8/bootstrap-social-logo.png?content_type=image%2Fpng&disposition=inline%3B+filename%3D%22bootstrap-social-logo.png%22%3B+filename%2A%3DUTF-8%27%27bootstrap-social-logo.png)[0m
+Redirected to http://127.0.0.1:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWhOM052TVhack9UQm9kR1V6WTJoak5tSnFlRFZ1TXpCb1lUUjFOZ1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpWFdsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW1KdmIzUnpkSEpoY0MxemIyTnBZV3d0Ykc5bmJ5NXdibWNpT3lCbWFXeGxibUZ0WlNvOVZWUkdMVGduSjJKdmIzUnpkSEpoY0MxemIyTnBZV3d0Ykc5bmJ5NXdibWNHT3daVU9oRmpiMjUwWlc1MFgzUjVjR1ZKSWc1cGJXRm5aUzl3Ym1jR093WlUiLCJleHAiOiIyMDIwLTExLTE4VDE1OjU0OjMwLjk3NloiLCJwdXIiOiJibG9iX2tleSJ9fQ==--4bbee68f82307128334a0bf9ee88a368a88b39e8/bootstrap-social-logo.png?content_type=image%2Fpng&disposition=inline%3B+filename%3D%22bootstrap-social-logo.png%22%3B+filename%2A%3DUTF-8%27%27bootstrap-social-logo.png
+Completed 302 Found in 3ms (ActiveRecord: 0.1ms | Allocations: 2091)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWhOM052TVhack9UQm9kR1V6WTJoak5tSnFlRFZ1TXpCb1lUUjFOZ1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpWFdsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW1KdmIzUnpkSEpoY0MxemIyTnBZV3d0Ykc5bmJ5NXdibWNpT3lCbWFXeGxibUZ0WlNvOVZWUkdMVGduSjJKdmIzUnpkSEpoY0MxemIyTnBZV3d0Ykc5bmJ5NXdibWNHT3daVU9oRmpiMjUwWlc1MFgzUjVjR1ZKSWc1cGJXRm5aUzl3Ym1jR093WlUiLCJleHAiOiIyMDIwLTExLTE4VDE1OjU0OjMwLjk3NloiLCJwdXIiOiJibG9iX2tleSJ9fQ==--4bbee68f82307128334a0bf9ee88a368a88b39e8/bootstrap-social-logo.png?content_type=image%2Fpng&disposition=inline%3B+filename%3D%22bootstrap-social-logo.png%22%3B+filename%2A%3DUTF-8%27%27bootstrap-social-logo.png" for 127.0.0.1 at 2020-11-18 15:49:30 +0000
+Processing by ActiveStorage::DiskController#show as PNG
+  Parameters: {"content_type"=>"image/png", "disposition"=>"inline; filename=\"bootstrap-social-logo.png\"; filename*=UTF-8''bootstrap-social-logo.png", "encoded_key"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWhOM052TVhack9UQm9kR1V6WTJoak5tSnFlRFZ1TXpCb1lUUjFOZ1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpWFdsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW1KdmIzUnpkSEpoY0MxemIyTnBZV3d0Ykc5bmJ5NXdibWNpT3lCbWFXeGxibUZ0WlNvOVZWUkdMVGduSjJKdmIzUnpkSEpoY0MxemIyTnBZV3d0Ykc5bmJ5NXdibWNHT3daVU9oRmpiMjUwWlc1MFgzUjVjR1ZKSWc1cGJXRm5aUzl3Ym1jR093WlUiLCJleHAiOiIyMDIwLTExLTE4VDE1OjU0OjMwLjk3NloiLCJwdXIiOiJibG9iX2tleSJ9fQ==--4bbee68f82307128334a0bf9ee88a368a88b39e8", "filename"=>"bootstrap-social-logo"}
+Completed 200 OK in 1ms (ActiveRecord: 0.0ms | Allocations: 656)
+
+
+Started GET "/" for 127.0.0.1 at 2020-11-18 17:13:55 +0000
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by EmployeesController#show as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mEmployee Load (0.3ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."user_id" = ? LIMIT ?[0m  [["user_id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/employees_controller.rb:71:in `set_employee'
+  Rendering employees/show.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (0.8ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 2], ["record_type", "Employee"], ["name", "picture"], ["LIMIT", 1]]
+  ↳ app/views/employees/show.html.erb:5
+  [1m[36mActiveStorage::Blob Load (1.0ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/employees/show.html.erb:5
+  [1m[36mTimer Load (0.2ms)[0m  [1m[34mSELECT "timers".* FROM "timers" WHERE "timers"."employee_id" = ? ORDER BY "timers"."id" DESC LIMIT ?[0m  [["employee_id", 2], ["LIMIT", 1]]
+  ↳ app/views/employees/show.html.erb:32
+  [1m[36mCACHE Timer Load (0.0ms)[0m  [1m[34mSELECT "timers".* FROM "timers" WHERE "timers"."employee_id" = ? ORDER BY "timers"."id" DESC LIMIT ?[0m  [["employee_id", 2], ["LIMIT", 1]]
+  ↳ app/views/employees/show.html.erb:32
+  [1m[36mCACHE Timer Load (0.1ms)[0m  [1m[34mSELECT "timers".* FROM "timers" WHERE "timers"."employee_id" = ? ORDER BY "timers"."id" DESC LIMIT ?[0m  [["employee_id", 2], ["LIMIT", 1]]
+  ↳ app/views/employees/show.html.erb:32
+  [1m[36mCACHE Timer Load (0.0ms)[0m  [1m[34mSELECT "timers".* FROM "timers" WHERE "timers"."employee_id" = ? ORDER BY "timers"."id" DESC LIMIT ?[0m  [["employee_id", 2], ["LIMIT", 1]]
+  ↳ app/views/employees/show.html.erb:32
+  [1m[36mCACHE Timer Load (0.0ms)[0m  [1m[34mSELECT "timers".* FROM "timers" WHERE "timers"."employee_id" = ? ORDER BY "timers"."id" DESC LIMIT ?[0m  [["employee_id", 2], ["LIMIT", 1]]
+  ↳ app/views/employees/show.html.erb:39
+  [1m[36mCACHE Timer Load (0.0ms)[0m  [1m[34mSELECT "timers".* FROM "timers" WHERE "timers"."employee_id" = ? ORDER BY "timers"."id" DESC LIMIT ?[0m  [["employee_id", 2], ["LIMIT", 1]]
+  ↳ app/views/employees/show.html.erb:39
+  [1m[36mCACHE Timer Load (0.0ms)[0m  [1m[34mSELECT "timers".* FROM "timers" WHERE "timers"."employee_id" = ? ORDER BY "timers"."id" DESC LIMIT ?[0m  [["employee_id", 2], ["LIMIT", 1]]
+  ↳ app/views/employees/show.html.erb:46
+  [1m[36mCACHE Timer Load (0.0ms)[0m  [1m[34mSELECT "timers".* FROM "timers" WHERE "timers"."employee_id" = ? ORDER BY "timers"."id" DESC LIMIT ?[0m  [["employee_id", 2], ["LIMIT", 1]]
+  ↳ app/views/employees/show.html.erb:46
+  [1m[36mCACHE Timer Load (0.0ms)[0m  [1m[34mSELECT "timers".* FROM "timers" WHERE "timers"."employee_id" = ? ORDER BY "timers"."id" DESC LIMIT ?[0m  [["employee_id", 2], ["LIMIT", 1]]
+  ↳ app/views/employees/show.html.erb:46
+  [1m[36mCACHE Timer Load (0.0ms)[0m  [1m[34mSELECT "timers".* FROM "timers" WHERE "timers"."employee_id" = ? ORDER BY "timers"."id" DESC LIMIT ?[0m  [["employee_id", 2], ["LIMIT", 1]]
+  ↳ app/views/employees/show.html.erb:46
+  [1m[36mCACHE Timer Load (0.0ms)[0m  [1m[34mSELECT "timers".* FROM "timers" WHERE "timers"."employee_id" = ? ORDER BY "timers"."id" DESC LIMIT ?[0m  [["employee_id", 2], ["LIMIT", 1]]
+  ↳ app/views/employees/show.html.erb:50
+  [1m[36mCACHE Timer Load (0.0ms)[0m  [1m[34mSELECT "timers".* FROM "timers" WHERE "timers"."employee_id" = ? ORDER BY "timers"."id" DESC LIMIT ?[0m  [["employee_id", 2], ["LIMIT", 1]]
+  ↳ app/views/employees/show.html.erb:50
+  Rendered employees/show.html.erb within layouts/application (Duration: 69.2ms | Allocations: 26908)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 141ms (Views: 90.6ms | ActiveRecord: 2.8ms | Allocations: 44693)
+
+
+Started GET "/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCdz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--ebdc04f109e08c4db4f935f88391a1e67dbf39cf/bootstrap-social-logo.png" for 127.0.0.1 at 2020-11-18 17:13:56 +0000
+Processing by ActiveStorage::BlobsController#show as PNG
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCdz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--ebdc04f109e08c4db4f935f88391a1e67dbf39cf", "filename"=>"bootstrap-social-logo"}
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+[36m  Disk Storage (0.8ms) [0m[34mGenerated URL for file at key: 7so1vk90hte3chc6bjx5n30ha4u6 (http://127.0.0.1:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWhOM052TVhack9UQm9kR1V6WTJoak5tSnFlRFZ1TXpCb1lUUjFOZ1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpWFdsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW1KdmIzUnpkSEpoY0MxemIyTnBZV3d0Ykc5bmJ5NXdibWNpT3lCbWFXeGxibUZ0WlNvOVZWUkdMVGduSjJKdmIzUnpkSEpoY0MxemIyTnBZV3d0Ykc5bmJ5NXdibWNHT3daVU9oRmpiMjUwWlc1MFgzUjVjR1ZKSWc1cGJXRm5aUzl3Ym1jR093WlUiLCJleHAiOiIyMDIwLTExLTE4VDE3OjE4OjU2LjYwMFoiLCJwdXIiOiJibG9iX2tleSJ9fQ==--130c3f7a625b77c3cd5e58383d970db7570f0c41/bootstrap-social-logo.png?content_type=image%2Fpng&disposition=inline%3B+filename%3D%22bootstrap-social-logo.png%22%3B+filename%2A%3DUTF-8%27%27bootstrap-social-logo.png)[0m
+Redirected to http://127.0.0.1:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWhOM052TVhack9UQm9kR1V6WTJoak5tSnFlRFZ1TXpCb1lUUjFOZ1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpWFdsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW1KdmIzUnpkSEpoY0MxemIyTnBZV3d0Ykc5bmJ5NXdibWNpT3lCbWFXeGxibUZ0WlNvOVZWUkdMVGduSjJKdmIzUnpkSEpoY0MxemIyTnBZV3d0Ykc5bmJ5NXdibWNHT3daVU9oRmpiMjUwWlc1MFgzUjVjR1ZKSWc1cGJXRm5aUzl3Ym1jR093WlUiLCJleHAiOiIyMDIwLTExLTE4VDE3OjE4OjU2LjYwMFoiLCJwdXIiOiJibG9iX2tleSJ9fQ==--130c3f7a625b77c3cd5e58383d970db7570f0c41/bootstrap-social-logo.png?content_type=image%2Fpng&disposition=inline%3B+filename%3D%22bootstrap-social-logo.png%22%3B+filename%2A%3DUTF-8%27%27bootstrap-social-logo.png
+Completed 302 Found in 9ms (ActiveRecord: 0.1ms | Allocations: 2416)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWhOM052TVhack9UQm9kR1V6WTJoak5tSnFlRFZ1TXpCb1lUUjFOZ1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpWFdsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW1KdmIzUnpkSEpoY0MxemIyTnBZV3d0Ykc5bmJ5NXdibWNpT3lCbWFXeGxibUZ0WlNvOVZWUkdMVGduSjJKdmIzUnpkSEpoY0MxemIyTnBZV3d0Ykc5bmJ5NXdibWNHT3daVU9oRmpiMjUwWlc1MFgzUjVjR1ZKSWc1cGJXRm5aUzl3Ym1jR093WlUiLCJleHAiOiIyMDIwLTExLTE4VDE3OjE4OjU2LjYwMFoiLCJwdXIiOiJibG9iX2tleSJ9fQ==--130c3f7a625b77c3cd5e58383d970db7570f0c41/bootstrap-social-logo.png?content_type=image%2Fpng&disposition=inline%3B+filename%3D%22bootstrap-social-logo.png%22%3B+filename%2A%3DUTF-8%27%27bootstrap-social-logo.png" for 127.0.0.1 at 2020-11-18 17:13:56 +0000
+Processing by ActiveStorage::DiskController#show as PNG
+  Parameters: {"content_type"=>"image/png", "disposition"=>"inline; filename=\"bootstrap-social-logo.png\"; filename*=UTF-8''bootstrap-social-logo.png", "encoded_key"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWhOM052TVhack9UQm9kR1V6WTJoak5tSnFlRFZ1TXpCb1lUUjFOZ1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpWFdsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW1KdmIzUnpkSEpoY0MxemIyTnBZV3d0Ykc5bmJ5NXdibWNpT3lCbWFXeGxibUZ0WlNvOVZWUkdMVGduSjJKdmIzUnpkSEpoY0MxemIyTnBZV3d0Ykc5bmJ5NXdibWNHT3daVU9oRmpiMjUwWlc1MFgzUjVjR1ZKSWc1cGJXRm5aUzl3Ym1jR093WlUiLCJleHAiOiIyMDIwLTExLTE4VDE3OjE4OjU2LjYwMFoiLCJwdXIiOiJibG9iX2tleSJ9fQ==--130c3f7a625b77c3cd5e58383d970db7570f0c41", "filename"=>"bootstrap-social-logo"}
+Completed 200 OK in 3ms (ActiveRecord: 0.0ms | Allocations: 714)
+
+
