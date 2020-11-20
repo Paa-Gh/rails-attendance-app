@@ -54,7 +54,8 @@
         You worked a total of <b><%= ((current_user.employee.timers.last.time_out - current_user.employee.timers.last.time_in)/1.minute).round %></b> minutes
       </p>
       <% end %>
+      <br><br>
+      <%= link_to 'See all attendance records', timers_path, class:"btn btn-primary" %>
     </div>
-
   </div>
 </div><br><br>

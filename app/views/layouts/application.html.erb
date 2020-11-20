@@ -27,7 +27,7 @@
     }
   </style>
 </head>
-<body>
+<body id="page-container">
 
   <% if notice %>
     <p class="alert alert-success"><%= notice %></p>
@@ -36,7 +36,7 @@
     <p class="alert alert-danger"><%= alert %></p>
   <% end %>
 
-
+<div id="content">
 <nav class="navbar navbar-inverse">
   <div class="container-fluid">
     <div class="navbar-header">
@@ -73,9 +73,10 @@
 <div class="container">
 <%= yield %>
 </div>
+</div>
 
 
-<footer class="container-fluid text-center">
+<footer id="footer" class="container-fluid text-center">
   <p>
     <b>Copyright &copy; All rights reserved | FnF Telecomunications</b>
   </p>
